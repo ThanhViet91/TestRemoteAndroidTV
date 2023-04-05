@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -13,7 +14,6 @@ import com.example.myapplication.kunal52.exception.PairingException;
 import com.example.myapplication.kunal52.remote.Remotemessage;
 import com.faendir.rhino_android.RhinoAndroidHelper;
 
-import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ImporterTopLevel;
 import org.mozilla.javascript.Scriptable;
 
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 //        context = rhinoAndroidHelper.enterContext();
 //        context.setOptimizationLevel(1);
 //        scope = new ImporterTopLevel(context);
+        context = this;
     }
 
     AndroidRemoteTv androidRemoteTv;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         RunUtil.runInBackground(() -> {
 
             try {
-                androidRemoteTv.connect("192.168.1.25", new AndroidTvListener() {
+                androidRemoteTv.connect(context, "192.168.1.15", new AndroidTvListener() {
                     @Override
                     public void onSessionCreated() {
                         System.out.println("thanhlv androidRemoteTv.connect() onSessionCreated" );
@@ -59,8 +60,9 @@ public class MainActivity extends AppCompatActivity {
 
                         try {
                             String name = reader.readLine();
-                            androidRemoteTv.sendSecret(name);
+//                            androidRemoteTv.sendSecret("t1243745");
                         } catch (IOException e) {
+
                             throw new RuntimeException(e);
                         }
                     }
@@ -79,7 +81,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onConnected() {
                         System.out.println("thanhlv androidRemoteTv.connect() onConnected" );
 
-                        androidRemoteTv.sendCommand(Remotemessage.RemoteKeyCode.KEYCODE_POWER, Remotemessage.RemoteDirection.SHORT);
+                        androidRemoteTv.sendCommand(Remotemessage.RemoteKeyCode.KEYCODE_VOLUME_UP, Remotemessage.RemoteDirection.SHORT);
+                        androidRemoteTv.sendCommand(Remotemessage.RemoteKeyCode.KEYCODE_VOLUME_UP, Remotemessage.RemoteDirection.SHORT);
+                        androidRemoteTv.sendAppLink("https://www.youtube.com");
 
                     }
 
@@ -106,6 +110,11 @@ public class MainActivity extends AppCompatActivity {
                 throw new RuntimeException(e);
             }
         });
+    }
+
+    public void sendCode(View view) {
+        String code = ((EditText)findViewById(R.id.edt_code)).getText().toString();
+        androidRemoteTv.sendSecret(code);
     }
 
 

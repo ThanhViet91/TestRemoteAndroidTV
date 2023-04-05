@@ -1,6 +1,7 @@
 package com.example.myapplication.kunal52.ssl;
 
 
+import android.content.Context;
 import android.os.Build;
 
 import com.example.myapplication.kunal52.AndroidRemoteContext;
@@ -34,13 +35,13 @@ import javax.security.auth.x500.X500Principal;
 /* renamed from: sensustech.android.tv.remote.control.manager.keystore.KeyStoreManager */
 /* loaded from: classes3.dex */
 public final class KeyStoreManager {
-    private static String ANDROID_KEYSTORE = "keyStore";
+    private static String ANDROID_KEYSTORE = "AndroidKeyStore";
     private static final boolean DEBUG = false;
-    //    public static final String KEYSTORE_FILENAME = "androidtv.keystore";
-//    static final char[] KEYSTORE_PASSWORD = "KeyStore_Password".toCharArray();
-    private static final String LOCAL_IDENTITY_ALIAS = "keyAlias";
-    private static final String REMOTE_IDENTITY_ALIAS_PATTERN = "androidtv-remote-%s";
-    private static final String SERVER_IDENTITY_ALIAS = "androidtv-local";
+        public static final String KEYSTORE_FILENAME = "atvremote.keystore";
+    static final char[] KEYSTORE_PASSWORD = "KeyStore_Password".toCharArray();
+    private static final String LOCAL_IDENTITY_ALIAS = "atvremote-remote";
+    private static final String REMOTE_IDENTITY_ALIAS_PATTERN = "atvremote-remote-%s";
+    private static final String SERVER_IDENTITY_ALIAS = "atvremote-local";
     private static final String TAG = "KeyStoreManager";
     private DynamicTrustManager mDynamicTrustManager;
     private KeyStore mKeyStore;
@@ -88,10 +89,13 @@ public final class KeyStoreManager {
         }
     }
 
-    public KeyStoreManager() {
+    Context mContext;
+    public KeyStoreManager(Context context) {
+        this.mContext = context;
         KeyStore load = load();
         this.mKeyStore = load;
         this.mDynamicTrustManager = new DynamicTrustManager(load);
+
     }
 
     private void clearKeyStore() {
@@ -162,7 +166,10 @@ public final class KeyStoreManager {
     }
 
     private static final String getCertificateName(String str) {
-        return "CN=androidtv/livingTV";
+//        return "CN=anymote/" + Build.PRODUCT + "/" + Build.DEVICE + "/"
+//                + Build.MODEL + "/" + str;
+//        return "CN=androidtv/livingTV";
+        return "CN=atvremote/" + Build.PRODUCT + "/" + Build.DEVICE + "/" + Build.MODEL + "/" + str;
     }
 
     private static String getSubjectDN(Certificate certificate) {
@@ -191,16 +198,11 @@ public final class KeyStoreManager {
         try {
             if (!useAndroidKeyStore()) {
                 keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    Path path = androidRemoteContext.getKeyStoreFile().toPath();
-                    char[] pass = androidRemoteContext.getKeyStorePass();
-//                    File directory = new File(App.getAppContext().getFilesDir(), "Projects");
-//                    if (!directory.exists()) {
-//                        boolean a = directory.mkdirs();
-//                    }
-
-//                    keyStore.load(Files.newInputStream(androidRemoteContext.getKeyStoreFile().toPath(), null), androidRemoteContext.getKeyStorePass());
-                    keyStore.load(Files.newInputStream(path), pass);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && mContext != null) {
+//                    Path path = androidRemoteContext.getKeyStoreFile().toPath();
+//                    char[] pass = androidRemoteContext.getKeyStorePass();
+//                    keyStore.load(Files.newInputStream(path), pass);
+                    keyStore.load(mContext.openFileInput(KEYSTORE_FILENAME), KEYSTORE_PASSWORD);
                 }
             } else {
                 keyStore = KeyStore.getInstance(ANDROID_KEYSTORE);
@@ -227,8 +229,10 @@ public final class KeyStoreManager {
     private void store(KeyStore keyStore) {
         if (!useAndroidKeyStore()) {
             try {
-                FileOutputStream openFileOutput = new FileOutputStream(androidRemoteContext.getKeyStoreFile());
-                keyStore.store(openFileOutput, androidRemoteContext.getKeyStorePass());
+//                FileOutputStream openFileOutput = new FileOutputStream(androidRemoteContext.getKeyStoreFile());
+//                keyStore.store(openFileOutput, androidRemoteContext.getKeyStorePass());
+                FileOutputStream openFileOutput = this.mContext.openFileOutput(KEYSTORE_FILENAME, 0);
+                keyStore.store(openFileOutput, KEYSTORE_PASSWORD);
                 openFileOutput.close();
             } catch (IOException e) {
                 throw new IllegalStateException("Unable to store keyStore", e);

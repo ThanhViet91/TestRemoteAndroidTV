@@ -3,22 +3,24 @@
 
 package com.example.myapplication.kunal52.pairing;
 
+import com.google.protobuf.*;
+
 public final class Pairingmessage {
   private Pairingmessage() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+      ExtensionRegistryLite registry) {
   }
 
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      ExtensionRegistry registry) {
     registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
+        (ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf enum {@code com.example.myapplication.kunal52.pairing.RoleType}
+   * Protobuf enum {@code RoleType}
    */
   public enum RoleType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements ProtocolMessageEnum {
     /**
      * <code>ROLE_TYPE_UNKNOWN = 0;</code>
      */
@@ -87,27 +89,27 @@ public final class Pairingmessage {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<RoleType>
+    public static Internal.EnumLiteMap<RoleType>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
+    private static final Internal.EnumLiteMap<
         RoleType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<RoleType>() {
+          new Internal.EnumLiteMap<RoleType>() {
             public RoleType findValueByNumber(int number) {
               return RoleType.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(ordinal());
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final Descriptors.EnumDescriptor
         getDescriptor() {
       return Pairingmessage.getDescriptor().getEnumTypes().get(0);
     }
@@ -115,7 +117,7 @@ public final class Pairingmessage {
     private static final RoleType[] VALUES = values();
 
     public static RoleType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -132,12 +134,12 @@ public final class Pairingmessage {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:com.example.myapplication.kunal52.pairing.RoleType)
+    // @@protoc_insertion_point(enum_scope:RoleType)
   }
 
   public interface PairingRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.example.myapplication.kunal52.pairing.PairingRequest)
-      com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PairingRequest)
+      MessageOrBuilder {
 
     /**
      * <code>string client_name = 2;</code>
@@ -148,7 +150,7 @@ public final class Pairingmessage {
      * <code>string client_name = 2;</code>
      * @return The bytes for clientName.
      */
-    com.google.protobuf.ByteString
+    ByteString
         getClientNameBytes();
 
     /**
@@ -160,19 +162,19 @@ public final class Pairingmessage {
      * <code>string service_name = 1;</code>
      * @return The bytes for serviceName.
      */
-    com.google.protobuf.ByteString
+    ByteString
         getServiceNameBytes();
   }
   /**
-   * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingRequest}
+   * Protobuf type {@code PairingRequest}
    */
   public  static final class PairingRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.example.myapplication.kunal52.pairing.PairingRequest)
+      GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PairingRequest)
       PairingRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PairingRequest.newBuilder() to construct.
-    private PairingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PairingRequest(GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private PairingRequest() {
@@ -188,20 +190,20 @@ public final class Pairingmessage {
     }
 
     @Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private PairingRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      UnknownFieldSet.Builder unknownFields =
+          UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -231,27 +233,27 @@ public final class Pairingmessage {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final Descriptors.Descriptor
         getDescriptor() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_descriptor;
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_descriptor;
     }
 
     @Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_fieldAccessorTable
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.Builder.class);
+              Pairingmessage.PairingRequest.class, Pairingmessage.PairingRequest.Builder.class);
     }
 
     public static final int CLIENT_NAME_FIELD_NUMBER = 2;
@@ -265,8 +267,8 @@ public final class Pairingmessage {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        ByteString bs = 
+            (ByteString) ref;
         String s = bs.toStringUtf8();
         clientName_ = s;
         return s;
@@ -276,17 +278,17 @@ public final class Pairingmessage {
      * <code>string client_name = 2;</code>
      * @return The bytes for clientName.
      */
-    public com.google.protobuf.ByteString
+    public ByteString
         getClientNameBytes() {
       Object ref = clientName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        ByteString b = 
+            ByteString.copyFromUtf8(
                 (String) ref);
         clientName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (ByteString) ref;
       }
     }
 
@@ -301,8 +303,8 @@ public final class Pairingmessage {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        ByteString bs = 
+            (ByteString) ref;
         String s = bs.toStringUtf8();
         serviceName_ = s;
         return s;
@@ -312,17 +314,17 @@ public final class Pairingmessage {
      * <code>string service_name = 1;</code>
      * @return The bytes for serviceName.
      */
-    public com.google.protobuf.ByteString
+    public ByteString
         getServiceNameBytes() {
       Object ref = serviceName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        ByteString b = 
+            ByteString.copyFromUtf8(
                 (String) ref);
         serviceName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (ByteString) ref;
       }
     }
 
@@ -338,13 +340,13 @@ public final class Pairingmessage {
     }
 
     @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(CodedOutputStream output)
                         throws java.io.IOException {
       if (!getServiceNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceName_);
+        GeneratedMessageV3.writeString(output, 1, serviceName_);
       }
       if (!getClientNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientName_);
+        GeneratedMessageV3.writeString(output, 2, clientName_);
       }
       unknownFields.writeTo(output);
     }
@@ -356,10 +358,10 @@ public final class Pairingmessage {
 
       size = 0;
       if (!getServiceNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceName_);
+        size += GeneratedMessageV3.computeStringSize(1, serviceName_);
       }
       if (!getClientNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientName_);
+        size += GeneratedMessageV3.computeStringSize(2, clientName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -371,10 +373,10 @@ public final class Pairingmessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest)) {
+      if (!(obj instanceof Pairingmessage.PairingRequest)) {
         return super.equals(obj);
       }
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest other = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest) obj;
+      Pairingmessage.PairingRequest other = (Pairingmessage.PairingRequest) obj;
 
       if (!getClientName()
           .equals(other.getClientName())) return false;
@@ -400,73 +402,73 @@ public final class Pairingmessage {
       return hash;
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(
+    public static Pairingmessage.PairingRequest parseFrom(
         java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(
+    public static Pairingmessage.PairingRequest parseFrom(
         java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingRequest parseFrom(
+        ByteString data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingRequest parseFrom(
+        ByteString data,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingRequest parseFrom(byte[] data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(
+    public static Pairingmessage.PairingRequest parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(
+    public static Pairingmessage.PairingRequest parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseDelimitedFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseDelimitedFrom(
+    public static Pairingmessage.PairingRequest parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
+    public static Pairingmessage.PairingRequest parseFrom(
+        CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static Pairingmessage.PairingRequest parseFrom(
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -475,7 +477,7 @@ public final class Pairingmessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest prototype) {
+    public static Builder newBuilder(Pairingmessage.PairingRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -486,42 +488,42 @@ public final class Pairingmessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingRequest}
+     * Protobuf type {@code PairingRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.example.myapplication.kunal52.pairing.PairingRequest)
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+        GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PairingRequest)
+        Pairingmessage.PairingRequestOrBuilder {
+      public static final Descriptors.Descriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_descriptor;
       }
 
       @Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_fieldAccessorTable
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.Builder.class);
+                Pairingmessage.PairingRequest.class, Pairingmessage.PairingRequest.Builder.class);
       }
 
-      // Construct using com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.newBuilder()
+      // Construct using Pairingmessage.PairingRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
@@ -536,19 +538,19 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.google.protobuf.Descriptors.Descriptor
+      public Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequest_descriptor;
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest getDefaultInstanceForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.getDefaultInstance();
+      public Pairingmessage.PairingRequest getDefaultInstanceForType() {
+        return Pairingmessage.PairingRequest.getDefaultInstance();
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest build() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest result = buildPartial();
+      public Pairingmessage.PairingRequest build() {
+        Pairingmessage.PairingRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -556,8 +558,8 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest buildPartial() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest result = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest(this);
+      public Pairingmessage.PairingRequest buildPartial() {
+        Pairingmessage.PairingRequest result = new Pairingmessage.PairingRequest(this);
         result.clientName_ = clientName_;
         result.serviceName_ = serviceName_;
         onBuilt();
@@ -570,44 +572,44 @@ public final class Pairingmessage {
       }
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.setField(field, value);
       }
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.addRepeatedField(field, value);
       }
       @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest) {
-          return mergeFrom((com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest)other);
+      public Builder mergeFrom(Message other) {
+        if (other instanceof Pairingmessage.PairingRequest) {
+          return mergeFrom((Pairingmessage.PairingRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest other) {
-        if (other == com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(Pairingmessage.PairingRequest other) {
+        if (other == Pairingmessage.PairingRequest.getDefaultInstance()) return this;
         if (!other.getClientName().isEmpty()) {
           clientName_ = other.clientName_;
           onChanged();
@@ -628,14 +630,14 @@ public final class Pairingmessage {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest parsedMessage = null;
+        Pairingmessage.PairingRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest) e.getUnfinishedMessage();
+        } catch (InvalidProtocolBufferException e) {
+          parsedMessage = (Pairingmessage.PairingRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -653,8 +655,8 @@ public final class Pairingmessage {
       public String getClientName() {
         Object ref = clientName_;
         if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          ByteString bs =
+              (ByteString) ref;
           String s = bs.toStringUtf8();
           clientName_ = s;
           return s;
@@ -666,17 +668,17 @@ public final class Pairingmessage {
        * <code>string client_name = 2;</code>
        * @return The bytes for clientName.
        */
-      public com.google.protobuf.ByteString
+      public ByteString
           getClientNameBytes() {
         Object ref = clientName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          ByteString b = 
+              ByteString.copyFromUtf8(
                   (String) ref);
           clientName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (ByteString) ref;
         }
       }
       /**
@@ -710,7 +712,7 @@ public final class Pairingmessage {
        * @return This builder for chaining.
        */
       public Builder setClientNameBytes(
-          com.google.protobuf.ByteString value) {
+          ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -729,8 +731,8 @@ public final class Pairingmessage {
       public String getServiceName() {
         Object ref = serviceName_;
         if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          ByteString bs =
+              (ByteString) ref;
           String s = bs.toStringUtf8();
           serviceName_ = s;
           return s;
@@ -742,17 +744,17 @@ public final class Pairingmessage {
        * <code>string service_name = 1;</code>
        * @return The bytes for serviceName.
        */
-      public com.google.protobuf.ByteString
+      public ByteString
           getServiceNameBytes() {
         Object ref = serviceName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          ByteString b = 
+              ByteString.copyFromUtf8(
                   (String) ref);
           serviceName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (ByteString) ref;
         }
       }
       /**
@@ -786,7 +788,7 @@ public final class Pairingmessage {
        * @return This builder for chaining.
        */
       public Builder setServiceNameBytes(
-          com.google.protobuf.ByteString value) {
+          ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -798,60 +800,60 @@ public final class Pairingmessage {
       }
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.example.myapplication.kunal52.pairing.PairingRequest)
+      // @@protoc_insertion_point(builder_scope:PairingRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:com.example.myapplication.kunal52.pairing.PairingRequest)
-    private static final com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PairingRequest)
+    private static final Pairingmessage.PairingRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest();
+      DEFAULT_INSTANCE = new Pairingmessage.PairingRequest();
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest getDefaultInstance() {
+    public static Pairingmessage.PairingRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PairingRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PairingRequest>() {
+    private static final Parser<PairingRequest>
+        PARSER = new AbstractParser<PairingRequest>() {
       @Override
       public PairingRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
+          throws InvalidProtocolBufferException {
         return new PairingRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PairingRequest> parser() {
+    public static Parser<PairingRequest> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<PairingRequest> getParserForType() {
+    public Parser<PairingRequest> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest getDefaultInstanceForType() {
+    public Pairingmessage.PairingRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PairingRequestAckOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.example.myapplication.kunal52.pairing.PairingRequestAck)
-      com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PairingRequestAck)
+      MessageOrBuilder {
 
     /**
      * <code>string server_name = 1;</code>
@@ -862,19 +864,19 @@ public final class Pairingmessage {
      * <code>string server_name = 1;</code>
      * @return The bytes for serverName.
      */
-    com.google.protobuf.ByteString
+    ByteString
         getServerNameBytes();
   }
   /**
-   * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingRequestAck}
+   * Protobuf type {@code PairingRequestAck}
    */
   public  static final class PairingRequestAck extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.example.myapplication.kunal52.pairing.PairingRequestAck)
+      GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PairingRequestAck)
       PairingRequestAckOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PairingRequestAck.newBuilder() to construct.
-    private PairingRequestAck(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PairingRequestAck(GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private PairingRequestAck() {
@@ -889,20 +891,20 @@ public final class Pairingmessage {
     }
 
     @Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private PairingRequestAck(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      UnknownFieldSet.Builder unknownFields =
+          UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -926,27 +928,27 @@ public final class Pairingmessage {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final Descriptors.Descriptor
         getDescriptor() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_descriptor;
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_descriptor;
     }
 
     @Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_fieldAccessorTable
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.Builder.class);
+              Pairingmessage.PairingRequestAck.class, Pairingmessage.PairingRequestAck.Builder.class);
     }
 
     public static final int SERVER_NAME_FIELD_NUMBER = 1;
@@ -960,8 +962,8 @@ public final class Pairingmessage {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        ByteString bs = 
+            (ByteString) ref;
         String s = bs.toStringUtf8();
         serverName_ = s;
         return s;
@@ -971,17 +973,17 @@ public final class Pairingmessage {
      * <code>string server_name = 1;</code>
      * @return The bytes for serverName.
      */
-    public com.google.protobuf.ByteString
+    public ByteString
         getServerNameBytes() {
       Object ref = serverName_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        ByteString b = 
+            ByteString.copyFromUtf8(
                 (String) ref);
         serverName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (ByteString) ref;
       }
     }
 
@@ -997,10 +999,10 @@ public final class Pairingmessage {
     }
 
     @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(CodedOutputStream output)
                         throws java.io.IOException {
       if (!getServerNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serverName_);
+        GeneratedMessageV3.writeString(output, 1, serverName_);
       }
       unknownFields.writeTo(output);
     }
@@ -1012,7 +1014,7 @@ public final class Pairingmessage {
 
       size = 0;
       if (!getServerNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serverName_);
+        size += GeneratedMessageV3.computeStringSize(1, serverName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1024,10 +1026,10 @@ public final class Pairingmessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck)) {
+      if (!(obj instanceof Pairingmessage.PairingRequestAck)) {
         return super.equals(obj);
       }
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck other = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck) obj;
+      Pairingmessage.PairingRequestAck other = (Pairingmessage.PairingRequestAck) obj;
 
       if (!getServerName()
           .equals(other.getServerName())) return false;
@@ -1049,73 +1051,73 @@ public final class Pairingmessage {
       return hash;
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(
+    public static Pairingmessage.PairingRequestAck parseFrom(
         java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(
+    public static Pairingmessage.PairingRequestAck parseFrom(
         java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingRequestAck parseFrom(
+        ByteString data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingRequestAck parseFrom(
+        ByteString data,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingRequestAck parseFrom(byte[] data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(
+    public static Pairingmessage.PairingRequestAck parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingRequestAck parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(
+    public static Pairingmessage.PairingRequestAck parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseDelimitedFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingRequestAck parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseDelimitedFrom(
+    public static Pairingmessage.PairingRequestAck parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(
-        com.google.protobuf.CodedInputStream input)
+    public static Pairingmessage.PairingRequestAck parseFrom(
+        CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static Pairingmessage.PairingRequestAck parseFrom(
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -1124,7 +1126,7 @@ public final class Pairingmessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck prototype) {
+    public static Builder newBuilder(Pairingmessage.PairingRequestAck prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -1135,42 +1137,42 @@ public final class Pairingmessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingRequestAck}
+     * Protobuf type {@code PairingRequestAck}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.example.myapplication.kunal52.pairing.PairingRequestAck)
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAckOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+        GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PairingRequestAck)
+        Pairingmessage.PairingRequestAckOrBuilder {
+      public static final Descriptors.Descriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_descriptor;
       }
 
       @Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_fieldAccessorTable
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.Builder.class);
+                Pairingmessage.PairingRequestAck.class, Pairingmessage.PairingRequestAck.Builder.class);
       }
 
-      // Construct using com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.newBuilder()
+      // Construct using Pairingmessage.PairingRequestAck.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
@@ -1183,19 +1185,19 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.google.protobuf.Descriptors.Descriptor
+      public Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingRequestAck_descriptor;
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck getDefaultInstanceForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.getDefaultInstance();
+      public Pairingmessage.PairingRequestAck getDefaultInstanceForType() {
+        return Pairingmessage.PairingRequestAck.getDefaultInstance();
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck build() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck result = buildPartial();
+      public Pairingmessage.PairingRequestAck build() {
+        Pairingmessage.PairingRequestAck result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1203,8 +1205,8 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck buildPartial() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck result = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck(this);
+      public Pairingmessage.PairingRequestAck buildPartial() {
+        Pairingmessage.PairingRequestAck result = new Pairingmessage.PairingRequestAck(this);
         result.serverName_ = serverName_;
         onBuilt();
         return result;
@@ -1216,44 +1218,44 @@ public final class Pairingmessage {
       }
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.setField(field, value);
       }
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.addRepeatedField(field, value);
       }
       @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck) {
-          return mergeFrom((com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck)other);
+      public Builder mergeFrom(Message other) {
+        if (other instanceof Pairingmessage.PairingRequestAck) {
+          return mergeFrom((Pairingmessage.PairingRequestAck)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck other) {
-        if (other == com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.getDefaultInstance()) return this;
+      public Builder mergeFrom(Pairingmessage.PairingRequestAck other) {
+        if (other == Pairingmessage.PairingRequestAck.getDefaultInstance()) return this;
         if (!other.getServerName().isEmpty()) {
           serverName_ = other.serverName_;
           onChanged();
@@ -1270,14 +1272,14 @@ public final class Pairingmessage {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck parsedMessage = null;
+        Pairingmessage.PairingRequestAck parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck) e.getUnfinishedMessage();
+        } catch (InvalidProtocolBufferException e) {
+          parsedMessage = (Pairingmessage.PairingRequestAck) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1295,8 +1297,8 @@ public final class Pairingmessage {
       public String getServerName() {
         Object ref = serverName_;
         if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          ByteString bs =
+              (ByteString) ref;
           String s = bs.toStringUtf8();
           serverName_ = s;
           return s;
@@ -1308,17 +1310,17 @@ public final class Pairingmessage {
        * <code>string server_name = 1;</code>
        * @return The bytes for serverName.
        */
-      public com.google.protobuf.ByteString
+      public ByteString
           getServerNameBytes() {
         Object ref = serverName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          ByteString b = 
+              ByteString.copyFromUtf8(
                   (String) ref);
           serverName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (ByteString) ref;
         }
       }
       /**
@@ -1352,7 +1354,7 @@ public final class Pairingmessage {
        * @return This builder for chaining.
        */
       public Builder setServerNameBytes(
-          com.google.protobuf.ByteString value) {
+          ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1364,71 +1366,71 @@ public final class Pairingmessage {
       }
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.example.myapplication.kunal52.pairing.PairingRequestAck)
+      // @@protoc_insertion_point(builder_scope:PairingRequestAck)
     }
 
-    // @@protoc_insertion_point(class_scope:com.example.myapplication.kunal52.pairing.PairingRequestAck)
-    private static final com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PairingRequestAck)
+    private static final Pairingmessage.PairingRequestAck DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck();
+      DEFAULT_INSTANCE = new Pairingmessage.PairingRequestAck();
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck getDefaultInstance() {
+    public static Pairingmessage.PairingRequestAck getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PairingRequestAck>
-        PARSER = new com.google.protobuf.AbstractParser<PairingRequestAck>() {
+    private static final Parser<PairingRequestAck>
+        PARSER = new AbstractParser<PairingRequestAck>() {
       @Override
       public PairingRequestAck parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
+          throws InvalidProtocolBufferException {
         return new PairingRequestAck(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PairingRequestAck> parser() {
+    public static Parser<PairingRequestAck> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<PairingRequestAck> getParserForType() {
+    public Parser<PairingRequestAck> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck getDefaultInstanceForType() {
+    public Pairingmessage.PairingRequestAck getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PairingEncodingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.example.myapplication.kunal52.pairing.PairingEncoding)
-      com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PairingEncoding)
+      MessageOrBuilder {
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType type = 1;</code>
+     * <code>.PairingEncoding.EncodingType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType type = 1;</code>
+     * <code>.PairingEncoding.EncodingType type = 1;</code>
      * @return The type.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType getType();
+    Pairingmessage.PairingEncoding.EncodingType getType();
 
     /**
      * <code>uint32 symbol_length = 2;</code>
@@ -1437,15 +1439,15 @@ public final class Pairingmessage {
     int getSymbolLength();
   }
   /**
-   * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingEncoding}
+   * Protobuf type {@code PairingEncoding}
    */
   public  static final class PairingEncoding extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.example.myapplication.kunal52.pairing.PairingEncoding)
+      GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PairingEncoding)
       PairingEncodingOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PairingEncoding.newBuilder() to construct.
-    private PairingEncoding(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PairingEncoding(GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private PairingEncoding() {
@@ -1460,20 +1462,20 @@ public final class Pairingmessage {
     }
 
     @Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private PairingEncoding(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      UnknownFieldSet.Builder unknownFields =
+          UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1502,34 +1504,34 @@ public final class Pairingmessage {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final Descriptors.Descriptor
         getDescriptor() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_descriptor;
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_descriptor;
     }
 
     @Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_fieldAccessorTable
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder.class);
+              Pairingmessage.PairingEncoding.class, Pairingmessage.PairingEncoding.Builder.class);
     }
 
     /**
-     * Protobuf enum {@code com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType}
+     * Protobuf enum {@code PairingEncoding.EncodingType}
      */
     public enum EncodingType
-        implements com.google.protobuf.ProtocolMessageEnum {
+        implements ProtocolMessageEnum {
       /**
        * <code>ENCODING_TYPE_UNKNOWN = 0;</code>
        */
@@ -1616,35 +1618,35 @@ public final class Pairingmessage {
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<EncodingType>
+      public static Internal.EnumLiteMap<EncodingType>
           internalGetValueMap() {
         return internalValueMap;
       }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
+      private static final Internal.EnumLiteMap<
           EncodingType> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<EncodingType>() {
+            new Internal.EnumLiteMap<EncodingType>() {
               public EncodingType findValueByNumber(int number) {
                 return EncodingType.forNumber(number);
               }
             };
 
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+      public final Descriptors.EnumValueDescriptor
           getValueDescriptor() {
         return getDescriptor().getValues().get(ordinal());
       }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
+      public final Descriptors.EnumDescriptor
           getDescriptorForType() {
         return getDescriptor();
       }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
+      public static final Descriptors.EnumDescriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDescriptor().getEnumTypes().get(0);
+        return Pairingmessage.PairingEncoding.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final EncodingType[] VALUES = values();
 
       public static EncodingType valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
@@ -1661,26 +1663,26 @@ public final class Pairingmessage {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType)
+      // @@protoc_insertion_point(enum_scope:PairingEncoding.EncodingType)
     }
 
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType type = 1;</code>
+     * <code>.PairingEncoding.EncodingType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
     public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType type = 1;</code>
+     * <code>.PairingEncoding.EncodingType type = 1;</code>
      * @return The type.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType getType() {
+    public Pairingmessage.PairingEncoding.EncodingType getType() {
       @SuppressWarnings("deprecation")
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType result = com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType.valueOf(type_);
-      return result == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType.UNRECOGNIZED : result;
+      Pairingmessage.PairingEncoding.EncodingType result = Pairingmessage.PairingEncoding.EncodingType.valueOf(type_);
+      return result == null ? Pairingmessage.PairingEncoding.EncodingType.UNRECOGNIZED : result;
     }
 
     public static final int SYMBOL_LENGTH_FIELD_NUMBER = 2;
@@ -1705,9 +1707,9 @@ public final class Pairingmessage {
     }
 
     @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(CodedOutputStream output)
                         throws java.io.IOException {
-      if (type_ != com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType.ENCODING_TYPE_UNKNOWN.getNumber()) {
+      if (type_ != Pairingmessage.PairingEncoding.EncodingType.ENCODING_TYPE_UNKNOWN.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (symbolLength_ != 0) {
@@ -1722,12 +1724,12 @@ public final class Pairingmessage {
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType.ENCODING_TYPE_UNKNOWN.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
+      if (type_ != Pairingmessage.PairingEncoding.EncodingType.ENCODING_TYPE_UNKNOWN.getNumber()) {
+        size += CodedOutputStream
           .computeEnumSize(1, type_);
       }
       if (symbolLength_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeUInt32Size(2, symbolLength_);
       }
       size += unknownFields.getSerializedSize();
@@ -1740,10 +1742,10 @@ public final class Pairingmessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding)) {
+      if (!(obj instanceof Pairingmessage.PairingEncoding)) {
         return super.equals(obj);
       }
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding other = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding) obj;
+      Pairingmessage.PairingEncoding other = (Pairingmessage.PairingEncoding) obj;
 
       if (type_ != other.type_) return false;
       if (getSymbolLength()
@@ -1768,73 +1770,73 @@ public final class Pairingmessage {
       return hash;
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(
+    public static Pairingmessage.PairingEncoding parseFrom(
         java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(
+    public static Pairingmessage.PairingEncoding parseFrom(
         java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingEncoding parseFrom(
+        ByteString data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingEncoding parseFrom(
+        ByteString data,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingEncoding parseFrom(byte[] data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(
+    public static Pairingmessage.PairingEncoding parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingEncoding parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(
+    public static Pairingmessage.PairingEncoding parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseDelimitedFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingEncoding parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseDelimitedFrom(
+    public static Pairingmessage.PairingEncoding parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(
-        com.google.protobuf.CodedInputStream input)
+    public static Pairingmessage.PairingEncoding parseFrom(
+        CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static Pairingmessage.PairingEncoding parseFrom(
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -1843,7 +1845,7 @@ public final class Pairingmessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding prototype) {
+    public static Builder newBuilder(Pairingmessage.PairingEncoding prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -1854,42 +1856,42 @@ public final class Pairingmessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingEncoding}
+     * Protobuf type {@code PairingEncoding}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.example.myapplication.kunal52.pairing.PairingEncoding)
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+        GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PairingEncoding)
+        Pairingmessage.PairingEncodingOrBuilder {
+      public static final Descriptors.Descriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_descriptor;
       }
 
       @Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_fieldAccessorTable
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder.class);
+                Pairingmessage.PairingEncoding.class, Pairingmessage.PairingEncoding.Builder.class);
       }
 
-      // Construct using com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.newBuilder()
+      // Construct using Pairingmessage.PairingEncoding.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
@@ -1904,19 +1906,19 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.google.protobuf.Descriptors.Descriptor
+      public Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingEncoding_descriptor;
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getDefaultInstanceForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDefaultInstance();
+      public Pairingmessage.PairingEncoding getDefaultInstanceForType() {
+        return Pairingmessage.PairingEncoding.getDefaultInstance();
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding build() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding result = buildPartial();
+      public Pairingmessage.PairingEncoding build() {
+        Pairingmessage.PairingEncoding result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1924,8 +1926,8 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding buildPartial() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding result = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding(this);
+      public Pairingmessage.PairingEncoding buildPartial() {
+        Pairingmessage.PairingEncoding result = new Pairingmessage.PairingEncoding(this);
         result.type_ = type_;
         result.symbolLength_ = symbolLength_;
         onBuilt();
@@ -1938,44 +1940,44 @@ public final class Pairingmessage {
       }
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.setField(field, value);
       }
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.addRepeatedField(field, value);
       }
       @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding) {
-          return mergeFrom((com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding)other);
+      public Builder mergeFrom(Message other) {
+        if (other instanceof Pairingmessage.PairingEncoding) {
+          return mergeFrom((Pairingmessage.PairingEncoding)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding other) {
-        if (other == com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDefaultInstance()) return this;
+      public Builder mergeFrom(Pairingmessage.PairingEncoding other) {
+        if (other == Pairingmessage.PairingEncoding.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -1994,14 +1996,14 @@ public final class Pairingmessage {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding parsedMessage = null;
+        Pairingmessage.PairingEncoding parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding) e.getUnfinishedMessage();
+        } catch (InvalidProtocolBufferException e) {
+          parsedMessage = (Pairingmessage.PairingEncoding) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2013,14 +2015,14 @@ public final class Pairingmessage {
 
       private int type_ = 0;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType type = 1;</code>
+       * <code>.PairingEncoding.EncodingType type = 1;</code>
        * @return The enum numeric value on the wire for type.
        */
       public int getTypeValue() {
         return type_;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType type = 1;</code>
+       * <code>.PairingEncoding.EncodingType type = 1;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
@@ -2030,20 +2032,20 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType type = 1;</code>
+       * <code>.PairingEncoding.EncodingType type = 1;</code>
        * @return The type.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType getType() {
+      public Pairingmessage.PairingEncoding.EncodingType getType() {
         @SuppressWarnings("deprecation")
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType result = com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType.valueOf(type_);
-        return result == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType.UNRECOGNIZED : result;
+        Pairingmessage.PairingEncoding.EncodingType result = Pairingmessage.PairingEncoding.EncodingType.valueOf(type_);
+        return result == null ? Pairingmessage.PairingEncoding.EncodingType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType type = 1;</code>
+       * <code>.PairingEncoding.EncodingType type = 1;</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.EncodingType value) {
+      public Builder setType(Pairingmessage.PairingEncoding.EncodingType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2053,7 +2055,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding.EncodingType type = 1;</code>
+       * <code>.PairingEncoding.EncodingType type = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -2094,130 +2096,130 @@ public final class Pairingmessage {
       }
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.example.myapplication.kunal52.pairing.PairingEncoding)
+      // @@protoc_insertion_point(builder_scope:PairingEncoding)
     }
 
-    // @@protoc_insertion_point(class_scope:com.example.myapplication.kunal52.pairing.PairingEncoding)
-    private static final com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PairingEncoding)
+    private static final Pairingmessage.PairingEncoding DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding();
+      DEFAULT_INSTANCE = new Pairingmessage.PairingEncoding();
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getDefaultInstance() {
+    public static Pairingmessage.PairingEncoding getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PairingEncoding>
-        PARSER = new com.google.protobuf.AbstractParser<PairingEncoding>() {
+    private static final Parser<PairingEncoding>
+        PARSER = new AbstractParser<PairingEncoding>() {
       @Override
       public PairingEncoding parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
+          throws InvalidProtocolBufferException {
         return new PairingEncoding(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PairingEncoding> parser() {
+    public static Parser<PairingEncoding> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<PairingEncoding> getParserForType() {
+    public Parser<PairingEncoding> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getDefaultInstanceForType() {
+    public Pairingmessage.PairingEncoding getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PairingOptionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.example.myapplication.kunal52.pairing.PairingOption)
-      com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PairingOption)
+      MessageOrBuilder {
 
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
-    java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> 
+    java.util.List<Pairingmessage.PairingEncoding> 
         getInputEncodingsList();
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getInputEncodings(int index);
+    Pairingmessage.PairingEncoding getInputEncodings(int index);
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
     int getInputEncodingsCount();
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
-    java.util.List<? extends com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> 
+    java.util.List<? extends Pairingmessage.PairingEncodingOrBuilder> 
         getInputEncodingsOrBuilderList();
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder getInputEncodingsOrBuilder(
+    Pairingmessage.PairingEncodingOrBuilder getInputEncodingsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
-    java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> 
+    java.util.List<Pairingmessage.PairingEncoding> 
         getOutputEncodingsList();
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getOutputEncodings(int index);
+    Pairingmessage.PairingEncoding getOutputEncodings(int index);
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
     int getOutputEncodingsCount();
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
-    java.util.List<? extends com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> 
+    java.util.List<? extends Pairingmessage.PairingEncodingOrBuilder> 
         getOutputEncodingsOrBuilderList();
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder getOutputEncodingsOrBuilder(
+    Pairingmessage.PairingEncodingOrBuilder getOutputEncodingsOrBuilder(
         int index);
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.RoleType preferred_role = 3;</code>
+     * <code>.RoleType preferred_role = 3;</code>
      * @return The enum numeric value on the wire for preferredRole.
      */
     int getPreferredRoleValue();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.RoleType preferred_role = 3;</code>
+     * <code>.RoleType preferred_role = 3;</code>
      * @return The preferredRole.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType getPreferredRole();
+    Pairingmessage.RoleType getPreferredRole();
   }
   /**
-   * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingOption}
+   * Protobuf type {@code PairingOption}
    */
   public  static final class PairingOption extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.example.myapplication.kunal52.pairing.PairingOption)
+      GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PairingOption)
       PairingOptionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PairingOption.newBuilder() to construct.
-    private PairingOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PairingOption(GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private PairingOption() {
@@ -2234,21 +2236,21 @@ public final class Pairingmessage {
     }
 
     @Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private PairingOption(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      UnknownFieldSet.Builder unknownFields =
+          UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2259,20 +2261,20 @@ public final class Pairingmessage {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                inputEncodings_ = new java.util.ArrayList<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding>();
+                inputEncodings_ = new java.util.ArrayList<Pairingmessage.PairingEncoding>();
                 mutable_bitField0_ |= 0x00000001;
               }
               inputEncodings_.add(
-                  input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.parser(), extensionRegistry));
+                  input.readMessage(Pairingmessage.PairingEncoding.parser(), extensionRegistry));
               break;
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                outputEncodings_ = new java.util.ArrayList<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding>();
+                outputEncodings_ = new java.util.ArrayList<Pairingmessage.PairingEncoding>();
                 mutable_bitField0_ |= 0x00000002;
               }
               outputEncodings_.add(
-                  input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.parser(), extensionRegistry));
+                  input.readMessage(Pairingmessage.PairingEncoding.parser(), extensionRegistry));
               break;
             }
             case 24: {
@@ -2290,10 +2292,10 @@ public final class Pairingmessage {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
@@ -2306,85 +2308,85 @@ public final class Pairingmessage {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final Descriptors.Descriptor
         getDescriptor() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_descriptor;
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_descriptor;
     }
 
     @Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_fieldAccessorTable
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.Builder.class);
+              Pairingmessage.PairingOption.class, Pairingmessage.PairingOption.Builder.class);
     }
 
     public static final int INPUT_ENCODINGS_FIELD_NUMBER = 1;
-    private java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> inputEncodings_;
+    private java.util.List<Pairingmessage.PairingEncoding> inputEncodings_;
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
-    public java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> getInputEncodingsList() {
+    public java.util.List<Pairingmessage.PairingEncoding> getInputEncodingsList() {
       return inputEncodings_;
     }
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
-    public java.util.List<? extends com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> 
+    public java.util.List<? extends Pairingmessage.PairingEncodingOrBuilder> 
         getInputEncodingsOrBuilderList() {
       return inputEncodings_;
     }
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
     public int getInputEncodingsCount() {
       return inputEncodings_.size();
     }
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getInputEncodings(int index) {
+    public Pairingmessage.PairingEncoding getInputEncodings(int index) {
       return inputEncodings_.get(index);
     }
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+     * <code>repeated .PairingEncoding input_encodings = 1;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder getInputEncodingsOrBuilder(
+    public Pairingmessage.PairingEncodingOrBuilder getInputEncodingsOrBuilder(
         int index) {
       return inputEncodings_.get(index);
     }
 
     public static final int OUTPUT_ENCODINGS_FIELD_NUMBER = 2;
-    private java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> outputEncodings_;
+    private java.util.List<Pairingmessage.PairingEncoding> outputEncodings_;
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
-    public java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> getOutputEncodingsList() {
+    public java.util.List<Pairingmessage.PairingEncoding> getOutputEncodingsList() {
       return outputEncodings_;
     }
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
-    public java.util.List<? extends com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> 
+    public java.util.List<? extends Pairingmessage.PairingEncodingOrBuilder> 
         getOutputEncodingsOrBuilderList() {
       return outputEncodings_;
     }
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
     public int getOutputEncodingsCount() {
       return outputEncodings_.size();
     }
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getOutputEncodings(int index) {
+    public Pairingmessage.PairingEncoding getOutputEncodings(int index) {
       return outputEncodings_.get(index);
     }
     /**
-     * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+     * <code>repeated .PairingEncoding output_encodings = 2;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder getOutputEncodingsOrBuilder(
+    public Pairingmessage.PairingEncodingOrBuilder getOutputEncodingsOrBuilder(
         int index) {
       return outputEncodings_.get(index);
     }
@@ -2392,20 +2394,20 @@ public final class Pairingmessage {
     public static final int PREFERRED_ROLE_FIELD_NUMBER = 3;
     private int preferredRole_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.RoleType preferred_role = 3;</code>
+     * <code>.RoleType preferred_role = 3;</code>
      * @return The enum numeric value on the wire for preferredRole.
      */
     public int getPreferredRoleValue() {
       return preferredRole_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.RoleType preferred_role = 3;</code>
+     * <code>.RoleType preferred_role = 3;</code>
      * @return The preferredRole.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType getPreferredRole() {
+    public Pairingmessage.RoleType getPreferredRole() {
       @SuppressWarnings("deprecation")
-      com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType result = com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.valueOf(preferredRole_);
-      return result == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.UNRECOGNIZED : result;
+      Pairingmessage.RoleType result = Pairingmessage.RoleType.valueOf(preferredRole_);
+      return result == null ? Pairingmessage.RoleType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2420,7 +2422,7 @@ public final class Pairingmessage {
     }
 
     @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < inputEncodings_.size(); i++) {
         output.writeMessage(1, inputEncodings_.get(i));
@@ -2428,7 +2430,7 @@ public final class Pairingmessage {
       for (int i = 0; i < outputEncodings_.size(); i++) {
         output.writeMessage(2, outputEncodings_.get(i));
       }
-      if (preferredRole_ != com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.ROLE_TYPE_UNKNOWN.getNumber()) {
+      if (preferredRole_ != Pairingmessage.RoleType.ROLE_TYPE_UNKNOWN.getNumber()) {
         output.writeEnum(3, preferredRole_);
       }
       unknownFields.writeTo(output);
@@ -2441,15 +2443,15 @@ public final class Pairingmessage {
 
       size = 0;
       for (int i = 0; i < inputEncodings_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(1, inputEncodings_.get(i));
       }
       for (int i = 0; i < outputEncodings_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(2, outputEncodings_.get(i));
       }
-      if (preferredRole_ != com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.ROLE_TYPE_UNKNOWN.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
+      if (preferredRole_ != Pairingmessage.RoleType.ROLE_TYPE_UNKNOWN.getNumber()) {
+        size += CodedOutputStream
           .computeEnumSize(3, preferredRole_);
       }
       size += unknownFields.getSerializedSize();
@@ -2462,10 +2464,10 @@ public final class Pairingmessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption)) {
+      if (!(obj instanceof Pairingmessage.PairingOption)) {
         return super.equals(obj);
       }
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption other = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption) obj;
+      Pairingmessage.PairingOption other = (Pairingmessage.PairingOption) obj;
 
       if (!getInputEncodingsList()
           .equals(other.getInputEncodingsList())) return false;
@@ -2498,73 +2500,73 @@ public final class Pairingmessage {
       return hash;
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(
+    public static Pairingmessage.PairingOption parseFrom(
         java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(
+    public static Pairingmessage.PairingOption parseFrom(
         java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingOption parseFrom(
+        ByteString data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingOption parseFrom(
+        ByteString data,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingOption parseFrom(byte[] data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(
+    public static Pairingmessage.PairingOption parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingOption parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(
+    public static Pairingmessage.PairingOption parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseDelimitedFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingOption parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseDelimitedFrom(
+    public static Pairingmessage.PairingOption parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(
-        com.google.protobuf.CodedInputStream input)
+    public static Pairingmessage.PairingOption parseFrom(
+        CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static Pairingmessage.PairingOption parseFrom(
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -2573,7 +2575,7 @@ public final class Pairingmessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption prototype) {
+    public static Builder newBuilder(Pairingmessage.PairingOption prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -2584,42 +2586,42 @@ public final class Pairingmessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingOption}
+     * Protobuf type {@code PairingOption}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.example.myapplication.kunal52.pairing.PairingOption)
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOptionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+        GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PairingOption)
+        Pairingmessage.PairingOptionOrBuilder {
+      public static final Descriptors.Descriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_descriptor;
       }
 
       @Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_fieldAccessorTable
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.Builder.class);
+                Pairingmessage.PairingOption.class, Pairingmessage.PairingOption.Builder.class);
       }
 
-      // Construct using com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.newBuilder()
+      // Construct using Pairingmessage.PairingOption.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getInputEncodingsFieldBuilder();
           getOutputEncodingsFieldBuilder();
@@ -2646,19 +2648,19 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.google.protobuf.Descriptors.Descriptor
+      public Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingOption_descriptor;
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption getDefaultInstanceForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.getDefaultInstance();
+      public Pairingmessage.PairingOption getDefaultInstanceForType() {
+        return Pairingmessage.PairingOption.getDefaultInstance();
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption build() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption result = buildPartial();
+      public Pairingmessage.PairingOption build() {
+        Pairingmessage.PairingOption result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2666,8 +2668,8 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption buildPartial() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption result = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption(this);
+      public Pairingmessage.PairingOption buildPartial() {
+        Pairingmessage.PairingOption result = new Pairingmessage.PairingOption(this);
         int from_bitField0_ = bitField0_;
         if (inputEncodingsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -2698,44 +2700,44 @@ public final class Pairingmessage {
       }
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.setField(field, value);
       }
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.addRepeatedField(field, value);
       }
       @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption) {
-          return mergeFrom((com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption)other);
+      public Builder mergeFrom(Message other) {
+        if (other instanceof Pairingmessage.PairingOption) {
+          return mergeFrom((Pairingmessage.PairingOption)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption other) {
-        if (other == com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.getDefaultInstance()) return this;
+      public Builder mergeFrom(Pairingmessage.PairingOption other) {
+        if (other == Pairingmessage.PairingOption.getDefaultInstance()) return this;
         if (inputEncodingsBuilder_ == null) {
           if (!other.inputEncodings_.isEmpty()) {
             if (inputEncodings_.isEmpty()) {
@@ -2755,7 +2757,7 @@ public final class Pairingmessage {
               inputEncodings_ = other.inputEncodings_;
               bitField0_ = (bitField0_ & ~0x00000001);
               inputEncodingsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInputEncodingsFieldBuilder() : null;
             } else {
               inputEncodingsBuilder_.addAllMessages(other.inputEncodings_);
@@ -2781,7 +2783,7 @@ public final class Pairingmessage {
               outputEncodings_ = other.outputEncodings_;
               bitField0_ = (bitField0_ & ~0x00000002);
               outputEncodingsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOutputEncodingsFieldBuilder() : null;
             } else {
               outputEncodingsBuilder_.addAllMessages(other.outputEncodings_);
@@ -2803,14 +2805,14 @@ public final class Pairingmessage {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption parsedMessage = null;
+        Pairingmessage.PairingOption parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption) e.getUnfinishedMessage();
+        } catch (InvalidProtocolBufferException e) {
+          parsedMessage = (Pairingmessage.PairingOption) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2821,22 +2823,22 @@ public final class Pairingmessage {
       }
       private int bitField0_;
 
-      private java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> inputEncodings_ =
+      private java.util.List<Pairingmessage.PairingEncoding> inputEncodings_ =
         java.util.Collections.emptyList();
       private void ensureInputEncodingsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          inputEncodings_ = new java.util.ArrayList<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding>(inputEncodings_);
+          inputEncodings_ = new java.util.ArrayList<Pairingmessage.PairingEncoding>(inputEncodings_);
           bitField0_ |= 0x00000001;
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> inputEncodingsBuilder_;
+      private RepeatedFieldBuilderV3<
+          Pairingmessage.PairingEncoding, Pairingmessage.PairingEncoding.Builder, Pairingmessage.PairingEncodingOrBuilder> inputEncodingsBuilder_;
 
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
-      public java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> getInputEncodingsList() {
+      public java.util.List<Pairingmessage.PairingEncoding> getInputEncodingsList() {
         if (inputEncodingsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(inputEncodings_);
         } else {
@@ -2844,7 +2846,7 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
       public int getInputEncodingsCount() {
         if (inputEncodingsBuilder_ == null) {
@@ -2854,9 +2856,9 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getInputEncodings(int index) {
+      public Pairingmessage.PairingEncoding getInputEncodings(int index) {
         if (inputEncodingsBuilder_ == null) {
           return inputEncodings_.get(index);
         } else {
@@ -2864,10 +2866,10 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
       public Builder setInputEncodings(
-          int index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding value) {
+          int index, Pairingmessage.PairingEncoding value) {
         if (inputEncodingsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2881,10 +2883,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
       public Builder setInputEncodings(
-          int index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder builderForValue) {
+          int index, Pairingmessage.PairingEncoding.Builder builderForValue) {
         if (inputEncodingsBuilder_ == null) {
           ensureInputEncodingsIsMutable();
           inputEncodings_.set(index, builderForValue.build());
@@ -2895,9 +2897,9 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
-      public Builder addInputEncodings(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding value) {
+      public Builder addInputEncodings(Pairingmessage.PairingEncoding value) {
         if (inputEncodingsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2911,10 +2913,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
       public Builder addInputEncodings(
-          int index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding value) {
+          int index, Pairingmessage.PairingEncoding value) {
         if (inputEncodingsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2928,10 +2930,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
       public Builder addInputEncodings(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder builderForValue) {
+          Pairingmessage.PairingEncoding.Builder builderForValue) {
         if (inputEncodingsBuilder_ == null) {
           ensureInputEncodingsIsMutable();
           inputEncodings_.add(builderForValue.build());
@@ -2942,10 +2944,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
       public Builder addInputEncodings(
-          int index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder builderForValue) {
+          int index, Pairingmessage.PairingEncoding.Builder builderForValue) {
         if (inputEncodingsBuilder_ == null) {
           ensureInputEncodingsIsMutable();
           inputEncodings_.add(index, builderForValue.build());
@@ -2956,13 +2958,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
       public Builder addAllInputEncodings(
-          Iterable<? extends com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> values) {
+          Iterable<? extends Pairingmessage.PairingEncoding> values) {
         if (inputEncodingsBuilder_ == null) {
           ensureInputEncodingsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          AbstractMessageLite.Builder.addAll(
               values, inputEncodings_);
           onChanged();
         } else {
@@ -2971,7 +2973,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
       public Builder clearInputEncodings() {
         if (inputEncodingsBuilder_ == null) {
@@ -2984,7 +2986,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
       public Builder removeInputEncodings(int index) {
         if (inputEncodingsBuilder_ == null) {
@@ -2997,16 +2999,16 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder getInputEncodingsBuilder(
+      public Pairingmessage.PairingEncoding.Builder getInputEncodingsBuilder(
           int index) {
         return getInputEncodingsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder getInputEncodingsOrBuilder(
+      public Pairingmessage.PairingEncodingOrBuilder getInputEncodingsOrBuilder(
           int index) {
         if (inputEncodingsBuilder_ == null) {
           return inputEncodings_.get(index);  } else {
@@ -3014,9 +3016,9 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
-      public java.util.List<? extends com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> 
+      public java.util.List<? extends Pairingmessage.PairingEncodingOrBuilder> 
            getInputEncodingsOrBuilderList() {
         if (inputEncodingsBuilder_ != null) {
           return inputEncodingsBuilder_.getMessageOrBuilderList();
@@ -3025,33 +3027,33 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder addInputEncodingsBuilder() {
+      public Pairingmessage.PairingEncoding.Builder addInputEncodingsBuilder() {
         return getInputEncodingsFieldBuilder().addBuilder(
-            com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDefaultInstance());
+            Pairingmessage.PairingEncoding.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder addInputEncodingsBuilder(
+      public Pairingmessage.PairingEncoding.Builder addInputEncodingsBuilder(
           int index) {
         return getInputEncodingsFieldBuilder().addBuilder(
-            index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDefaultInstance());
+            index, Pairingmessage.PairingEncoding.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding input_encodings = 1;</code>
+       * <code>repeated .PairingEncoding input_encodings = 1;</code>
        */
-      public java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder> 
+      public java.util.List<Pairingmessage.PairingEncoding.Builder> 
            getInputEncodingsBuilderList() {
         return getInputEncodingsFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> 
+      private RepeatedFieldBuilderV3<
+          Pairingmessage.PairingEncoding, Pairingmessage.PairingEncoding.Builder, Pairingmessage.PairingEncodingOrBuilder> 
           getInputEncodingsFieldBuilder() {
         if (inputEncodingsBuilder_ == null) {
-          inputEncodingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder>(
+          inputEncodingsBuilder_ = new RepeatedFieldBuilderV3<
+              Pairingmessage.PairingEncoding, Pairingmessage.PairingEncoding.Builder, Pairingmessage.PairingEncodingOrBuilder>(
                   inputEncodings_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -3061,22 +3063,22 @@ public final class Pairingmessage {
         return inputEncodingsBuilder_;
       }
 
-      private java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> outputEncodings_ =
+      private java.util.List<Pairingmessage.PairingEncoding> outputEncodings_ =
         java.util.Collections.emptyList();
       private void ensureOutputEncodingsIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          outputEncodings_ = new java.util.ArrayList<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding>(outputEncodings_);
+          outputEncodings_ = new java.util.ArrayList<Pairingmessage.PairingEncoding>(outputEncodings_);
           bitField0_ |= 0x00000002;
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> outputEncodingsBuilder_;
+      private RepeatedFieldBuilderV3<
+          Pairingmessage.PairingEncoding, Pairingmessage.PairingEncoding.Builder, Pairingmessage.PairingEncodingOrBuilder> outputEncodingsBuilder_;
 
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
-      public java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> getOutputEncodingsList() {
+      public java.util.List<Pairingmessage.PairingEncoding> getOutputEncodingsList() {
         if (outputEncodingsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(outputEncodings_);
         } else {
@@ -3084,7 +3086,7 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
       public int getOutputEncodingsCount() {
         if (outputEncodingsBuilder_ == null) {
@@ -3094,9 +3096,9 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getOutputEncodings(int index) {
+      public Pairingmessage.PairingEncoding getOutputEncodings(int index) {
         if (outputEncodingsBuilder_ == null) {
           return outputEncodings_.get(index);
         } else {
@@ -3104,10 +3106,10 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
       public Builder setOutputEncodings(
-          int index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding value) {
+          int index, Pairingmessage.PairingEncoding value) {
         if (outputEncodingsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3121,10 +3123,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
       public Builder setOutputEncodings(
-          int index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder builderForValue) {
+          int index, Pairingmessage.PairingEncoding.Builder builderForValue) {
         if (outputEncodingsBuilder_ == null) {
           ensureOutputEncodingsIsMutable();
           outputEncodings_.set(index, builderForValue.build());
@@ -3135,9 +3137,9 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
-      public Builder addOutputEncodings(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding value) {
+      public Builder addOutputEncodings(Pairingmessage.PairingEncoding value) {
         if (outputEncodingsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3151,10 +3153,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
       public Builder addOutputEncodings(
-          int index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding value) {
+          int index, Pairingmessage.PairingEncoding value) {
         if (outputEncodingsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3168,10 +3170,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
       public Builder addOutputEncodings(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder builderForValue) {
+          Pairingmessage.PairingEncoding.Builder builderForValue) {
         if (outputEncodingsBuilder_ == null) {
           ensureOutputEncodingsIsMutable();
           outputEncodings_.add(builderForValue.build());
@@ -3182,10 +3184,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
       public Builder addOutputEncodings(
-          int index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder builderForValue) {
+          int index, Pairingmessage.PairingEncoding.Builder builderForValue) {
         if (outputEncodingsBuilder_ == null) {
           ensureOutputEncodingsIsMutable();
           outputEncodings_.add(index, builderForValue.build());
@@ -3196,13 +3198,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
       public Builder addAllOutputEncodings(
-          Iterable<? extends com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding> values) {
+          Iterable<? extends Pairingmessage.PairingEncoding> values) {
         if (outputEncodingsBuilder_ == null) {
           ensureOutputEncodingsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          AbstractMessageLite.Builder.addAll(
               values, outputEncodings_);
           onChanged();
         } else {
@@ -3211,7 +3213,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
       public Builder clearOutputEncodings() {
         if (outputEncodingsBuilder_ == null) {
@@ -3224,7 +3226,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
       public Builder removeOutputEncodings(int index) {
         if (outputEncodingsBuilder_ == null) {
@@ -3237,16 +3239,16 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder getOutputEncodingsBuilder(
+      public Pairingmessage.PairingEncoding.Builder getOutputEncodingsBuilder(
           int index) {
         return getOutputEncodingsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder getOutputEncodingsOrBuilder(
+      public Pairingmessage.PairingEncodingOrBuilder getOutputEncodingsOrBuilder(
           int index) {
         if (outputEncodingsBuilder_ == null) {
           return outputEncodings_.get(index);  } else {
@@ -3254,9 +3256,9 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
-      public java.util.List<? extends com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> 
+      public java.util.List<? extends Pairingmessage.PairingEncodingOrBuilder> 
            getOutputEncodingsOrBuilderList() {
         if (outputEncodingsBuilder_ != null) {
           return outputEncodingsBuilder_.getMessageOrBuilderList();
@@ -3265,33 +3267,33 @@ public final class Pairingmessage {
         }
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder addOutputEncodingsBuilder() {
+      public Pairingmessage.PairingEncoding.Builder addOutputEncodingsBuilder() {
         return getOutputEncodingsFieldBuilder().addBuilder(
-            com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDefaultInstance());
+            Pairingmessage.PairingEncoding.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder addOutputEncodingsBuilder(
+      public Pairingmessage.PairingEncoding.Builder addOutputEncodingsBuilder(
           int index) {
         return getOutputEncodingsFieldBuilder().addBuilder(
-            index, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDefaultInstance());
+            index, Pairingmessage.PairingEncoding.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.example.myapplication.kunal52.pairing.PairingEncoding output_encodings = 2;</code>
+       * <code>repeated .PairingEncoding output_encodings = 2;</code>
        */
-      public java.util.List<com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder> 
+      public java.util.List<Pairingmessage.PairingEncoding.Builder> 
            getOutputEncodingsBuilderList() {
         return getOutputEncodingsFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> 
+      private RepeatedFieldBuilderV3<
+          Pairingmessage.PairingEncoding, Pairingmessage.PairingEncoding.Builder, Pairingmessage.PairingEncodingOrBuilder> 
           getOutputEncodingsFieldBuilder() {
         if (outputEncodingsBuilder_ == null) {
-          outputEncodingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder>(
+          outputEncodingsBuilder_ = new RepeatedFieldBuilderV3<
+              Pairingmessage.PairingEncoding, Pairingmessage.PairingEncoding.Builder, Pairingmessage.PairingEncodingOrBuilder>(
                   outputEncodings_,
                   ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
@@ -3303,14 +3305,14 @@ public final class Pairingmessage {
 
       private int preferredRole_ = 0;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType preferred_role = 3;</code>
+       * <code>.RoleType preferred_role = 3;</code>
        * @return The enum numeric value on the wire for preferredRole.
        */
       public int getPreferredRoleValue() {
         return preferredRole_;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType preferred_role = 3;</code>
+       * <code>.RoleType preferred_role = 3;</code>
        * @param value The enum numeric value on the wire for preferredRole to set.
        * @return This builder for chaining.
        */
@@ -3320,20 +3322,20 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType preferred_role = 3;</code>
+       * <code>.RoleType preferred_role = 3;</code>
        * @return The preferredRole.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType getPreferredRole() {
+      public Pairingmessage.RoleType getPreferredRole() {
         @SuppressWarnings("deprecation")
-        com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType result = com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.valueOf(preferredRole_);
-        return result == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.UNRECOGNIZED : result;
+        Pairingmessage.RoleType result = Pairingmessage.RoleType.valueOf(preferredRole_);
+        return result == null ? Pairingmessage.RoleType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType preferred_role = 3;</code>
+       * <code>.RoleType preferred_role = 3;</code>
        * @param value The preferredRole to set.
        * @return This builder for chaining.
        */
-      public Builder setPreferredRole(com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType value) {
+      public Builder setPreferredRole(Pairingmessage.RoleType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3343,7 +3345,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType preferred_role = 3;</code>
+       * <code>.RoleType preferred_role = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearPreferredRole() {
@@ -3354,97 +3356,97 @@ public final class Pairingmessage {
       }
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.example.myapplication.kunal52.pairing.PairingOption)
+      // @@protoc_insertion_point(builder_scope:PairingOption)
     }
 
-    // @@protoc_insertion_point(class_scope:com.example.myapplication.kunal52.pairing.PairingOption)
-    private static final com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PairingOption)
+    private static final Pairingmessage.PairingOption DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption();
+      DEFAULT_INSTANCE = new Pairingmessage.PairingOption();
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption getDefaultInstance() {
+    public static Pairingmessage.PairingOption getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PairingOption>
-        PARSER = new com.google.protobuf.AbstractParser<PairingOption>() {
+    private static final Parser<PairingOption>
+        PARSER = new AbstractParser<PairingOption>() {
       @Override
       public PairingOption parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
+          throws InvalidProtocolBufferException {
         return new PairingOption(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PairingOption> parser() {
+    public static Parser<PairingOption> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<PairingOption> getParserForType() {
+    public Parser<PairingOption> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption getDefaultInstanceForType() {
+    public Pairingmessage.PairingOption getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PairingConfigurationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.example.myapplication.kunal52.pairing.PairingConfiguration)
-      com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PairingConfiguration)
+      MessageOrBuilder {
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+     * <code>.PairingEncoding encoding = 1;</code>
      * @return Whether the encoding field is set.
      */
     boolean hasEncoding();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+     * <code>.PairingEncoding encoding = 1;</code>
      * @return The encoding.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getEncoding();
+    Pairingmessage.PairingEncoding getEncoding();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+     * <code>.PairingEncoding encoding = 1;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder getEncodingOrBuilder();
+    Pairingmessage.PairingEncodingOrBuilder getEncodingOrBuilder();
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.RoleType client_role = 2;</code>
+     * <code>.RoleType client_role = 2;</code>
      * @return The enum numeric value on the wire for clientRole.
      */
     int getClientRoleValue();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.RoleType client_role = 2;</code>
+     * <code>.RoleType client_role = 2;</code>
      * @return The clientRole.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType getClientRole();
+    Pairingmessage.RoleType getClientRole();
   }
   /**
-   * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingConfiguration}
+   * Protobuf type {@code PairingConfiguration}
    */
   public  static final class PairingConfiguration extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.example.myapplication.kunal52.pairing.PairingConfiguration)
+      GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PairingConfiguration)
       PairingConfigurationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PairingConfiguration.newBuilder() to construct.
-    private PairingConfiguration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PairingConfiguration(GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private PairingConfiguration() {
@@ -3459,20 +3461,20 @@ public final class Pairingmessage {
     }
 
     @Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private PairingConfiguration(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      UnknownFieldSet.Builder unknownFields =
+          UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3482,11 +3484,11 @@ public final class Pairingmessage {
               done = true;
               break;
             case 10: {
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder subBuilder = null;
+              Pairingmessage.PairingEncoding.Builder subBuilder = null;
               if (encoding_ != null) {
                 subBuilder = encoding_.toBuilder();
               }
-              encoding_ = input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.parser(), extensionRegistry);
+              encoding_ = input.readMessage(Pairingmessage.PairingEncoding.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(encoding_);
                 encoding_ = subBuilder.buildPartial();
@@ -3509,69 +3511,69 @@ public final class Pairingmessage {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final Descriptors.Descriptor
         getDescriptor() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_descriptor;
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_descriptor;
     }
 
     @Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_fieldAccessorTable
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.Builder.class);
+              Pairingmessage.PairingConfiguration.class, Pairingmessage.PairingConfiguration.Builder.class);
     }
 
     public static final int ENCODING_FIELD_NUMBER = 1;
-    private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding encoding_;
+    private Pairingmessage.PairingEncoding encoding_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+     * <code>.PairingEncoding encoding = 1;</code>
      * @return Whether the encoding field is set.
      */
     public boolean hasEncoding() {
       return encoding_ != null;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+     * <code>.PairingEncoding encoding = 1;</code>
      * @return The encoding.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getEncoding() {
-      return encoding_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDefaultInstance() : encoding_;
+    public Pairingmessage.PairingEncoding getEncoding() {
+      return encoding_ == null ? Pairingmessage.PairingEncoding.getDefaultInstance() : encoding_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+     * <code>.PairingEncoding encoding = 1;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder getEncodingOrBuilder() {
+    public Pairingmessage.PairingEncodingOrBuilder getEncodingOrBuilder() {
       return getEncoding();
     }
 
     public static final int CLIENT_ROLE_FIELD_NUMBER = 2;
     private int clientRole_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.RoleType client_role = 2;</code>
+     * <code>.RoleType client_role = 2;</code>
      * @return The enum numeric value on the wire for clientRole.
      */
     public int getClientRoleValue() {
       return clientRole_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.RoleType client_role = 2;</code>
+     * <code>.RoleType client_role = 2;</code>
      * @return The clientRole.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType getClientRole() {
+    public Pairingmessage.RoleType getClientRole() {
       @SuppressWarnings("deprecation")
-      com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType result = com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.valueOf(clientRole_);
-      return result == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.UNRECOGNIZED : result;
+      Pairingmessage.RoleType result = Pairingmessage.RoleType.valueOf(clientRole_);
+      return result == null ? Pairingmessage.RoleType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3586,12 +3588,12 @@ public final class Pairingmessage {
     }
 
     @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(CodedOutputStream output)
                         throws java.io.IOException {
       if (encoding_ != null) {
         output.writeMessage(1, getEncoding());
       }
-      if (clientRole_ != com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.ROLE_TYPE_UNKNOWN.getNumber()) {
+      if (clientRole_ != Pairingmessage.RoleType.ROLE_TYPE_UNKNOWN.getNumber()) {
         output.writeEnum(2, clientRole_);
       }
       unknownFields.writeTo(output);
@@ -3604,11 +3606,11 @@ public final class Pairingmessage {
 
       size = 0;
       if (encoding_ != null) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(1, getEncoding());
       }
-      if (clientRole_ != com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.ROLE_TYPE_UNKNOWN.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
+      if (clientRole_ != Pairingmessage.RoleType.ROLE_TYPE_UNKNOWN.getNumber()) {
+        size += CodedOutputStream
           .computeEnumSize(2, clientRole_);
       }
       size += unknownFields.getSerializedSize();
@@ -3621,10 +3623,10 @@ public final class Pairingmessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration)) {
+      if (!(obj instanceof Pairingmessage.PairingConfiguration)) {
         return super.equals(obj);
       }
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration other = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration) obj;
+      Pairingmessage.PairingConfiguration other = (Pairingmessage.PairingConfiguration) obj;
 
       if (hasEncoding() != other.hasEncoding()) return false;
       if (hasEncoding()) {
@@ -3654,73 +3656,73 @@ public final class Pairingmessage {
       return hash;
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(
+    public static Pairingmessage.PairingConfiguration parseFrom(
         java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(
+    public static Pairingmessage.PairingConfiguration parseFrom(
         java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingConfiguration parseFrom(
+        ByteString data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingConfiguration parseFrom(
+        ByteString data,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingConfiguration parseFrom(byte[] data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(
+    public static Pairingmessage.PairingConfiguration parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingConfiguration parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(
+    public static Pairingmessage.PairingConfiguration parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseDelimitedFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingConfiguration parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseDelimitedFrom(
+    public static Pairingmessage.PairingConfiguration parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(
-        com.google.protobuf.CodedInputStream input)
+    public static Pairingmessage.PairingConfiguration parseFrom(
+        CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static Pairingmessage.PairingConfiguration parseFrom(
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -3729,7 +3731,7 @@ public final class Pairingmessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration prototype) {
+    public static Builder newBuilder(Pairingmessage.PairingConfiguration prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -3740,42 +3742,42 @@ public final class Pairingmessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingConfiguration}
+     * Protobuf type {@code PairingConfiguration}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.example.myapplication.kunal52.pairing.PairingConfiguration)
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+        GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PairingConfiguration)
+        Pairingmessage.PairingConfigurationOrBuilder {
+      public static final Descriptors.Descriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_descriptor;
       }
 
       @Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_fieldAccessorTable
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.Builder.class);
+                Pairingmessage.PairingConfiguration.class, Pairingmessage.PairingConfiguration.Builder.class);
       }
 
-      // Construct using com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.newBuilder()
+      // Construct using Pairingmessage.PairingConfiguration.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
@@ -3794,19 +3796,19 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.google.protobuf.Descriptors.Descriptor
+      public Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfiguration_descriptor;
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration getDefaultInstanceForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.getDefaultInstance();
+      public Pairingmessage.PairingConfiguration getDefaultInstanceForType() {
+        return Pairingmessage.PairingConfiguration.getDefaultInstance();
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration build() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration result = buildPartial();
+      public Pairingmessage.PairingConfiguration build() {
+        Pairingmessage.PairingConfiguration result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3814,8 +3816,8 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration buildPartial() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration result = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration(this);
+      public Pairingmessage.PairingConfiguration buildPartial() {
+        Pairingmessage.PairingConfiguration result = new Pairingmessage.PairingConfiguration(this);
         if (encodingBuilder_ == null) {
           result.encoding_ = encoding_;
         } else {
@@ -3832,44 +3834,44 @@ public final class Pairingmessage {
       }
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.setField(field, value);
       }
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.addRepeatedField(field, value);
       }
       @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration) {
-          return mergeFrom((com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration)other);
+      public Builder mergeFrom(Message other) {
+        if (other instanceof Pairingmessage.PairingConfiguration) {
+          return mergeFrom((Pairingmessage.PairingConfiguration)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration other) {
-        if (other == com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.getDefaultInstance()) return this;
+      public Builder mergeFrom(Pairingmessage.PairingConfiguration other) {
+        if (other == Pairingmessage.PairingConfiguration.getDefaultInstance()) return this;
         if (other.hasEncoding()) {
           mergeEncoding(other.getEncoding());
         }
@@ -3888,14 +3890,14 @@ public final class Pairingmessage {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration parsedMessage = null;
+        Pairingmessage.PairingConfiguration parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration) e.getUnfinishedMessage();
+        } catch (InvalidProtocolBufferException e) {
+          parsedMessage = (Pairingmessage.PairingConfiguration) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3905,31 +3907,31 @@ public final class Pairingmessage {
         return this;
       }
 
-      private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding encoding_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> encodingBuilder_;
+      private Pairingmessage.PairingEncoding encoding_;
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingEncoding, Pairingmessage.PairingEncoding.Builder, Pairingmessage.PairingEncodingOrBuilder> encodingBuilder_;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+       * <code>.PairingEncoding encoding = 1;</code>
        * @return Whether the encoding field is set.
        */
       public boolean hasEncoding() {
         return encodingBuilder_ != null || encoding_ != null;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+       * <code>.PairingEncoding encoding = 1;</code>
        * @return The encoding.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding getEncoding() {
+      public Pairingmessage.PairingEncoding getEncoding() {
         if (encodingBuilder_ == null) {
-          return encoding_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDefaultInstance() : encoding_;
+          return encoding_ == null ? Pairingmessage.PairingEncoding.getDefaultInstance() : encoding_;
         } else {
           return encodingBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+       * <code>.PairingEncoding encoding = 1;</code>
        */
-      public Builder setEncoding(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding value) {
+      public Builder setEncoding(Pairingmessage.PairingEncoding value) {
         if (encodingBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3943,10 +3945,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+       * <code>.PairingEncoding encoding = 1;</code>
        */
       public Builder setEncoding(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder builderForValue) {
+          Pairingmessage.PairingEncoding.Builder builderForValue) {
         if (encodingBuilder_ == null) {
           encoding_ = builderForValue.build();
           onChanged();
@@ -3957,13 +3959,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+       * <code>.PairingEncoding encoding = 1;</code>
        */
-      public Builder mergeEncoding(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding value) {
+      public Builder mergeEncoding(Pairingmessage.PairingEncoding value) {
         if (encodingBuilder_ == null) {
           if (encoding_ != null) {
             encoding_ =
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.newBuilder(encoding_).mergeFrom(value).buildPartial();
+              Pairingmessage.PairingEncoding.newBuilder(encoding_).mergeFrom(value).buildPartial();
           } else {
             encoding_ = value;
           }
@@ -3975,7 +3977,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+       * <code>.PairingEncoding encoding = 1;</code>
        */
       public Builder clearEncoding() {
         if (encodingBuilder_ == null) {
@@ -3989,33 +3991,33 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+       * <code>.PairingEncoding encoding = 1;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder getEncodingBuilder() {
+      public Pairingmessage.PairingEncoding.Builder getEncodingBuilder() {
         
         onChanged();
         return getEncodingFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+       * <code>.PairingEncoding encoding = 1;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder getEncodingOrBuilder() {
+      public Pairingmessage.PairingEncodingOrBuilder getEncodingOrBuilder() {
         if (encodingBuilder_ != null) {
           return encodingBuilder_.getMessageOrBuilder();
         } else {
           return encoding_ == null ?
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.getDefaultInstance() : encoding_;
+              Pairingmessage.PairingEncoding.getDefaultInstance() : encoding_;
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingEncoding encoding = 1;</code>
+       * <code>.PairingEncoding encoding = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder> 
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingEncoding, Pairingmessage.PairingEncoding.Builder, Pairingmessage.PairingEncodingOrBuilder> 
           getEncodingFieldBuilder() {
         if (encodingBuilder_ == null) {
-          encodingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncoding.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingEncodingOrBuilder>(
+          encodingBuilder_ = new SingleFieldBuilderV3<
+              Pairingmessage.PairingEncoding, Pairingmessage.PairingEncoding.Builder, Pairingmessage.PairingEncodingOrBuilder>(
                   getEncoding(),
                   getParentForChildren(),
                   isClean());
@@ -4026,14 +4028,14 @@ public final class Pairingmessage {
 
       private int clientRole_ = 0;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType client_role = 2;</code>
+       * <code>.RoleType client_role = 2;</code>
        * @return The enum numeric value on the wire for clientRole.
        */
       public int getClientRoleValue() {
         return clientRole_;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType client_role = 2;</code>
+       * <code>.RoleType client_role = 2;</code>
        * @param value The enum numeric value on the wire for clientRole to set.
        * @return This builder for chaining.
        */
@@ -4043,20 +4045,20 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType client_role = 2;</code>
+       * <code>.RoleType client_role = 2;</code>
        * @return The clientRole.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType getClientRole() {
+      public Pairingmessage.RoleType getClientRole() {
         @SuppressWarnings("deprecation")
-        com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType result = com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.valueOf(clientRole_);
-        return result == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType.UNRECOGNIZED : result;
+        Pairingmessage.RoleType result = Pairingmessage.RoleType.valueOf(clientRole_);
+        return result == null ? Pairingmessage.RoleType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType client_role = 2;</code>
+       * <code>.RoleType client_role = 2;</code>
        * @param value The clientRole to set.
        * @return This builder for chaining.
        */
-      public Builder setClientRole(com.example.myapplication.kunal52.pairing.Pairingmessage.RoleType value) {
+      public Builder setClientRole(Pairingmessage.RoleType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4066,7 +4068,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.RoleType client_role = 2;</code>
+       * <code>.RoleType client_role = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearClientRole() {
@@ -4077,71 +4079,71 @@ public final class Pairingmessage {
       }
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.example.myapplication.kunal52.pairing.PairingConfiguration)
+      // @@protoc_insertion_point(builder_scope:PairingConfiguration)
     }
 
-    // @@protoc_insertion_point(class_scope:com.example.myapplication.kunal52.pairing.PairingConfiguration)
-    private static final com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PairingConfiguration)
+    private static final Pairingmessage.PairingConfiguration DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration();
+      DEFAULT_INSTANCE = new Pairingmessage.PairingConfiguration();
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration getDefaultInstance() {
+    public static Pairingmessage.PairingConfiguration getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PairingConfiguration>
-        PARSER = new com.google.protobuf.AbstractParser<PairingConfiguration>() {
+    private static final Parser<PairingConfiguration>
+        PARSER = new AbstractParser<PairingConfiguration>() {
       @Override
       public PairingConfiguration parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
+          throws InvalidProtocolBufferException {
         return new PairingConfiguration(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PairingConfiguration> parser() {
+    public static Parser<PairingConfiguration> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<PairingConfiguration> getParserForType() {
+    public Parser<PairingConfiguration> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration getDefaultInstanceForType() {
+    public Pairingmessage.PairingConfiguration getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PairingConfigurationAckOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.example.myapplication.kunal52.pairing.PairingConfigurationAck)
-      com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PairingConfigurationAck)
+      MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingConfigurationAck}
+   * Protobuf type {@code PairingConfigurationAck}
    */
   public  static final class PairingConfigurationAck extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.example.myapplication.kunal52.pairing.PairingConfigurationAck)
+      GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PairingConfigurationAck)
       PairingConfigurationAckOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PairingConfigurationAck.newBuilder() to construct.
-    private PairingConfigurationAck(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PairingConfigurationAck(GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private PairingConfigurationAck() {
@@ -4155,20 +4157,20 @@ public final class Pairingmessage {
     }
 
     @Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private PairingConfigurationAck(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      UnknownFieldSet.Builder unknownFields =
+          UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4186,27 +4188,27 @@ public final class Pairingmessage {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final Descriptors.Descriptor
         getDescriptor() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_descriptor;
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_descriptor;
     }
 
     @Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_fieldAccessorTable
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.Builder.class);
+              Pairingmessage.PairingConfigurationAck.class, Pairingmessage.PairingConfigurationAck.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4221,7 +4223,7 @@ public final class Pairingmessage {
     }
 
     @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
@@ -4242,10 +4244,10 @@ public final class Pairingmessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck)) {
+      if (!(obj instanceof Pairingmessage.PairingConfigurationAck)) {
         return super.equals(obj);
       }
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck other = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck) obj;
+      Pairingmessage.PairingConfigurationAck other = (Pairingmessage.PairingConfigurationAck) obj;
 
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -4263,73 +4265,73 @@ public final class Pairingmessage {
       return hash;
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(
+    public static Pairingmessage.PairingConfigurationAck parseFrom(
         java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(
+    public static Pairingmessage.PairingConfigurationAck parseFrom(
         java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingConfigurationAck parseFrom(
+        ByteString data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingConfigurationAck parseFrom(
+        ByteString data,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingConfigurationAck parseFrom(byte[] data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(
+    public static Pairingmessage.PairingConfigurationAck parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingConfigurationAck parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(
+    public static Pairingmessage.PairingConfigurationAck parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseDelimitedFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingConfigurationAck parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseDelimitedFrom(
+    public static Pairingmessage.PairingConfigurationAck parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(
-        com.google.protobuf.CodedInputStream input)
+    public static Pairingmessage.PairingConfigurationAck parseFrom(
+        CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static Pairingmessage.PairingConfigurationAck parseFrom(
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -4338,7 +4340,7 @@ public final class Pairingmessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck prototype) {
+    public static Builder newBuilder(Pairingmessage.PairingConfigurationAck prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -4349,42 +4351,42 @@ public final class Pairingmessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingConfigurationAck}
+     * Protobuf type {@code PairingConfigurationAck}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.example.myapplication.kunal52.pairing.PairingConfigurationAck)
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAckOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+        GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PairingConfigurationAck)
+        Pairingmessage.PairingConfigurationAckOrBuilder {
+      public static final Descriptors.Descriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_descriptor;
       }
 
       @Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_fieldAccessorTable
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.Builder.class);
+                Pairingmessage.PairingConfigurationAck.class, Pairingmessage.PairingConfigurationAck.Builder.class);
       }
 
-      // Construct using com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.newBuilder()
+      // Construct using Pairingmessage.PairingConfigurationAck.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
@@ -4395,19 +4397,19 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.google.protobuf.Descriptors.Descriptor
+      public Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingConfigurationAck_descriptor;
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck getDefaultInstanceForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.getDefaultInstance();
+      public Pairingmessage.PairingConfigurationAck getDefaultInstanceForType() {
+        return Pairingmessage.PairingConfigurationAck.getDefaultInstance();
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck build() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck result = buildPartial();
+      public Pairingmessage.PairingConfigurationAck build() {
+        Pairingmessage.PairingConfigurationAck result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4415,8 +4417,8 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck buildPartial() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck result = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck(this);
+      public Pairingmessage.PairingConfigurationAck buildPartial() {
+        Pairingmessage.PairingConfigurationAck result = new Pairingmessage.PairingConfigurationAck(this);
         onBuilt();
         return result;
       }
@@ -4427,44 +4429,44 @@ public final class Pairingmessage {
       }
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.setField(field, value);
       }
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.addRepeatedField(field, value);
       }
       @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck) {
-          return mergeFrom((com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck)other);
+      public Builder mergeFrom(Message other) {
+        if (other instanceof Pairingmessage.PairingConfigurationAck) {
+          return mergeFrom((Pairingmessage.PairingConfigurationAck)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck other) {
-        if (other == com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.getDefaultInstance()) return this;
+      public Builder mergeFrom(Pairingmessage.PairingConfigurationAck other) {
+        if (other == Pairingmessage.PairingConfigurationAck.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4477,14 +4479,14 @@ public final class Pairingmessage {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck parsedMessage = null;
+        Pairingmessage.PairingConfigurationAck parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck) e.getUnfinishedMessage();
+        } catch (InvalidProtocolBufferException e) {
+          parsedMessage = (Pairingmessage.PairingConfigurationAck) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4495,81 +4497,81 @@ public final class Pairingmessage {
       }
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.example.myapplication.kunal52.pairing.PairingConfigurationAck)
+      // @@protoc_insertion_point(builder_scope:PairingConfigurationAck)
     }
 
-    // @@protoc_insertion_point(class_scope:com.example.myapplication.kunal52.pairing.PairingConfigurationAck)
-    private static final com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PairingConfigurationAck)
+    private static final Pairingmessage.PairingConfigurationAck DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck();
+      DEFAULT_INSTANCE = new Pairingmessage.PairingConfigurationAck();
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck getDefaultInstance() {
+    public static Pairingmessage.PairingConfigurationAck getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PairingConfigurationAck>
-        PARSER = new com.google.protobuf.AbstractParser<PairingConfigurationAck>() {
+    private static final Parser<PairingConfigurationAck>
+        PARSER = new AbstractParser<PairingConfigurationAck>() {
       @Override
       public PairingConfigurationAck parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
+          throws InvalidProtocolBufferException {
         return new PairingConfigurationAck(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PairingConfigurationAck> parser() {
+    public static Parser<PairingConfigurationAck> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<PairingConfigurationAck> getParserForType() {
+    public Parser<PairingConfigurationAck> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck getDefaultInstanceForType() {
+    public Pairingmessage.PairingConfigurationAck getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PairingSecretOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.example.myapplication.kunal52.pairing.PairingSecret)
-      com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PairingSecret)
+      MessageOrBuilder {
 
     /**
      * <code>bytes secret = 1;</code>
      * @return The secret.
      */
-    com.google.protobuf.ByteString getSecret();
+    ByteString getSecret();
   }
   /**
-   * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingSecret}
+   * Protobuf type {@code PairingSecret}
    */
   public  static final class PairingSecret extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.example.myapplication.kunal52.pairing.PairingSecret)
+      GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PairingSecret)
       PairingSecretOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PairingSecret.newBuilder() to construct.
-    private PairingSecret(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PairingSecret(GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private PairingSecret() {
-      secret_ = com.google.protobuf.ByteString.EMPTY;
+      secret_ = ByteString.EMPTY;
     }
 
     @Override
@@ -4580,20 +4582,20 @@ public final class Pairingmessage {
     }
 
     @Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private PairingSecret(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      UnknownFieldSet.Builder unknownFields =
+          UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4616,36 +4618,36 @@ public final class Pairingmessage {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final Descriptors.Descriptor
         getDescriptor() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_descriptor;
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_descriptor;
     }
 
     @Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_fieldAccessorTable
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.Builder.class);
+              Pairingmessage.PairingSecret.class, Pairingmessage.PairingSecret.Builder.class);
     }
 
     public static final int SECRET_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString secret_;
+    private ByteString secret_;
     /**
      * <code>bytes secret = 1;</code>
      * @return The secret.
      */
-    public com.google.protobuf.ByteString getSecret() {
+    public ByteString getSecret() {
       return secret_;
     }
 
@@ -4661,7 +4663,7 @@ public final class Pairingmessage {
     }
 
     @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(CodedOutputStream output)
                         throws java.io.IOException {
       if (!secret_.isEmpty()) {
         output.writeBytes(1, secret_);
@@ -4676,7 +4678,7 @@ public final class Pairingmessage {
 
       size = 0;
       if (!secret_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeBytesSize(1, secret_);
       }
       size += unknownFields.getSerializedSize();
@@ -4689,10 +4691,10 @@ public final class Pairingmessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret)) {
+      if (!(obj instanceof Pairingmessage.PairingSecret)) {
         return super.equals(obj);
       }
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret other = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret) obj;
+      Pairingmessage.PairingSecret other = (Pairingmessage.PairingSecret) obj;
 
       if (!getSecret()
           .equals(other.getSecret())) return false;
@@ -4714,73 +4716,73 @@ public final class Pairingmessage {
       return hash;
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(
+    public static Pairingmessage.PairingSecret parseFrom(
         java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(
+    public static Pairingmessage.PairingSecret parseFrom(
         java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingSecret parseFrom(
+        ByteString data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingSecret parseFrom(
+        ByteString data,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingSecret parseFrom(byte[] data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(
+    public static Pairingmessage.PairingSecret parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingSecret parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(
+    public static Pairingmessage.PairingSecret parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseDelimitedFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingSecret parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseDelimitedFrom(
+    public static Pairingmessage.PairingSecret parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(
-        com.google.protobuf.CodedInputStream input)
+    public static Pairingmessage.PairingSecret parseFrom(
+        CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static Pairingmessage.PairingSecret parseFrom(
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -4789,7 +4791,7 @@ public final class Pairingmessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret prototype) {
+    public static Builder newBuilder(Pairingmessage.PairingSecret prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -4800,67 +4802,67 @@ public final class Pairingmessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingSecret}
+     * Protobuf type {@code PairingSecret}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.example.myapplication.kunal52.pairing.PairingSecret)
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+        GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PairingSecret)
+        Pairingmessage.PairingSecretOrBuilder {
+      public static final Descriptors.Descriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_descriptor;
       }
 
       @Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_fieldAccessorTable
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.Builder.class);
+                Pairingmessage.PairingSecret.class, Pairingmessage.PairingSecret.Builder.class);
       }
 
-      // Construct using com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.newBuilder()
+      // Construct using Pairingmessage.PairingSecret.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
       @Override
       public Builder clear() {
         super.clear();
-        secret_ = com.google.protobuf.ByteString.EMPTY;
+        secret_ = ByteString.EMPTY;
 
         return this;
       }
 
       @Override
-      public com.google.protobuf.Descriptors.Descriptor
+      public Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecret_descriptor;
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret getDefaultInstanceForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.getDefaultInstance();
+      public Pairingmessage.PairingSecret getDefaultInstanceForType() {
+        return Pairingmessage.PairingSecret.getDefaultInstance();
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret build() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret result = buildPartial();
+      public Pairingmessage.PairingSecret build() {
+        Pairingmessage.PairingSecret result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4868,8 +4870,8 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret buildPartial() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret result = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret(this);
+      public Pairingmessage.PairingSecret buildPartial() {
+        Pairingmessage.PairingSecret result = new Pairingmessage.PairingSecret(this);
         result.secret_ = secret_;
         onBuilt();
         return result;
@@ -4881,45 +4883,45 @@ public final class Pairingmessage {
       }
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.setField(field, value);
       }
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.addRepeatedField(field, value);
       }
       @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret) {
-          return mergeFrom((com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret)other);
+      public Builder mergeFrom(Message other) {
+        if (other instanceof Pairingmessage.PairingSecret) {
+          return mergeFrom((Pairingmessage.PairingSecret)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret other) {
-        if (other == com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.getDefaultInstance()) return this;
-        if (other.getSecret() != com.google.protobuf.ByteString.EMPTY) {
+      public Builder mergeFrom(Pairingmessage.PairingSecret other) {
+        if (other == Pairingmessage.PairingSecret.getDefaultInstance()) return this;
+        if (other.getSecret() != ByteString.EMPTY) {
           setSecret(other.getSecret());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -4934,14 +4936,14 @@ public final class Pairingmessage {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret parsedMessage = null;
+        Pairingmessage.PairingSecret parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret) e.getUnfinishedMessage();
+        } catch (InvalidProtocolBufferException e) {
+          parsedMessage = (Pairingmessage.PairingSecret) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4951,12 +4953,12 @@ public final class Pairingmessage {
         return this;
       }
 
-      private com.google.protobuf.ByteString secret_ = com.google.protobuf.ByteString.EMPTY;
+      private ByteString secret_ = ByteString.EMPTY;
       /**
        * <code>bytes secret = 1;</code>
        * @return The secret.
        */
-      public com.google.protobuf.ByteString getSecret() {
+      public ByteString getSecret() {
         return secret_;
       }
       /**
@@ -4964,7 +4966,7 @@ public final class Pairingmessage {
        * @param value The secret to set.
        * @return This builder for chaining.
        */
-      public Builder setSecret(com.google.protobuf.ByteString value) {
+      public Builder setSecret(ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4985,81 +4987,81 @@ public final class Pairingmessage {
       }
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.example.myapplication.kunal52.pairing.PairingSecret)
+      // @@protoc_insertion_point(builder_scope:PairingSecret)
     }
 
-    // @@protoc_insertion_point(class_scope:com.example.myapplication.kunal52.pairing.PairingSecret)
-    private static final com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PairingSecret)
+    private static final Pairingmessage.PairingSecret DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret();
+      DEFAULT_INSTANCE = new Pairingmessage.PairingSecret();
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret getDefaultInstance() {
+    public static Pairingmessage.PairingSecret getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PairingSecret>
-        PARSER = new com.google.protobuf.AbstractParser<PairingSecret>() {
+    private static final Parser<PairingSecret>
+        PARSER = new AbstractParser<PairingSecret>() {
       @Override
       public PairingSecret parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
+          throws InvalidProtocolBufferException {
         return new PairingSecret(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PairingSecret> parser() {
+    public static Parser<PairingSecret> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<PairingSecret> getParserForType() {
+    public Parser<PairingSecret> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret getDefaultInstanceForType() {
+    public Pairingmessage.PairingSecret getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PairingSecretAckOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.example.myapplication.kunal52.pairing.PairingSecretAck)
-      com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PairingSecretAck)
+      MessageOrBuilder {
 
     /**
      * <code>bytes secret = 1;</code>
      * @return The secret.
      */
-    com.google.protobuf.ByteString getSecret();
+    ByteString getSecret();
   }
   /**
-   * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingSecretAck}
+   * Protobuf type {@code PairingSecretAck}
    */
   public  static final class PairingSecretAck extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.example.myapplication.kunal52.pairing.PairingSecretAck)
+      GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PairingSecretAck)
       PairingSecretAckOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PairingSecretAck.newBuilder() to construct.
-    private PairingSecretAck(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PairingSecretAck(GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private PairingSecretAck() {
-      secret_ = com.google.protobuf.ByteString.EMPTY;
+      secret_ = ByteString.EMPTY;
     }
 
     @Override
@@ -5070,20 +5072,20 @@ public final class Pairingmessage {
     }
 
     @Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private PairingSecretAck(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      UnknownFieldSet.Builder unknownFields =
+          UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -5106,36 +5108,36 @@ public final class Pairingmessage {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final Descriptors.Descriptor
         getDescriptor() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_descriptor;
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_descriptor;
     }
 
     @Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_fieldAccessorTable
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.Builder.class);
+              Pairingmessage.PairingSecretAck.class, Pairingmessage.PairingSecretAck.Builder.class);
     }
 
     public static final int SECRET_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString secret_;
+    private ByteString secret_;
     /**
      * <code>bytes secret = 1;</code>
      * @return The secret.
      */
-    public com.google.protobuf.ByteString getSecret() {
+    public ByteString getSecret() {
       return secret_;
     }
 
@@ -5151,7 +5153,7 @@ public final class Pairingmessage {
     }
 
     @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(CodedOutputStream output)
                         throws java.io.IOException {
       if (!secret_.isEmpty()) {
         output.writeBytes(1, secret_);
@@ -5166,7 +5168,7 @@ public final class Pairingmessage {
 
       size = 0;
       if (!secret_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeBytesSize(1, secret_);
       }
       size += unknownFields.getSerializedSize();
@@ -5179,10 +5181,10 @@ public final class Pairingmessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck)) {
+      if (!(obj instanceof Pairingmessage.PairingSecretAck)) {
         return super.equals(obj);
       }
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck other = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck) obj;
+      Pairingmessage.PairingSecretAck other = (Pairingmessage.PairingSecretAck) obj;
 
       if (!getSecret()
           .equals(other.getSecret())) return false;
@@ -5204,73 +5206,73 @@ public final class Pairingmessage {
       return hash;
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(
+    public static Pairingmessage.PairingSecretAck parseFrom(
         java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(
+    public static Pairingmessage.PairingSecretAck parseFrom(
         java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingSecretAck parseFrom(
+        ByteString data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingSecretAck parseFrom(
+        ByteString data,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingSecretAck parseFrom(byte[] data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(
+    public static Pairingmessage.PairingSecretAck parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingSecretAck parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(
+    public static Pairingmessage.PairingSecretAck parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseDelimitedFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingSecretAck parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseDelimitedFrom(
+    public static Pairingmessage.PairingSecretAck parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(
-        com.google.protobuf.CodedInputStream input)
+    public static Pairingmessage.PairingSecretAck parseFrom(
+        CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static Pairingmessage.PairingSecretAck parseFrom(
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -5279,7 +5281,7 @@ public final class Pairingmessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck prototype) {
+    public static Builder newBuilder(Pairingmessage.PairingSecretAck prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -5290,67 +5292,67 @@ public final class Pairingmessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingSecretAck}
+     * Protobuf type {@code PairingSecretAck}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.example.myapplication.kunal52.pairing.PairingSecretAck)
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAckOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+        GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PairingSecretAck)
+        Pairingmessage.PairingSecretAckOrBuilder {
+      public static final Descriptors.Descriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_descriptor;
       }
 
       @Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_fieldAccessorTable
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.Builder.class);
+                Pairingmessage.PairingSecretAck.class, Pairingmessage.PairingSecretAck.Builder.class);
       }
 
-      // Construct using com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.newBuilder()
+      // Construct using Pairingmessage.PairingSecretAck.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
       @Override
       public Builder clear() {
         super.clear();
-        secret_ = com.google.protobuf.ByteString.EMPTY;
+        secret_ = ByteString.EMPTY;
 
         return this;
       }
 
       @Override
-      public com.google.protobuf.Descriptors.Descriptor
+      public Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingSecretAck_descriptor;
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck getDefaultInstanceForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.getDefaultInstance();
+      public Pairingmessage.PairingSecretAck getDefaultInstanceForType() {
+        return Pairingmessage.PairingSecretAck.getDefaultInstance();
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck build() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck result = buildPartial();
+      public Pairingmessage.PairingSecretAck build() {
+        Pairingmessage.PairingSecretAck result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5358,8 +5360,8 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck buildPartial() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck result = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck(this);
+      public Pairingmessage.PairingSecretAck buildPartial() {
+        Pairingmessage.PairingSecretAck result = new Pairingmessage.PairingSecretAck(this);
         result.secret_ = secret_;
         onBuilt();
         return result;
@@ -5371,45 +5373,45 @@ public final class Pairingmessage {
       }
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.setField(field, value);
       }
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.addRepeatedField(field, value);
       }
       @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck) {
-          return mergeFrom((com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck)other);
+      public Builder mergeFrom(Message other) {
+        if (other instanceof Pairingmessage.PairingSecretAck) {
+          return mergeFrom((Pairingmessage.PairingSecretAck)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck other) {
-        if (other == com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.getDefaultInstance()) return this;
-        if (other.getSecret() != com.google.protobuf.ByteString.EMPTY) {
+      public Builder mergeFrom(Pairingmessage.PairingSecretAck other) {
+        if (other == Pairingmessage.PairingSecretAck.getDefaultInstance()) return this;
+        if (other.getSecret() != ByteString.EMPTY) {
           setSecret(other.getSecret());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -5424,14 +5426,14 @@ public final class Pairingmessage {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck parsedMessage = null;
+        Pairingmessage.PairingSecretAck parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck) e.getUnfinishedMessage();
+        } catch (InvalidProtocolBufferException e) {
+          parsedMessage = (Pairingmessage.PairingSecretAck) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5441,12 +5443,12 @@ public final class Pairingmessage {
         return this;
       }
 
-      private com.google.protobuf.ByteString secret_ = com.google.protobuf.ByteString.EMPTY;
+      private ByteString secret_ = ByteString.EMPTY;
       /**
        * <code>bytes secret = 1;</code>
        * @return The secret.
        */
-      public com.google.protobuf.ByteString getSecret() {
+      public ByteString getSecret() {
         return secret_;
       }
       /**
@@ -5454,7 +5456,7 @@ public final class Pairingmessage {
        * @param value The secret to set.
        * @return This builder for chaining.
        */
-      public Builder setSecret(com.google.protobuf.ByteString value) {
+      public Builder setSecret(ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5475,60 +5477,60 @@ public final class Pairingmessage {
       }
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.example.myapplication.kunal52.pairing.PairingSecretAck)
+      // @@protoc_insertion_point(builder_scope:PairingSecretAck)
     }
 
-    // @@protoc_insertion_point(class_scope:com.example.myapplication.kunal52.pairing.PairingSecretAck)
-    private static final com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PairingSecretAck)
+    private static final Pairingmessage.PairingSecretAck DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck();
+      DEFAULT_INSTANCE = new Pairingmessage.PairingSecretAck();
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck getDefaultInstance() {
+    public static Pairingmessage.PairingSecretAck getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PairingSecretAck>
-        PARSER = new com.google.protobuf.AbstractParser<PairingSecretAck>() {
+    private static final Parser<PairingSecretAck>
+        PARSER = new AbstractParser<PairingSecretAck>() {
       @Override
       public PairingSecretAck parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
+          throws InvalidProtocolBufferException {
         return new PairingSecretAck(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PairingSecretAck> parser() {
+    public static Parser<PairingSecretAck> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<PairingSecretAck> getParserForType() {
+    public Parser<PairingSecretAck> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck getDefaultInstanceForType() {
+    public Pairingmessage.PairingSecretAck getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface PairingMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.example.myapplication.kunal52.pairing.PairingMessage)
-      com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PairingMessage)
+      MessageOrBuilder {
 
     /**
      * <code>int32 protocol_version = 1;</code>
@@ -5537,15 +5539,15 @@ public final class Pairingmessage {
     int getProtocolVersion();
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingMessage.Status status = 2;</code>
+     * <code>.PairingMessage.Status status = 2;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingMessage.Status status = 2;</code>
+     * <code>.PairingMessage.Status status = 2;</code>
      * @return The status.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status getStatus();
+    Pairingmessage.PairingMessage.Status getStatus();
 
     /**
      * <code>int32 request_case = 3;</code>
@@ -5554,120 +5556,120 @@ public final class Pairingmessage {
     int getRequestCase();
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+     * <code>.PairingRequest pairing_request = 10;</code>
      * @return Whether the pairingRequest field is set.
      */
     boolean hasPairingRequest();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+     * <code>.PairingRequest pairing_request = 10;</code>
      * @return The pairingRequest.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest getPairingRequest();
+    Pairingmessage.PairingRequest getPairingRequest();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+     * <code>.PairingRequest pairing_request = 10;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestOrBuilder getPairingRequestOrBuilder();
+    Pairingmessage.PairingRequestOrBuilder getPairingRequestOrBuilder();
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+     * <code>.PairingRequestAck pairing_request_ack = 11;</code>
      * @return Whether the pairingRequestAck field is set.
      */
     boolean hasPairingRequestAck();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+     * <code>.PairingRequestAck pairing_request_ack = 11;</code>
      * @return The pairingRequestAck.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck getPairingRequestAck();
+    Pairingmessage.PairingRequestAck getPairingRequestAck();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+     * <code>.PairingRequestAck pairing_request_ack = 11;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAckOrBuilder getPairingRequestAckOrBuilder();
+    Pairingmessage.PairingRequestAckOrBuilder getPairingRequestAckOrBuilder();
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+     * <code>.PairingOption pairing_option = 20;</code>
      * @return Whether the pairingOption field is set.
      */
     boolean hasPairingOption();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+     * <code>.PairingOption pairing_option = 20;</code>
      * @return The pairingOption.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption getPairingOption();
+    Pairingmessage.PairingOption getPairingOption();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+     * <code>.PairingOption pairing_option = 20;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOptionOrBuilder getPairingOptionOrBuilder();
+    Pairingmessage.PairingOptionOrBuilder getPairingOptionOrBuilder();
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+     * <code>.PairingConfiguration pairing_configuration = 30;</code>
      * @return Whether the pairingConfiguration field is set.
      */
     boolean hasPairingConfiguration();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+     * <code>.PairingConfiguration pairing_configuration = 30;</code>
      * @return The pairingConfiguration.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration getPairingConfiguration();
+    Pairingmessage.PairingConfiguration getPairingConfiguration();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+     * <code>.PairingConfiguration pairing_configuration = 30;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationOrBuilder getPairingConfigurationOrBuilder();
+    Pairingmessage.PairingConfigurationOrBuilder getPairingConfigurationOrBuilder();
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+     * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
      * @return Whether the pairingConfigurationAck field is set.
      */
     boolean hasPairingConfigurationAck();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+     * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
      * @return The pairingConfigurationAck.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck getPairingConfigurationAck();
+    Pairingmessage.PairingConfigurationAck getPairingConfigurationAck();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+     * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAckOrBuilder getPairingConfigurationAckOrBuilder();
+    Pairingmessage.PairingConfigurationAckOrBuilder getPairingConfigurationAckOrBuilder();
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+     * <code>.PairingSecret pairing_secret = 40;</code>
      * @return Whether the pairingSecret field is set.
      */
     boolean hasPairingSecret();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+     * <code>.PairingSecret pairing_secret = 40;</code>
      * @return The pairingSecret.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret getPairingSecret();
+    Pairingmessage.PairingSecret getPairingSecret();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+     * <code>.PairingSecret pairing_secret = 40;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretOrBuilder getPairingSecretOrBuilder();
+    Pairingmessage.PairingSecretOrBuilder getPairingSecretOrBuilder();
 
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+     * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
      * @return Whether the pairingSecretAck field is set.
      */
     boolean hasPairingSecretAck();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+     * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
      * @return The pairingSecretAck.
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck getPairingSecretAck();
+    Pairingmessage.PairingSecretAck getPairingSecretAck();
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+     * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
      */
-    com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAckOrBuilder getPairingSecretAckOrBuilder();
+    Pairingmessage.PairingSecretAckOrBuilder getPairingSecretAckOrBuilder();
   }
   /**
-   * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingMessage}
+   * Protobuf type {@code PairingMessage}
    */
   public  static final class PairingMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.example.myapplication.kunal52.pairing.PairingMessage)
+      GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PairingMessage)
       PairingMessageOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PairingMessage.newBuilder() to construct.
-    private PairingMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    private PairingMessage(GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
     private PairingMessage() {
@@ -5682,20 +5684,20 @@ public final class Pairingmessage {
     }
 
     @Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     private PairingMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new NullPointerException();
       }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      UnknownFieldSet.Builder unknownFields =
+          UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -5721,11 +5723,11 @@ public final class Pairingmessage {
               break;
             }
             case 82: {
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.Builder subBuilder = null;
+              Pairingmessage.PairingRequest.Builder subBuilder = null;
               if (pairingRequest_ != null) {
                 subBuilder = pairingRequest_.toBuilder();
               }
-              pairingRequest_ = input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.parser(), extensionRegistry);
+              pairingRequest_ = input.readMessage(Pairingmessage.PairingRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pairingRequest_);
                 pairingRequest_ = subBuilder.buildPartial();
@@ -5734,11 +5736,11 @@ public final class Pairingmessage {
               break;
             }
             case 90: {
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.Builder subBuilder = null;
+              Pairingmessage.PairingRequestAck.Builder subBuilder = null;
               if (pairingRequestAck_ != null) {
                 subBuilder = pairingRequestAck_.toBuilder();
               }
-              pairingRequestAck_ = input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.parser(), extensionRegistry);
+              pairingRequestAck_ = input.readMessage(Pairingmessage.PairingRequestAck.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pairingRequestAck_);
                 pairingRequestAck_ = subBuilder.buildPartial();
@@ -5747,11 +5749,11 @@ public final class Pairingmessage {
               break;
             }
             case 162: {
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.Builder subBuilder = null;
+              Pairingmessage.PairingOption.Builder subBuilder = null;
               if (pairingOption_ != null) {
                 subBuilder = pairingOption_.toBuilder();
               }
-              pairingOption_ = input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.parser(), extensionRegistry);
+              pairingOption_ = input.readMessage(Pairingmessage.PairingOption.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pairingOption_);
                 pairingOption_ = subBuilder.buildPartial();
@@ -5760,11 +5762,11 @@ public final class Pairingmessage {
               break;
             }
             case 242: {
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.Builder subBuilder = null;
+              Pairingmessage.PairingConfiguration.Builder subBuilder = null;
               if (pairingConfiguration_ != null) {
                 subBuilder = pairingConfiguration_.toBuilder();
               }
-              pairingConfiguration_ = input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.parser(), extensionRegistry);
+              pairingConfiguration_ = input.readMessage(Pairingmessage.PairingConfiguration.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pairingConfiguration_);
                 pairingConfiguration_ = subBuilder.buildPartial();
@@ -5773,11 +5775,11 @@ public final class Pairingmessage {
               break;
             }
             case 250: {
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.Builder subBuilder = null;
+              Pairingmessage.PairingConfigurationAck.Builder subBuilder = null;
               if (pairingConfigurationAck_ != null) {
                 subBuilder = pairingConfigurationAck_.toBuilder();
               }
-              pairingConfigurationAck_ = input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.parser(), extensionRegistry);
+              pairingConfigurationAck_ = input.readMessage(Pairingmessage.PairingConfigurationAck.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pairingConfigurationAck_);
                 pairingConfigurationAck_ = subBuilder.buildPartial();
@@ -5786,11 +5788,11 @@ public final class Pairingmessage {
               break;
             }
             case 322: {
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.Builder subBuilder = null;
+              Pairingmessage.PairingSecret.Builder subBuilder = null;
               if (pairingSecret_ != null) {
                 subBuilder = pairingSecret_.toBuilder();
               }
-              pairingSecret_ = input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.parser(), extensionRegistry);
+              pairingSecret_ = input.readMessage(Pairingmessage.PairingSecret.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pairingSecret_);
                 pairingSecret_ = subBuilder.buildPartial();
@@ -5799,11 +5801,11 @@ public final class Pairingmessage {
               break;
             }
             case 330: {
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.Builder subBuilder = null;
+              Pairingmessage.PairingSecretAck.Builder subBuilder = null;
               if (pairingSecretAck_ != null) {
                 subBuilder = pairingSecretAck_.toBuilder();
               }
-              pairingSecretAck_ = input.readMessage(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.parser(), extensionRegistry);
+              pairingSecretAck_ = input.readMessage(Pairingmessage.PairingSecretAck.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pairingSecretAck_);
                 pairingSecretAck_ = subBuilder.buildPartial();
@@ -5820,34 +5822,33 @@ public final class Pairingmessage {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final Descriptors.Descriptor
         getDescriptor() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_descriptor;
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_descriptor;
     }
 
     @Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Builder.class);
+      return Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(PairingMessage.class, Pairingmessage.PairingMessage.Builder.class);
     }
 
     /**
-     * Protobuf enum {@code com.example.myapplication.kunal52.pairing.PairingMessage.Status}
+     * Protobuf enum {@code PairingMessage.Status}
      */
     public enum Status
-        implements com.google.protobuf.ProtocolMessageEnum {
+        implements ProtocolMessageEnum {
       /**
        * <code>UNKNOWN = 0;</code>
        */
@@ -5934,35 +5935,35 @@ public final class Pairingmessage {
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+      public static Internal.EnumLiteMap<Status>
           internalGetValueMap() {
         return internalValueMap;
       }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
+      private static final Internal.EnumLiteMap<
           Status> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+            new Internal.EnumLiteMap<Status>() {
               public Status findValueByNumber(int number) {
                 return Status.forNumber(number);
               }
             };
 
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+      public final Descriptors.EnumValueDescriptor
           getValueDescriptor() {
         return getDescriptor().getValues().get(ordinal());
       }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
+      public final Descriptors.EnumDescriptor
           getDescriptorForType() {
         return getDescriptor();
       }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
+      public static final Descriptors.EnumDescriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.getDescriptor().getEnumTypes().get(0);
+        return Pairingmessage.PairingMessage.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Status[] VALUES = values();
 
       public static Status valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
@@ -5979,7 +5980,7 @@ public final class Pairingmessage {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:com.example.myapplication.kunal52.pairing.PairingMessage.Status)
+      // @@protoc_insertion_point(enum_scope:PairingMessage.Status)
     }
 
     public static final int PROTOCOL_VERSION_FIELD_NUMBER = 1;
@@ -5995,20 +5996,20 @@ public final class Pairingmessage {
     public static final int STATUS_FIELD_NUMBER = 2;
     private int status_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingMessage.Status status = 2;</code>
+     * <code>.PairingMessage.Status status = 2;</code>
      * @return The enum numeric value on the wire for status.
      */
     public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingMessage.Status status = 2;</code>
+     * <code>.PairingMessage.Status status = 2;</code>
      * @return The status.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status getStatus() {
+    public Pairingmessage.PairingMessage.Status getStatus() {
       @SuppressWarnings("deprecation")
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status result = com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status.valueOf(status_);
-      return result == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status.UNRECOGNIZED : result;
+      Pairingmessage.PairingMessage.Status result = Pairingmessage.PairingMessage.Status.valueOf(status_);
+      return result == null ? Pairingmessage.PairingMessage.Status.UNRECOGNIZED : result;
     }
 
     public static final int REQUEST_CASE_FIELD_NUMBER = 3;
@@ -6022,163 +6023,163 @@ public final class Pairingmessage {
     }
 
     public static final int PAIRING_REQUEST_FIELD_NUMBER = 10;
-    private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest pairingRequest_;
+    private Pairingmessage.PairingRequest pairingRequest_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+     * <code>.PairingRequest pairing_request = 10;</code>
      * @return Whether the pairingRequest field is set.
      */
     public boolean hasPairingRequest() {
       return pairingRequest_ != null;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+     * <code>.PairingRequest pairing_request = 10;</code>
      * @return The pairingRequest.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest getPairingRequest() {
-      return pairingRequest_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.getDefaultInstance() : pairingRequest_;
+    public Pairingmessage.PairingRequest getPairingRequest() {
+      return pairingRequest_ == null ? Pairingmessage.PairingRequest.getDefaultInstance() : pairingRequest_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+     * <code>.PairingRequest pairing_request = 10;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestOrBuilder getPairingRequestOrBuilder() {
+    public Pairingmessage.PairingRequestOrBuilder getPairingRequestOrBuilder() {
       return getPairingRequest();
     }
 
     public static final int PAIRING_REQUEST_ACK_FIELD_NUMBER = 11;
-    private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck pairingRequestAck_;
+    private Pairingmessage.PairingRequestAck pairingRequestAck_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+     * <code>.PairingRequestAck pairing_request_ack = 11;</code>
      * @return Whether the pairingRequestAck field is set.
      */
     public boolean hasPairingRequestAck() {
       return pairingRequestAck_ != null;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+     * <code>.PairingRequestAck pairing_request_ack = 11;</code>
      * @return The pairingRequestAck.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck getPairingRequestAck() {
-      return pairingRequestAck_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.getDefaultInstance() : pairingRequestAck_;
+    public Pairingmessage.PairingRequestAck getPairingRequestAck() {
+      return pairingRequestAck_ == null ? Pairingmessage.PairingRequestAck.getDefaultInstance() : pairingRequestAck_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+     * <code>.PairingRequestAck pairing_request_ack = 11;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAckOrBuilder getPairingRequestAckOrBuilder() {
+    public Pairingmessage.PairingRequestAckOrBuilder getPairingRequestAckOrBuilder() {
       return getPairingRequestAck();
     }
 
     public static final int PAIRING_OPTION_FIELD_NUMBER = 20;
-    private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption pairingOption_;
+    private Pairingmessage.PairingOption pairingOption_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+     * <code>.PairingOption pairing_option = 20;</code>
      * @return Whether the pairingOption field is set.
      */
     public boolean hasPairingOption() {
       return pairingOption_ != null;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+     * <code>.PairingOption pairing_option = 20;</code>
      * @return The pairingOption.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption getPairingOption() {
-      return pairingOption_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.getDefaultInstance() : pairingOption_;
+    public Pairingmessage.PairingOption getPairingOption() {
+      return pairingOption_ == null ? Pairingmessage.PairingOption.getDefaultInstance() : pairingOption_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+     * <code>.PairingOption pairing_option = 20;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOptionOrBuilder getPairingOptionOrBuilder() {
+    public Pairingmessage.PairingOptionOrBuilder getPairingOptionOrBuilder() {
       return getPairingOption();
     }
 
     public static final int PAIRING_CONFIGURATION_FIELD_NUMBER = 30;
-    private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration pairingConfiguration_;
+    private Pairingmessage.PairingConfiguration pairingConfiguration_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+     * <code>.PairingConfiguration pairing_configuration = 30;</code>
      * @return Whether the pairingConfiguration field is set.
      */
     public boolean hasPairingConfiguration() {
       return pairingConfiguration_ != null;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+     * <code>.PairingConfiguration pairing_configuration = 30;</code>
      * @return The pairingConfiguration.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration getPairingConfiguration() {
-      return pairingConfiguration_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.getDefaultInstance() : pairingConfiguration_;
+    public Pairingmessage.PairingConfiguration getPairingConfiguration() {
+      return pairingConfiguration_ == null ? Pairingmessage.PairingConfiguration.getDefaultInstance() : pairingConfiguration_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+     * <code>.PairingConfiguration pairing_configuration = 30;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationOrBuilder getPairingConfigurationOrBuilder() {
+    public Pairingmessage.PairingConfigurationOrBuilder getPairingConfigurationOrBuilder() {
       return getPairingConfiguration();
     }
 
     public static final int PAIRING_CONFIGURATION_ACK_FIELD_NUMBER = 31;
-    private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck pairingConfigurationAck_;
+    private Pairingmessage.PairingConfigurationAck pairingConfigurationAck_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+     * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
      * @return Whether the pairingConfigurationAck field is set.
      */
     public boolean hasPairingConfigurationAck() {
       return pairingConfigurationAck_ != null;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+     * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
      * @return The pairingConfigurationAck.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck getPairingConfigurationAck() {
-      return pairingConfigurationAck_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.getDefaultInstance() : pairingConfigurationAck_;
+    public Pairingmessage.PairingConfigurationAck getPairingConfigurationAck() {
+      return pairingConfigurationAck_ == null ? Pairingmessage.PairingConfigurationAck.getDefaultInstance() : pairingConfigurationAck_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+     * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAckOrBuilder getPairingConfigurationAckOrBuilder() {
+    public Pairingmessage.PairingConfigurationAckOrBuilder getPairingConfigurationAckOrBuilder() {
       return getPairingConfigurationAck();
     }
 
     public static final int PAIRING_SECRET_FIELD_NUMBER = 40;
-    private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret pairingSecret_;
+    private Pairingmessage.PairingSecret pairingSecret_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+     * <code>.PairingSecret pairing_secret = 40;</code>
      * @return Whether the pairingSecret field is set.
      */
     public boolean hasPairingSecret() {
       return pairingSecret_ != null;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+     * <code>.PairingSecret pairing_secret = 40;</code>
      * @return The pairingSecret.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret getPairingSecret() {
-      return pairingSecret_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.getDefaultInstance() : pairingSecret_;
+    public Pairingmessage.PairingSecret getPairingSecret() {
+      return pairingSecret_ == null ? Pairingmessage.PairingSecret.getDefaultInstance() : pairingSecret_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+     * <code>.PairingSecret pairing_secret = 40;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretOrBuilder getPairingSecretOrBuilder() {
+    public Pairingmessage.PairingSecretOrBuilder getPairingSecretOrBuilder() {
       return getPairingSecret();
     }
 
     public static final int PAIRING_SECRET_ACK_FIELD_NUMBER = 41;
-    private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck pairingSecretAck_;
+    private Pairingmessage.PairingSecretAck pairingSecretAck_;
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+     * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
      * @return Whether the pairingSecretAck field is set.
      */
     public boolean hasPairingSecretAck() {
       return pairingSecretAck_ != null;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+     * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
      * @return The pairingSecretAck.
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck getPairingSecretAck() {
-      return pairingSecretAck_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.getDefaultInstance() : pairingSecretAck_;
+    public Pairingmessage.PairingSecretAck getPairingSecretAck() {
+      return pairingSecretAck_ == null ? Pairingmessage.PairingSecretAck.getDefaultInstance() : pairingSecretAck_;
     }
     /**
-     * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+     * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
      */
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAckOrBuilder getPairingSecretAckOrBuilder() {
+    public Pairingmessage.PairingSecretAckOrBuilder getPairingSecretAckOrBuilder() {
       return getPairingSecretAck();
     }
 
@@ -6194,12 +6195,12 @@ public final class Pairingmessage {
     }
 
     @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(CodedOutputStream output)
                         throws java.io.IOException {
       if (protocolVersion_ != 0) {
         output.writeInt32(1, protocolVersion_);
       }
-      if (status_ != com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status.UNKNOWN.getNumber()) {
+      if (status_ != Pairingmessage.PairingMessage.Status.UNKNOWN.getNumber()) {
         output.writeEnum(2, status_);
       }
       if (requestCase_ != 0) {
@@ -6236,43 +6237,43 @@ public final class Pairingmessage {
 
       size = 0;
       if (protocolVersion_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeInt32Size(1, protocolVersion_);
       }
-      if (status_ != com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status.UNKNOWN.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
+      if (status_ != Pairingmessage.PairingMessage.Status.UNKNOWN.getNumber()) {
+        size += CodedOutputStream
           .computeEnumSize(2, status_);
       }
       if (requestCase_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeInt32Size(3, requestCase_);
       }
       if (pairingRequest_ != null) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(10, getPairingRequest());
       }
       if (pairingRequestAck_ != null) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(11, getPairingRequestAck());
       }
       if (pairingOption_ != null) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(20, getPairingOption());
       }
       if (pairingConfiguration_ != null) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(30, getPairingConfiguration());
       }
       if (pairingConfigurationAck_ != null) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(31, getPairingConfigurationAck());
       }
       if (pairingSecret_ != null) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(40, getPairingSecret());
       }
       if (pairingSecretAck_ != null) {
-        size += com.google.protobuf.CodedOutputStream
+        size += CodedOutputStream
           .computeMessageSize(41, getPairingSecretAck());
       }
       size += unknownFields.getSerializedSize();
@@ -6285,10 +6286,10 @@ public final class Pairingmessage {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage)) {
+      if (!(obj instanceof Pairingmessage.PairingMessage)) {
         return super.equals(obj);
       }
-      com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage other = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage) obj;
+      Pairingmessage.PairingMessage other = (Pairingmessage.PairingMessage) obj;
 
       if (getProtocolVersion()
           != other.getProtocolVersion()) return false;
@@ -6380,73 +6381,73 @@ public final class Pairingmessage {
       return hash;
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(
+    public static Pairingmessage.PairingMessage parseFrom(
         java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(
+    public static Pairingmessage.PairingMessage parseFrom(
         java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingMessage parseFrom(
+        ByteString data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingMessage parseFrom(
+        ByteString data,
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Pairingmessage.PairingMessage parseFrom(byte[] data)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(
+    public static Pairingmessage.PairingMessage parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        ExtensionRegistryLite extensionRegistry)
+        throws InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(
+    public static Pairingmessage.PairingMessage parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseDelimitedFrom(java.io.InputStream input)
+    public static Pairingmessage.PairingMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseDelimitedFrom(
+    public static Pairingmessage.PairingMessage parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
+    public static Pairingmessage.PairingMessage parseFrom(
+        CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static Pairingmessage.PairingMessage parseFrom(
+        CodedInputStream input,
+        ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
+      return GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
@@ -6455,7 +6456,7 @@ public final class Pairingmessage {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage prototype) {
+    public static Builder newBuilder(Pairingmessage.PairingMessage prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @Override
@@ -6466,42 +6467,42 @@ public final class Pairingmessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code com.example.myapplication.kunal52.pairing.PairingMessage}
+     * Protobuf type {@code PairingMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.example.myapplication.kunal52.pairing.PairingMessage)
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+        GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PairingMessage)
+        Pairingmessage.PairingMessageOrBuilder {
+      public static final Descriptors.Descriptor
           getDescriptor() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_descriptor;
       }
 
       @Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_fieldAccessorTable
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.class, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Builder.class);
+                Pairingmessage.PairingMessage.class, Pairingmessage.PairingMessage.Builder.class);
       }
 
-      // Construct using com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.newBuilder()
+      // Construct using Pairingmessage.PairingMessage.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
+        if (GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
         }
       }
@@ -6560,19 +6561,19 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.google.protobuf.Descriptors.Descriptor
+      public Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_descriptor;
+        return Pairingmessage.internal_static_com_kunal52_pairing_PairingMessage_descriptor;
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage getDefaultInstanceForType() {
-        return com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.getDefaultInstance();
+      public Pairingmessage.PairingMessage getDefaultInstanceForType() {
+        return Pairingmessage.PairingMessage.getDefaultInstance();
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage build() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage result = buildPartial();
+      public Pairingmessage.PairingMessage build() {
+        Pairingmessage.PairingMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6580,8 +6581,8 @@ public final class Pairingmessage {
       }
 
       @Override
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage buildPartial() {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage result = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage(this);
+      public Pairingmessage.PairingMessage buildPartial() {
+        Pairingmessage.PairingMessage result = new Pairingmessage.PairingMessage(this);
         result.protocolVersion_ = protocolVersion_;
         result.status_ = status_;
         result.requestCase_ = requestCase_;
@@ -6630,44 +6631,44 @@ public final class Pairingmessage {
       }
       @Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.setField(field, value);
       }
       @Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+          Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Descriptors.FieldDescriptor field,
           Object value) {
         return super.addRepeatedField(field, value);
       }
       @Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage) {
-          return mergeFrom((com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage)other);
+      public Builder mergeFrom(Message other) {
+        if (other instanceof Pairingmessage.PairingMessage) {
+          return mergeFrom((Pairingmessage.PairingMessage)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage other) {
-        if (other == com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.getDefaultInstance()) return this;
+      public Builder mergeFrom(Pairingmessage.PairingMessage other) {
+        if (other == Pairingmessage.PairingMessage.getDefaultInstance()) return this;
         if (other.getProtocolVersion() != 0) {
           setProtocolVersion(other.getProtocolVersion());
         }
@@ -6710,14 +6711,14 @@ public final class Pairingmessage {
 
       @Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage parsedMessage = null;
+        Pairingmessage.PairingMessage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage) e.getUnfinishedMessage();
+        } catch (InvalidProtocolBufferException e) {
+          parsedMessage = (Pairingmessage.PairingMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6759,14 +6760,14 @@ public final class Pairingmessage {
 
       private int status_ = 0;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingMessage.Status status = 2;</code>
+       * <code>.PairingMessage.Status status = 2;</code>
        * @return The enum numeric value on the wire for status.
        */
       public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingMessage.Status status = 2;</code>
+       * <code>.PairingMessage.Status status = 2;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -6776,20 +6777,20 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingMessage.Status status = 2;</code>
+       * <code>.PairingMessage.Status status = 2;</code>
        * @return The status.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status getStatus() {
+      public Pairingmessage.PairingMessage.Status getStatus() {
         @SuppressWarnings("deprecation")
-        com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status result = com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status.valueOf(status_);
-        return result == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status.UNRECOGNIZED : result;
+        Pairingmessage.PairingMessage.Status result = Pairingmessage.PairingMessage.Status.valueOf(status_);
+        return result == null ? Pairingmessage.PairingMessage.Status.UNRECOGNIZED : result;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingMessage.Status status = 2;</code>
+       * <code>.PairingMessage.Status status = 2;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage.Status value) {
+      public Builder setStatus(Pairingmessage.PairingMessage.Status value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -6799,7 +6800,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingMessage.Status status = 2;</code>
+       * <code>.PairingMessage.Status status = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -6839,31 +6840,31 @@ public final class Pairingmessage {
         return this;
       }
 
-      private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest pairingRequest_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestOrBuilder> pairingRequestBuilder_;
+      private Pairingmessage.PairingRequest pairingRequest_;
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingRequest, Pairingmessage.PairingRequest.Builder, Pairingmessage.PairingRequestOrBuilder> pairingRequestBuilder_;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+       * <code>.PairingRequest pairing_request = 10;</code>
        * @return Whether the pairingRequest field is set.
        */
       public boolean hasPairingRequest() {
         return pairingRequestBuilder_ != null || pairingRequest_ != null;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+       * <code>.PairingRequest pairing_request = 10;</code>
        * @return The pairingRequest.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest getPairingRequest() {
+      public Pairingmessage.PairingRequest getPairingRequest() {
         if (pairingRequestBuilder_ == null) {
-          return pairingRequest_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.getDefaultInstance() : pairingRequest_;
+          return pairingRequest_ == null ? Pairingmessage.PairingRequest.getDefaultInstance() : pairingRequest_;
         } else {
           return pairingRequestBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+       * <code>.PairingRequest pairing_request = 10;</code>
        */
-      public Builder setPairingRequest(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest value) {
+      public Builder setPairingRequest(Pairingmessage.PairingRequest value) {
         if (pairingRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6877,10 +6878,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+       * <code>.PairingRequest pairing_request = 10;</code>
        */
       public Builder setPairingRequest(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.Builder builderForValue) {
+          Pairingmessage.PairingRequest.Builder builderForValue) {
         if (pairingRequestBuilder_ == null) {
           pairingRequest_ = builderForValue.build();
           onChanged();
@@ -6891,13 +6892,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+       * <code>.PairingRequest pairing_request = 10;</code>
        */
-      public Builder mergePairingRequest(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest value) {
+      public Builder mergePairingRequest(Pairingmessage.PairingRequest value) {
         if (pairingRequestBuilder_ == null) {
           if (pairingRequest_ != null) {
             pairingRequest_ =
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.newBuilder(pairingRequest_).mergeFrom(value).buildPartial();
+              Pairingmessage.PairingRequest.newBuilder(pairingRequest_).mergeFrom(value).buildPartial();
           } else {
             pairingRequest_ = value;
           }
@@ -6909,7 +6910,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+       * <code>.PairingRequest pairing_request = 10;</code>
        */
       public Builder clearPairingRequest() {
         if (pairingRequestBuilder_ == null) {
@@ -6923,33 +6924,33 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+       * <code>.PairingRequest pairing_request = 10;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.Builder getPairingRequestBuilder() {
+      public Pairingmessage.PairingRequest.Builder getPairingRequestBuilder() {
         
         onChanged();
         return getPairingRequestFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+       * <code>.PairingRequest pairing_request = 10;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestOrBuilder getPairingRequestOrBuilder() {
+      public Pairingmessage.PairingRequestOrBuilder getPairingRequestOrBuilder() {
         if (pairingRequestBuilder_ != null) {
           return pairingRequestBuilder_.getMessageOrBuilder();
         } else {
           return pairingRequest_ == null ?
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.getDefaultInstance() : pairingRequest_;
+              Pairingmessage.PairingRequest.getDefaultInstance() : pairingRequest_;
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequest pairing_request = 10;</code>
+       * <code>.PairingRequest pairing_request = 10;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestOrBuilder> 
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingRequest, Pairingmessage.PairingRequest.Builder, Pairingmessage.PairingRequestOrBuilder> 
           getPairingRequestFieldBuilder() {
         if (pairingRequestBuilder_ == null) {
-          pairingRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequest.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestOrBuilder>(
+          pairingRequestBuilder_ = new SingleFieldBuilderV3<
+              Pairingmessage.PairingRequest, Pairingmessage.PairingRequest.Builder, Pairingmessage.PairingRequestOrBuilder>(
                   getPairingRequest(),
                   getParentForChildren(),
                   isClean());
@@ -6958,31 +6959,31 @@ public final class Pairingmessage {
         return pairingRequestBuilder_;
       }
 
-      private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck pairingRequestAck_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAckOrBuilder> pairingRequestAckBuilder_;
+      private Pairingmessage.PairingRequestAck pairingRequestAck_;
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingRequestAck, Pairingmessage.PairingRequestAck.Builder, Pairingmessage.PairingRequestAckOrBuilder> pairingRequestAckBuilder_;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+       * <code>.PairingRequestAck pairing_request_ack = 11;</code>
        * @return Whether the pairingRequestAck field is set.
        */
       public boolean hasPairingRequestAck() {
         return pairingRequestAckBuilder_ != null || pairingRequestAck_ != null;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+       * <code>.PairingRequestAck pairing_request_ack = 11;</code>
        * @return The pairingRequestAck.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck getPairingRequestAck() {
+      public Pairingmessage.PairingRequestAck getPairingRequestAck() {
         if (pairingRequestAckBuilder_ == null) {
-          return pairingRequestAck_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.getDefaultInstance() : pairingRequestAck_;
+          return pairingRequestAck_ == null ? Pairingmessage.PairingRequestAck.getDefaultInstance() : pairingRequestAck_;
         } else {
           return pairingRequestAckBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+       * <code>.PairingRequestAck pairing_request_ack = 11;</code>
        */
-      public Builder setPairingRequestAck(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck value) {
+      public Builder setPairingRequestAck(Pairingmessage.PairingRequestAck value) {
         if (pairingRequestAckBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6996,10 +6997,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+       * <code>.PairingRequestAck pairing_request_ack = 11;</code>
        */
       public Builder setPairingRequestAck(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.Builder builderForValue) {
+          Pairingmessage.PairingRequestAck.Builder builderForValue) {
         if (pairingRequestAckBuilder_ == null) {
           pairingRequestAck_ = builderForValue.build();
           onChanged();
@@ -7010,13 +7011,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+       * <code>.PairingRequestAck pairing_request_ack = 11;</code>
        */
-      public Builder mergePairingRequestAck(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck value) {
+      public Builder mergePairingRequestAck(Pairingmessage.PairingRequestAck value) {
         if (pairingRequestAckBuilder_ == null) {
           if (pairingRequestAck_ != null) {
             pairingRequestAck_ =
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.newBuilder(pairingRequestAck_).mergeFrom(value).buildPartial();
+              Pairingmessage.PairingRequestAck.newBuilder(pairingRequestAck_).mergeFrom(value).buildPartial();
           } else {
             pairingRequestAck_ = value;
           }
@@ -7028,7 +7029,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+       * <code>.PairingRequestAck pairing_request_ack = 11;</code>
        */
       public Builder clearPairingRequestAck() {
         if (pairingRequestAckBuilder_ == null) {
@@ -7042,33 +7043,33 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+       * <code>.PairingRequestAck pairing_request_ack = 11;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.Builder getPairingRequestAckBuilder() {
+      public Pairingmessage.PairingRequestAck.Builder getPairingRequestAckBuilder() {
         
         onChanged();
         return getPairingRequestAckFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+       * <code>.PairingRequestAck pairing_request_ack = 11;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAckOrBuilder getPairingRequestAckOrBuilder() {
+      public Pairingmessage.PairingRequestAckOrBuilder getPairingRequestAckOrBuilder() {
         if (pairingRequestAckBuilder_ != null) {
           return pairingRequestAckBuilder_.getMessageOrBuilder();
         } else {
           return pairingRequestAck_ == null ?
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.getDefaultInstance() : pairingRequestAck_;
+              Pairingmessage.PairingRequestAck.getDefaultInstance() : pairingRequestAck_;
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingRequestAck pairing_request_ack = 11;</code>
+       * <code>.PairingRequestAck pairing_request_ack = 11;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAckOrBuilder> 
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingRequestAck, Pairingmessage.PairingRequestAck.Builder, Pairingmessage.PairingRequestAckOrBuilder> 
           getPairingRequestAckFieldBuilder() {
         if (pairingRequestAckBuilder_ == null) {
-          pairingRequestAckBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAck.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingRequestAckOrBuilder>(
+          pairingRequestAckBuilder_ = new SingleFieldBuilderV3<
+              Pairingmessage.PairingRequestAck, Pairingmessage.PairingRequestAck.Builder, Pairingmessage.PairingRequestAckOrBuilder>(
                   getPairingRequestAck(),
                   getParentForChildren(),
                   isClean());
@@ -7077,31 +7078,31 @@ public final class Pairingmessage {
         return pairingRequestAckBuilder_;
       }
 
-      private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption pairingOption_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOptionOrBuilder> pairingOptionBuilder_;
+      private Pairingmessage.PairingOption pairingOption_;
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingOption, Pairingmessage.PairingOption.Builder, Pairingmessage.PairingOptionOrBuilder> pairingOptionBuilder_;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+       * <code>.PairingOption pairing_option = 20;</code>
        * @return Whether the pairingOption field is set.
        */
       public boolean hasPairingOption() {
         return pairingOptionBuilder_ != null || pairingOption_ != null;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+       * <code>.PairingOption pairing_option = 20;</code>
        * @return The pairingOption.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption getPairingOption() {
+      public Pairingmessage.PairingOption getPairingOption() {
         if (pairingOptionBuilder_ == null) {
-          return pairingOption_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.getDefaultInstance() : pairingOption_;
+          return pairingOption_ == null ? Pairingmessage.PairingOption.getDefaultInstance() : pairingOption_;
         } else {
           return pairingOptionBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+       * <code>.PairingOption pairing_option = 20;</code>
        */
-      public Builder setPairingOption(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption value) {
+      public Builder setPairingOption(Pairingmessage.PairingOption value) {
         if (pairingOptionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7115,10 +7116,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+       * <code>.PairingOption pairing_option = 20;</code>
        */
       public Builder setPairingOption(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.Builder builderForValue) {
+          Pairingmessage.PairingOption.Builder builderForValue) {
         if (pairingOptionBuilder_ == null) {
           pairingOption_ = builderForValue.build();
           onChanged();
@@ -7129,13 +7130,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+       * <code>.PairingOption pairing_option = 20;</code>
        */
-      public Builder mergePairingOption(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption value) {
+      public Builder mergePairingOption(Pairingmessage.PairingOption value) {
         if (pairingOptionBuilder_ == null) {
           if (pairingOption_ != null) {
             pairingOption_ =
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.newBuilder(pairingOption_).mergeFrom(value).buildPartial();
+              Pairingmessage.PairingOption.newBuilder(pairingOption_).mergeFrom(value).buildPartial();
           } else {
             pairingOption_ = value;
           }
@@ -7147,7 +7148,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+       * <code>.PairingOption pairing_option = 20;</code>
        */
       public Builder clearPairingOption() {
         if (pairingOptionBuilder_ == null) {
@@ -7161,33 +7162,33 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+       * <code>.PairingOption pairing_option = 20;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.Builder getPairingOptionBuilder() {
+      public Pairingmessage.PairingOption.Builder getPairingOptionBuilder() {
         
         onChanged();
         return getPairingOptionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+       * <code>.PairingOption pairing_option = 20;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOptionOrBuilder getPairingOptionOrBuilder() {
+      public Pairingmessage.PairingOptionOrBuilder getPairingOptionOrBuilder() {
         if (pairingOptionBuilder_ != null) {
           return pairingOptionBuilder_.getMessageOrBuilder();
         } else {
           return pairingOption_ == null ?
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.getDefaultInstance() : pairingOption_;
+              Pairingmessage.PairingOption.getDefaultInstance() : pairingOption_;
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingOption pairing_option = 20;</code>
+       * <code>.PairingOption pairing_option = 20;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOptionOrBuilder> 
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingOption, Pairingmessage.PairingOption.Builder, Pairingmessage.PairingOptionOrBuilder> 
           getPairingOptionFieldBuilder() {
         if (pairingOptionBuilder_ == null) {
-          pairingOptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOption.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingOptionOrBuilder>(
+          pairingOptionBuilder_ = new SingleFieldBuilderV3<
+              Pairingmessage.PairingOption, Pairingmessage.PairingOption.Builder, Pairingmessage.PairingOptionOrBuilder>(
                   getPairingOption(),
                   getParentForChildren(),
                   isClean());
@@ -7196,31 +7197,31 @@ public final class Pairingmessage {
         return pairingOptionBuilder_;
       }
 
-      private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration pairingConfiguration_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationOrBuilder> pairingConfigurationBuilder_;
+      private Pairingmessage.PairingConfiguration pairingConfiguration_;
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingConfiguration, Pairingmessage.PairingConfiguration.Builder, Pairingmessage.PairingConfigurationOrBuilder> pairingConfigurationBuilder_;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+       * <code>.PairingConfiguration pairing_configuration = 30;</code>
        * @return Whether the pairingConfiguration field is set.
        */
       public boolean hasPairingConfiguration() {
         return pairingConfigurationBuilder_ != null || pairingConfiguration_ != null;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+       * <code>.PairingConfiguration pairing_configuration = 30;</code>
        * @return The pairingConfiguration.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration getPairingConfiguration() {
+      public Pairingmessage.PairingConfiguration getPairingConfiguration() {
         if (pairingConfigurationBuilder_ == null) {
-          return pairingConfiguration_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.getDefaultInstance() : pairingConfiguration_;
+          return pairingConfiguration_ == null ? Pairingmessage.PairingConfiguration.getDefaultInstance() : pairingConfiguration_;
         } else {
           return pairingConfigurationBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+       * <code>.PairingConfiguration pairing_configuration = 30;</code>
        */
-      public Builder setPairingConfiguration(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration value) {
+      public Builder setPairingConfiguration(Pairingmessage.PairingConfiguration value) {
         if (pairingConfigurationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7234,10 +7235,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+       * <code>.PairingConfiguration pairing_configuration = 30;</code>
        */
       public Builder setPairingConfiguration(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.Builder builderForValue) {
+          Pairingmessage.PairingConfiguration.Builder builderForValue) {
         if (pairingConfigurationBuilder_ == null) {
           pairingConfiguration_ = builderForValue.build();
           onChanged();
@@ -7248,13 +7249,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+       * <code>.PairingConfiguration pairing_configuration = 30;</code>
        */
-      public Builder mergePairingConfiguration(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration value) {
+      public Builder mergePairingConfiguration(Pairingmessage.PairingConfiguration value) {
         if (pairingConfigurationBuilder_ == null) {
           if (pairingConfiguration_ != null) {
             pairingConfiguration_ =
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.newBuilder(pairingConfiguration_).mergeFrom(value).buildPartial();
+              Pairingmessage.PairingConfiguration.newBuilder(pairingConfiguration_).mergeFrom(value).buildPartial();
           } else {
             pairingConfiguration_ = value;
           }
@@ -7266,7 +7267,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+       * <code>.PairingConfiguration pairing_configuration = 30;</code>
        */
       public Builder clearPairingConfiguration() {
         if (pairingConfigurationBuilder_ == null) {
@@ -7280,33 +7281,33 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+       * <code>.PairingConfiguration pairing_configuration = 30;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.Builder getPairingConfigurationBuilder() {
+      public Pairingmessage.PairingConfiguration.Builder getPairingConfigurationBuilder() {
         
         onChanged();
         return getPairingConfigurationFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+       * <code>.PairingConfiguration pairing_configuration = 30;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationOrBuilder getPairingConfigurationOrBuilder() {
+      public Pairingmessage.PairingConfigurationOrBuilder getPairingConfigurationOrBuilder() {
         if (pairingConfigurationBuilder_ != null) {
           return pairingConfigurationBuilder_.getMessageOrBuilder();
         } else {
           return pairingConfiguration_ == null ?
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.getDefaultInstance() : pairingConfiguration_;
+              Pairingmessage.PairingConfiguration.getDefaultInstance() : pairingConfiguration_;
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfiguration pairing_configuration = 30;</code>
+       * <code>.PairingConfiguration pairing_configuration = 30;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationOrBuilder> 
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingConfiguration, Pairingmessage.PairingConfiguration.Builder, Pairingmessage.PairingConfigurationOrBuilder> 
           getPairingConfigurationFieldBuilder() {
         if (pairingConfigurationBuilder_ == null) {
-          pairingConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfiguration.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationOrBuilder>(
+          pairingConfigurationBuilder_ = new SingleFieldBuilderV3<
+              Pairingmessage.PairingConfiguration, Pairingmessage.PairingConfiguration.Builder, Pairingmessage.PairingConfigurationOrBuilder>(
                   getPairingConfiguration(),
                   getParentForChildren(),
                   isClean());
@@ -7315,31 +7316,31 @@ public final class Pairingmessage {
         return pairingConfigurationBuilder_;
       }
 
-      private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck pairingConfigurationAck_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAckOrBuilder> pairingConfigurationAckBuilder_;
+      private Pairingmessage.PairingConfigurationAck pairingConfigurationAck_;
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingConfigurationAck, Pairingmessage.PairingConfigurationAck.Builder, Pairingmessage.PairingConfigurationAckOrBuilder> pairingConfigurationAckBuilder_;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+       * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
        * @return Whether the pairingConfigurationAck field is set.
        */
       public boolean hasPairingConfigurationAck() {
         return pairingConfigurationAckBuilder_ != null || pairingConfigurationAck_ != null;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+       * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
        * @return The pairingConfigurationAck.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck getPairingConfigurationAck() {
+      public Pairingmessage.PairingConfigurationAck getPairingConfigurationAck() {
         if (pairingConfigurationAckBuilder_ == null) {
-          return pairingConfigurationAck_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.getDefaultInstance() : pairingConfigurationAck_;
+          return pairingConfigurationAck_ == null ? Pairingmessage.PairingConfigurationAck.getDefaultInstance() : pairingConfigurationAck_;
         } else {
           return pairingConfigurationAckBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+       * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
        */
-      public Builder setPairingConfigurationAck(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck value) {
+      public Builder setPairingConfigurationAck(Pairingmessage.PairingConfigurationAck value) {
         if (pairingConfigurationAckBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7353,10 +7354,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+       * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
        */
       public Builder setPairingConfigurationAck(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.Builder builderForValue) {
+          Pairingmessage.PairingConfigurationAck.Builder builderForValue) {
         if (pairingConfigurationAckBuilder_ == null) {
           pairingConfigurationAck_ = builderForValue.build();
           onChanged();
@@ -7367,13 +7368,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+       * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
        */
-      public Builder mergePairingConfigurationAck(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck value) {
+      public Builder mergePairingConfigurationAck(Pairingmessage.PairingConfigurationAck value) {
         if (pairingConfigurationAckBuilder_ == null) {
           if (pairingConfigurationAck_ != null) {
             pairingConfigurationAck_ =
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.newBuilder(pairingConfigurationAck_).mergeFrom(value).buildPartial();
+              Pairingmessage.PairingConfigurationAck.newBuilder(pairingConfigurationAck_).mergeFrom(value).buildPartial();
           } else {
             pairingConfigurationAck_ = value;
           }
@@ -7385,7 +7386,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+       * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
        */
       public Builder clearPairingConfigurationAck() {
         if (pairingConfigurationAckBuilder_ == null) {
@@ -7399,33 +7400,33 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+       * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.Builder getPairingConfigurationAckBuilder() {
+      public Pairingmessage.PairingConfigurationAck.Builder getPairingConfigurationAckBuilder() {
         
         onChanged();
         return getPairingConfigurationAckFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+       * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAckOrBuilder getPairingConfigurationAckOrBuilder() {
+      public Pairingmessage.PairingConfigurationAckOrBuilder getPairingConfigurationAckOrBuilder() {
         if (pairingConfigurationAckBuilder_ != null) {
           return pairingConfigurationAckBuilder_.getMessageOrBuilder();
         } else {
           return pairingConfigurationAck_ == null ?
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.getDefaultInstance() : pairingConfigurationAck_;
+              Pairingmessage.PairingConfigurationAck.getDefaultInstance() : pairingConfigurationAck_;
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingConfigurationAck pairing_configuration_ack = 31;</code>
+       * <code>.PairingConfigurationAck pairing_configuration_ack = 31;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAckOrBuilder> 
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingConfigurationAck, Pairingmessage.PairingConfigurationAck.Builder, Pairingmessage.PairingConfigurationAckOrBuilder> 
           getPairingConfigurationAckFieldBuilder() {
         if (pairingConfigurationAckBuilder_ == null) {
-          pairingConfigurationAckBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAck.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingConfigurationAckOrBuilder>(
+          pairingConfigurationAckBuilder_ = new SingleFieldBuilderV3<
+              Pairingmessage.PairingConfigurationAck, Pairingmessage.PairingConfigurationAck.Builder, Pairingmessage.PairingConfigurationAckOrBuilder>(
                   getPairingConfigurationAck(),
                   getParentForChildren(),
                   isClean());
@@ -7434,31 +7435,31 @@ public final class Pairingmessage {
         return pairingConfigurationAckBuilder_;
       }
 
-      private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret pairingSecret_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretOrBuilder> pairingSecretBuilder_;
+      private Pairingmessage.PairingSecret pairingSecret_;
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingSecret, Pairingmessage.PairingSecret.Builder, Pairingmessage.PairingSecretOrBuilder> pairingSecretBuilder_;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+       * <code>.PairingSecret pairing_secret = 40;</code>
        * @return Whether the pairingSecret field is set.
        */
       public boolean hasPairingSecret() {
         return pairingSecretBuilder_ != null || pairingSecret_ != null;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+       * <code>.PairingSecret pairing_secret = 40;</code>
        * @return The pairingSecret.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret getPairingSecret() {
+      public Pairingmessage.PairingSecret getPairingSecret() {
         if (pairingSecretBuilder_ == null) {
-          return pairingSecret_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.getDefaultInstance() : pairingSecret_;
+          return pairingSecret_ == null ? Pairingmessage.PairingSecret.getDefaultInstance() : pairingSecret_;
         } else {
           return pairingSecretBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+       * <code>.PairingSecret pairing_secret = 40;</code>
        */
-      public Builder setPairingSecret(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret value) {
+      public Builder setPairingSecret(Pairingmessage.PairingSecret value) {
         if (pairingSecretBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7472,10 +7473,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+       * <code>.PairingSecret pairing_secret = 40;</code>
        */
       public Builder setPairingSecret(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.Builder builderForValue) {
+          Pairingmessage.PairingSecret.Builder builderForValue) {
         if (pairingSecretBuilder_ == null) {
           pairingSecret_ = builderForValue.build();
           onChanged();
@@ -7486,13 +7487,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+       * <code>.PairingSecret pairing_secret = 40;</code>
        */
-      public Builder mergePairingSecret(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret value) {
+      public Builder mergePairingSecret(Pairingmessage.PairingSecret value) {
         if (pairingSecretBuilder_ == null) {
           if (pairingSecret_ != null) {
             pairingSecret_ =
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.newBuilder(pairingSecret_).mergeFrom(value).buildPartial();
+              Pairingmessage.PairingSecret.newBuilder(pairingSecret_).mergeFrom(value).buildPartial();
           } else {
             pairingSecret_ = value;
           }
@@ -7504,7 +7505,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+       * <code>.PairingSecret pairing_secret = 40;</code>
        */
       public Builder clearPairingSecret() {
         if (pairingSecretBuilder_ == null) {
@@ -7518,33 +7519,33 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+       * <code>.PairingSecret pairing_secret = 40;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.Builder getPairingSecretBuilder() {
+      public Pairingmessage.PairingSecret.Builder getPairingSecretBuilder() {
         
         onChanged();
         return getPairingSecretFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+       * <code>.PairingSecret pairing_secret = 40;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretOrBuilder getPairingSecretOrBuilder() {
+      public Pairingmessage.PairingSecretOrBuilder getPairingSecretOrBuilder() {
         if (pairingSecretBuilder_ != null) {
           return pairingSecretBuilder_.getMessageOrBuilder();
         } else {
           return pairingSecret_ == null ?
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.getDefaultInstance() : pairingSecret_;
+              Pairingmessage.PairingSecret.getDefaultInstance() : pairingSecret_;
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecret pairing_secret = 40;</code>
+       * <code>.PairingSecret pairing_secret = 40;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretOrBuilder> 
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingSecret, Pairingmessage.PairingSecret.Builder, Pairingmessage.PairingSecretOrBuilder> 
           getPairingSecretFieldBuilder() {
         if (pairingSecretBuilder_ == null) {
-          pairingSecretBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecret.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretOrBuilder>(
+          pairingSecretBuilder_ = new SingleFieldBuilderV3<
+              Pairingmessage.PairingSecret, Pairingmessage.PairingSecret.Builder, Pairingmessage.PairingSecretOrBuilder>(
                   getPairingSecret(),
                   getParentForChildren(),
                   isClean());
@@ -7553,31 +7554,31 @@ public final class Pairingmessage {
         return pairingSecretBuilder_;
       }
 
-      private com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck pairingSecretAck_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAckOrBuilder> pairingSecretAckBuilder_;
+      private Pairingmessage.PairingSecretAck pairingSecretAck_;
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingSecretAck, Pairingmessage.PairingSecretAck.Builder, Pairingmessage.PairingSecretAckOrBuilder> pairingSecretAckBuilder_;
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+       * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
        * @return Whether the pairingSecretAck field is set.
        */
       public boolean hasPairingSecretAck() {
         return pairingSecretAckBuilder_ != null || pairingSecretAck_ != null;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+       * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
        * @return The pairingSecretAck.
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck getPairingSecretAck() {
+      public Pairingmessage.PairingSecretAck getPairingSecretAck() {
         if (pairingSecretAckBuilder_ == null) {
-          return pairingSecretAck_ == null ? com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.getDefaultInstance() : pairingSecretAck_;
+          return pairingSecretAck_ == null ? Pairingmessage.PairingSecretAck.getDefaultInstance() : pairingSecretAck_;
         } else {
           return pairingSecretAckBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+       * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
        */
-      public Builder setPairingSecretAck(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck value) {
+      public Builder setPairingSecretAck(Pairingmessage.PairingSecretAck value) {
         if (pairingSecretAckBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7591,10 +7592,10 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+       * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
        */
       public Builder setPairingSecretAck(
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.Builder builderForValue) {
+          Pairingmessage.PairingSecretAck.Builder builderForValue) {
         if (pairingSecretAckBuilder_ == null) {
           pairingSecretAck_ = builderForValue.build();
           onChanged();
@@ -7605,13 +7606,13 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+       * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
        */
-      public Builder mergePairingSecretAck(com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck value) {
+      public Builder mergePairingSecretAck(Pairingmessage.PairingSecretAck value) {
         if (pairingSecretAckBuilder_ == null) {
           if (pairingSecretAck_ != null) {
             pairingSecretAck_ =
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.newBuilder(pairingSecretAck_).mergeFrom(value).buildPartial();
+              Pairingmessage.PairingSecretAck.newBuilder(pairingSecretAck_).mergeFrom(value).buildPartial();
           } else {
             pairingSecretAck_ = value;
           }
@@ -7623,7 +7624,7 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+       * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
        */
       public Builder clearPairingSecretAck() {
         if (pairingSecretAckBuilder_ == null) {
@@ -7637,33 +7638,33 @@ public final class Pairingmessage {
         return this;
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+       * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.Builder getPairingSecretAckBuilder() {
+      public Pairingmessage.PairingSecretAck.Builder getPairingSecretAckBuilder() {
         
         onChanged();
         return getPairingSecretAckFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+       * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
        */
-      public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAckOrBuilder getPairingSecretAckOrBuilder() {
+      public Pairingmessage.PairingSecretAckOrBuilder getPairingSecretAckOrBuilder() {
         if (pairingSecretAckBuilder_ != null) {
           return pairingSecretAckBuilder_.getMessageOrBuilder();
         } else {
           return pairingSecretAck_ == null ?
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.getDefaultInstance() : pairingSecretAck_;
+              Pairingmessage.PairingSecretAck.getDefaultInstance() : pairingSecretAck_;
         }
       }
       /**
-       * <code>.com.example.myapplication.kunal52.pairing.PairingSecretAck pairing_secret_ack = 41;</code>
+       * <code>.PairingSecretAck pairing_secret_ack = 41;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAckOrBuilder> 
+      private SingleFieldBuilderV3<
+          Pairingmessage.PairingSecretAck, Pairingmessage.PairingSecretAck.Builder, Pairingmessage.PairingSecretAckOrBuilder> 
           getPairingSecretAckFieldBuilder() {
         if (pairingSecretAckBuilder_ == null) {
-          pairingSecretAckBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAck.Builder, com.example.myapplication.kunal52.pairing.Pairingmessage.PairingSecretAckOrBuilder>(
+          pairingSecretAckBuilder_ = new SingleFieldBuilderV3<
+              Pairingmessage.PairingSecretAck, Pairingmessage.PairingSecretAck.Builder, Pairingmessage.PairingSecretAckOrBuilder>(
                   getPairingSecretAck(),
                   getParentForChildren(),
                   isClean());
@@ -7673,111 +7674,158 @@ public final class Pairingmessage {
       }
       @Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.example.myapplication.kunal52.pairing.PairingMessage)
+      // @@protoc_insertion_point(builder_scope:PairingMessage)
     }
 
-    // @@protoc_insertion_point(class_scope:com.example.myapplication.kunal52.pairing.PairingMessage)
-    private static final com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:PairingMessage)
+    private static final Pairingmessage.PairingMessage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage();
+      DEFAULT_INSTANCE = new Pairingmessage.PairingMessage();
     }
 
-    public static com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage getDefaultInstance() {
+    public static Pairingmessage.PairingMessage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PairingMessage>
-        PARSER = new com.google.protobuf.AbstractParser<PairingMessage>() {
+    private static final Parser<PairingMessage>
+        PARSER = new AbstractParser<PairingMessage>() {
       @Override
       public PairingMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          CodedInputStream input,
+          ExtensionRegistryLite extensionRegistry)
+          throws InvalidProtocolBufferException {
         return new PairingMessage(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PairingMessage> parser() {
+    public static Parser<PairingMessage> parser() {
       return PARSER;
     }
 
     @Override
-    public com.google.protobuf.Parser<PairingMessage> getParserForType() {
+    public Parser<PairingMessage> getParserForType() {
       return PARSER;
     }
 
     @Override
-    public com.example.myapplication.kunal52.pairing.Pairingmessage.PairingMessage getDefaultInstanceForType() {
+    public Pairingmessage.PairingMessage getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final Descriptors.Descriptor
     internal_static_com_kunal52_pairing_PairingRequest_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    GeneratedMessageV3.FieldAccessorTable
       internal_static_com_kunal52_pairing_PairingRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final Descriptors.Descriptor
     internal_static_com_kunal52_pairing_PairingRequestAck_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    GeneratedMessageV3.FieldAccessorTable
       internal_static_com_kunal52_pairing_PairingRequestAck_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final Descriptors.Descriptor
     internal_static_com_kunal52_pairing_PairingEncoding_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    GeneratedMessageV3.FieldAccessorTable
       internal_static_com_kunal52_pairing_PairingEncoding_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final Descriptors.Descriptor
     internal_static_com_kunal52_pairing_PairingOption_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    GeneratedMessageV3.FieldAccessorTable
       internal_static_com_kunal52_pairing_PairingOption_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final Descriptors.Descriptor
     internal_static_com_kunal52_pairing_PairingConfiguration_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    GeneratedMessageV3.FieldAccessorTable
       internal_static_com_kunal52_pairing_PairingConfiguration_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final Descriptors.Descriptor
     internal_static_com_kunal52_pairing_PairingConfigurationAck_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    GeneratedMessageV3.FieldAccessorTable
       internal_static_com_kunal52_pairing_PairingConfigurationAck_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final Descriptors.Descriptor
     internal_static_com_kunal52_pairing_PairingSecret_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    GeneratedMessageV3.FieldAccessorTable
       internal_static_com_kunal52_pairing_PairingSecret_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final Descriptors.Descriptor
     internal_static_com_kunal52_pairing_PairingSecretAck_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    GeneratedMessageV3.FieldAccessorTable
       internal_static_com_kunal52_pairing_PairingSecretAck_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final Descriptors.Descriptor
     internal_static_com_kunal52_pairing_PairingMessage_descriptor;
   private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    GeneratedMessageV3.FieldAccessorTable
       internal_static_com_kunal52_pairing_PairingMessage_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
+  private static  Descriptors.FileDescriptor
       descriptor;
   static {
     String[] descriptorData = {
+          "\n\024pairingmessage.proto\022\023com.kunal52.pair" +
+                  "ing\";\n\016PairingRequest\022\023\n\013client_name\030\002 \001" +
+                  "(\t\022\024\n\014service_name\030\001 \001(\t\"(\n\021PairingReque" +
+                  "stAck\022\023\n\013server_name\030\001 \001(\t\"\244\002\n\017PairingEn" +
+                  "coding\022?\n\004type\030\001 \001(\01621.com.kunal52.pairi" +
+                  "ng.PairingEncoding.EncodingType\022\025\n\rsymbo" +
+                  "l_length\030\002 \001(\r\"\270\001\n\014EncodingType\022\031\n\025ENCOD" +
+                  "ING_TYPE_UNKNOWN\020\000\022\036\n\032ENCODING_TYPE_ALPH" +
+                  "ANUMERIC\020\001\022\031\n\025ENCODING_TYPE_NUMERIC\020\002\022\035\n" +
+                  "\031ENCODING_TYPE_HEXADECIMAL\020\003\022\030\n\024ENCODING" +
+                  "_TYPE_QRCODE\020\004\022\031\n\014UNRECOGNIZED\020\377\377\377\377\377\377\377\377\377" +
+                  "\001\"\305\001\n\rPairingOption\022=\n\017input_encodings\030\001" +
+                  " \003(\0132$.com.kunal52.pairing.PairingEncodi" +
+                  "ng\022>\n\020output_encodings\030\002 \003(\0132$.com.kunal" +
+                  "52.pairing.PairingEncoding\0225\n\016preferred_" +
+                  "role\030\003 \001(\0162\035.com.kunal52.pairing.RoleTyp" +
+                  "e\"\202\001\n\024PairingConfiguration\0226\n\010encoding\030\001" +
+                  " \001(\0132$.com.kunal52.pairing.PairingEncodi" +
+                  "ng\0222\n\013client_role\030\002 \001(\0162\035.com.kunal52.pa" +
+                  "iring.RoleType\"\031\n\027PairingConfigurationAc" +
+                  "k\"\037\n\rPairingSecret\022\016\n\006secret\030\001 \001(\014\"\"\n\020Pa" +
+                  "iringSecretAck\022\016\n\006secret\030\001 \001(\014\"\342\005\n\016Pairi" +
+                  "ngMessage\022\030\n\020protocol_version\030\001 \001(\005\022:\n\006s" +
+                  "tatus\030\002 \001(\0162*.com.kunal52.pairing.Pairin" +
+                  "gMessage.Status\022\024\n\014request_case\030\003 \001(\005\022<\n" +
+                  "\017pairing_request\030\n \001(\0132#.com.kunal52.pai" +
+                  "ring.PairingRequest\022C\n\023pairing_request_a" +
+                  "ck\030\013 \001(\0132&.com.kunal52.pairing.PairingRe" +
+                  "questAck\022:\n\016pairing_option\030\024 \001(\0132\".com.k" +
+                  "unal52.pairing.PairingOption\022H\n\025pairing_" +
+                  "configuration\030\036 \001(\0132).com.kunal52.pairin" +
+                  "g.PairingConfiguration\022O\n\031pairing_config" +
+                  "uration_ack\030\037 \001(\0132,.com.kunal52.pairing." +
+                  "PairingConfigurationAck\022:\n\016pairing_secre" +
+                  "t\030( \001(\0132\".com.kunal52.pairing.PairingSec" +
+                  "ret\022A\n\022pairing_secret_ack\030) \001(\0132%.com.ku" +
+                  "nal52.pairing.PairingSecretAck\"\212\001\n\006Statu" +
+                  "s\022\013\n\007UNKNOWN\020\000\022\016\n\tSTATUS_OK\020\310\001\022\021\n\014STATUS" +
+                  "_ERROR\020\220\003\022\035\n\030STATUS_BAD_CONFIGURATION\020\221\003" +
+                  "\022\026\n\021STATUS_BAD_SECRET\020\222\003\022\031\n\014UNRECOGNIZED" +
+                  "\020\377\377\377\377\377\377\377\377\377\001*g\n\010RoleType\022\025\n\021ROLE_TYPE_UNK" +
+                  "NOWN\020\000\022\023\n\017ROLE_TYPE_INPUT\020\001\022\024\n\020ROLE_TYPE" +
+                  "_OUTPUT\020\002\022\031\n\014UNRECOGNIZED\020\377\377\377\377\377\377\377\377\377\001b\006pr" +
+                  "oto3"
+  };
+   /*
+   String[] descriptorData = {
       "\n\024pairingmessage.proto\022\023com.example.myapplication.kunal52.pair" +
       "ing\";\n\016PairingRequest\022\023\n\013client_name\030\002 \001" +
       "(\t\022\024\n\014service_name\030\001 \001(\t\"(\n\021PairingReque" +
@@ -7790,29 +7838,29 @@ public final class Pairingmessage {
       "\031ENCODING_TYPE_HEXADECIMAL\020\003\022\030\n\024ENCODING" +
       "_TYPE_QRCODE\020\004\022\031\n\014UNRECOGNIZED\020\377\377\377\377\377\377\377\377\377" +
       "\001\"\305\001\n\rPairingOption\022=\n\017input_encodings\030\001" +
-      " \003(\0132$.com.example.myapplication.kunal52.pairing.PairingEncodi" +
+      " \003(\0132$.PairingEncodi" +
       "ng\022>\n\020output_encodings\030\002 \003(\0132$.com.kunal" +
       "52.pairing.PairingEncoding\0225\n\016preferred_" +
-      "role\030\003 \001(\0162\035.com.example.myapplication.kunal52.pairing.RoleTyp" +
+      "role\030\003 \001(\0162\035.RoleTyp" +
       "e\"\202\001\n\024PairingConfiguration\0226\n\010encoding\030\001" +
-      " \001(\0132$.com.example.myapplication.kunal52.pairing.PairingEncodi" +
+      " \001(\0132$.PairingEncodi" +
       "ng\0222\n\013client_role\030\002 \001(\0162\035.com.example.myapplication.kunal52.pa" +
       "iring.RoleType\"\031\n\027PairingConfigurationAc" +
       "k\"\037\n\rPairingSecret\022\016\n\006secret\030\001 \001(\014\"\"\n\020Pa" +
       "iringSecretAck\022\016\n\006secret\030\001 \001(\014\"\342\005\n\016Pairi" +
       "ngMessage\022\030\n\020protocol_version\030\001 \001(\005\022:\n\006s" +
-      "tatus\030\002 \001(\0162*.com.example.myapplication.kunal52.pairing.Pairin" +
+      "tatus\030\002 \001(\0162*.Pairin" +
       "gMessage.Status\022\024\n\014request_case\030\003 \001(\005\022<\n" +
       "\017pairing_request\030\n \001(\0132#.com.example.myapplication.kunal52.pai" +
       "ring.PairingRequest\022C\n\023pairing_request_a" +
-      "ck\030\013 \001(\0132&.com.example.myapplication.kunal52.pairing.PairingRe" +
+      "ck\030\013 \001(\0132&.PairingRe" +
       "questAck\022:\n\016pairing_option\030\024 \001(\0132\".com.k" +
       "unal52.pairing.PairingOption\022H\n\025pairing_" +
       "configuration\030\036 \001(\0132).com.example.myapplication.kunal52.pairin" +
       "g.PairingConfiguration\022O\n\031pairing_config" +
-      "uration_ack\030\037 \001(\0132,.com.example.myapplication.kunal52.pairing." +
+      "uration_ack\030\037 \001(\0132,." +
       "PairingConfigurationAck\022:\n\016pairing_secre" +
-      "t\030( \001(\0132\".com.example.myapplication.kunal52.pairing.PairingSec" +
+      "t\030( \001(\0132\".PairingSec" +
       "ret\022A\n\022pairing_secret_ack\030) \001(\0132%.com.ku" +
       "nal52.pairing.PairingSecretAck\"\212\001\n\006Statu" +
       "s\022\013\n\007UNKNOWN\020\000\022\016\n\tSTATUS_OK\020\310\001\022\021\n\014STATUS" +
@@ -7822,63 +7870,63 @@ public final class Pairingmessage {
       "NOWN\020\000\022\023\n\017ROLE_TYPE_INPUT\020\001\022\024\n\020ROLE_TYPE" +
       "_OUTPUT\020\002\022\031\n\014UNRECOGNIZED\020\377\377\377\377\377\377\377\377\377\001b\006pr" +
       "oto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    };*/
+    descriptor = Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new Descriptors.FileDescriptor[] {
         });
     internal_static_com_kunal52_pairing_PairingRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_com_kunal52_pairing_PairingRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_kunal52_pairing_PairingRequest_descriptor,
         new String[] { "ClientName", "ServiceName", });
     internal_static_com_kunal52_pairing_PairingRequestAck_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_kunal52_pairing_PairingRequestAck_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_kunal52_pairing_PairingRequestAck_descriptor,
         new String[] { "ServerName", });
     internal_static_com_kunal52_pairing_PairingEncoding_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_kunal52_pairing_PairingEncoding_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_kunal52_pairing_PairingEncoding_descriptor,
         new String[] { "Type", "SymbolLength", });
     internal_static_com_kunal52_pairing_PairingOption_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_kunal52_pairing_PairingOption_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_kunal52_pairing_PairingOption_descriptor,
         new String[] { "InputEncodings", "OutputEncodings", "PreferredRole", });
     internal_static_com_kunal52_pairing_PairingConfiguration_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_kunal52_pairing_PairingConfiguration_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_kunal52_pairing_PairingConfiguration_descriptor,
         new String[] { "Encoding", "ClientRole", });
     internal_static_com_kunal52_pairing_PairingConfigurationAck_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_com_kunal52_pairing_PairingConfigurationAck_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_kunal52_pairing_PairingConfigurationAck_descriptor,
         new String[] { });
     internal_static_com_kunal52_pairing_PairingSecret_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_kunal52_pairing_PairingSecret_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_kunal52_pairing_PairingSecret_descriptor,
         new String[] { "Secret", });
     internal_static_com_kunal52_pairing_PairingSecretAck_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_com_kunal52_pairing_PairingSecretAck_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_kunal52_pairing_PairingSecretAck_descriptor,
         new String[] { "Secret", });
     internal_static_com_kunal52_pairing_PairingMessage_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_com_kunal52_pairing_PairingMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_kunal52_pairing_PairingMessage_descriptor,
         new String[] { "ProtocolVersion", "Status", "RequestCase", "PairingRequest", "PairingRequestAck", "PairingOption", "PairingConfiguration", "PairingConfigurationAck", "PairingSecret", "PairingSecretAck", });
   }

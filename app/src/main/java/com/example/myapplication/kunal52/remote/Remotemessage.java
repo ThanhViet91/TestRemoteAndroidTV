@@ -21398,6 +21398,264 @@ public final class Remotemessage {
       descriptor;
   static {
     String[] descriptorData = {
+            "\n\023remotemessage.proto\022\022com.kunal52.remot" +
+                    "e\".\n\032RemoteAppLinkLaunchRequest\022\020\n\010app_l" +
+                    "ink\030\001 \001(\t\"!\n\037RemoteResetPreferredAudioDe" +
+                    "vice\"\037\n\035RemoteSetPreferredAudioDevice\"\031\n" +
+                    "\027RemoteAdjustVolumeLevel\"\264\001\n\024RemoteSetVo" +
+                    "lumeLevel\022\020\n\010unknown1\030\001 \001(\r\022\020\n\010unknown2\030" +
+                    "\002 \001(\r\022\024\n\014player_model\030\003 \001(\t\022\020\n\010unknown4\030" +
+                    "\004 \001(\r\022\020\n\010unknown5\030\005 \001(\r\022\022\n\nvolume_max\030\006 " +
+                    "\001(\r\022\024\n\014volume_level\030\007 \001(\r\022\024\n\014volume_mute" +
+                    "d\030\010 \001(\010\"\036\n\013RemoteStart\022\017\n\007started\030\001 \001(\010\"" +
+                    "\020\n\016RemoteVoiceEnd\"\024\n\022RemoteVoicePayload\"" +
+                    "\022\n\020RemoteVoiceBegin\"v\n\025RemoteTextFieldSt" +
+                    "atus\022\025\n\rcounter_field\030\001 \001(\005\022\r\n\005value\030\002 \001" +
+                    "(\t\022\r\n\005start\030\003 \001(\005\022\013\n\003end\030\004 \001(\005\022\014\n\004int5\030\005" +
+                    " \001(\005\022\r\n\005label\030\006 \001(\t\"c\n\024RemoteImeShowRequ" +
+                    "est\022K\n\030remote_text_field_status\030\002 \001(\0132)." +
+                    "com.kunal52.remote.RemoteTextFieldStatus" +
+                    "\" \n\016RemoteEditInfo\022\016\n\006insert\030\002 \001(\005\"w\n\022Re" +
+                    "moteImeBatchEdit\022\023\n\013ime_counter\030\001 \001(\005\022\025\n" +
+                    "\rfield_counter\030\002 \001(\005\0225\n\tedit_info\030\003 \001(\0132" +
+                    "\".com.kunal52.remote.RemoteEditInfo\"\231\001\n\r" +
+                    "RemoteAppInfo\022\017\n\007counter\030\001 \001(\005\022\014\n\004int2\030\002" +
+                    " \001(\005\022\014\n\004int3\030\003 \001(\005\022\014\n\004int4\030\004 \001(\t\022\014\n\004int7" +
+                    "\030\007 \001(\005\022\014\n\004int8\030\010 \001(\005\022\r\n\005label\030\n \001(\t\022\023\n\013a" +
+                    "pp_package\030\014 \001(\t\022\r\n\005int13\030\r \001(\005\"\217\001\n\022Remo" +
+                    "teImeKeyInject\0223\n\010app_info\030\001 \001(\0132!.com.k" +
+                    "unal52.remote.RemoteAppInfo\022D\n\021text_fiel" +
+                    "d_status\030\002 \001(\0132).com.kunal52.remote.Remo" +
+                    "teTextFieldStatus\"~\n\017RemoteKeyInject\0223\n\010" +
+                    "key_code\030\001 \001(\0162!.com.kunal52.remote.Remo" +
+                    "teKeyCode\0226\n\tdirection\030\002 \001(\0162#.com.kunal" +
+                    "52.remote.RemoteDirection\"\"\n\022RemotePingR" +
+                    "esponse\022\014\n\004val1\030\001 \001(\005\"/\n\021RemotePingReque" +
+                    "st\022\014\n\004val1\030\001 \001(\005\022\014\n\004val2\030\002 \001(\005\"!\n\017Remote" +
+                    "SetActive\022\016\n\006active\030\001 \001(\005\"\200\001\n\020RemoteDevi" +
+                    "ceInfo\022\r\n\005model\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\020\n" +
+                    "\010unknown1\030\003 \001(\005\022\020\n\010unknown2\030\004 \001(\t\022\024\n\014pac" +
+                    "kage_name\030\005 \001(\t\022\023\n\013app_version\030\006 \001(\t\"[\n\017" +
+                    "RemoteConfigure\022\r\n\005code1\030\001 \001(\005\0229\n\013device" +
+                    "_info\030\002 \001(\0132$.com.kunal52.remote.RemoteD" +
+                    "eviceInfo\"P\n\013RemoteError\022\r\n\005value\030\001 \001(\010\022" +
+                    "2\n\007message\030\002 \001(\0132!.com.kunal52.remote.Re" +
+                    "moteMessage\"\231\n\n\rRemoteMessage\022=\n\020remote_" +
+                    "configure\030\001 \001(\0132#.com.kunal52.remote.Rem" +
+                    "oteConfigure\022>\n\021remote_set_active\030\002 \001(\0132" +
+                    "#.com.kunal52.remote.RemoteSetActive\0225\n\014" +
+                    "remote_error\030\003 \001(\0132\037.com.kunal52.remote." +
+                    "RemoteError\022B\n\023remote_ping_request\030\010 \001(\013" +
+                    "2%.com.kunal52.remote.RemotePingRequest\022" +
+                    "D\n\024remote_ping_response\030\t \001(\0132&.com.kuna" +
+                    "l52.remote.RemotePingResponse\022>\n\021remote_" +
+                    "key_inject\030\n \001(\0132#.com.kunal52.remote.Re" +
+                    "moteKeyInject\022E\n\025remote_ime_key_inject\030\024" +
+                    " \001(\0132&.com.kunal52.remote.RemoteImeKeyIn" +
+                    "ject\022E\n\025remote_ime_batch_edit\030\025 \001(\0132&.co" +
+                    "m.kunal52.remote.RemoteImeBatchEdit\022I\n\027r" +
+                    "emote_ime_show_request\030\026 \001(\0132(.com.kunal" +
+                    "52.remote.RemoteImeShowRequest\022@\n\022remote" +
+                    "_voice_begin\030\036 \001(\0132$.com.kunal52.remote." +
+                    "RemoteVoiceBegin\022D\n\024remote_voice_payload" +
+                    "\030\037 \001(\0132&.com.kunal52.remote.RemoteVoiceP" +
+                    "ayload\022<\n\020remote_voice_end\030  \001(\0132\".com.k" +
+                    "unal52.remote.RemoteVoiceEnd\0225\n\014remote_s" +
+                    "tart\030( \001(\0132\037.com.kunal52.remote.RemoteSt" +
+                    "art\022I\n\027remote_set_volume_level\0302 \001(\0132(.c" +
+                    "om.kunal52.remote.RemoteSetVolumeLevel\022O" +
+                    "\n\032remote_adjust_volume_level\0303 \001(\0132+.com" +
+                    ".kunal52.remote.RemoteAdjustVolumeLevel\022" +
+                    "\\\n!remote_set_preferred_audio_device\030< \001" +
+                    "(\01321.com.kunal52.remote.RemoteSetPreferr" +
+                    "edAudioDevice\022`\n#remote_reset_preferred_" +
+                    "audio_device\030= \001(\01323.com.kunal52.remote." +
+                    "RemoteResetPreferredAudioDevice\022V\n\036remot" +
+                    "e_app_link_launch_request\030Z \001(\0132..com.ku" +
+                    "nal52.remote.RemoteAppLinkLaunchRequest*" +
+                    "\3477\n\rRemoteKeyCode\022\023\n\017KEYCODE_UNKNOWN\020\000\022\025" +
+                    "\n\021KEYCODE_SOFT_LEFT\020\001\022\026\n\022KEYCODE_SOFT_RI" +
+                    "GHT\020\002\022\020\n\014KEYCODE_HOME\020\003\022\020\n\014KEYCODE_BACK\020" +
+                    "\004\022\020\n\014KEYCODE_CALL\020\005\022\023\n\017KEYCODE_ENDCALL\020\006" +
+                    "\022\r\n\tKEYCODE_0\020\007\022\r\n\tKEYCODE_1\020\010\022\r\n\tKEYCOD" +
+                    "E_2\020\t\022\r\n\tKEYCODE_3\020\n\022\r\n\tKEYCODE_4\020\013\022\r\n\tK" +
+                    "EYCODE_5\020\014\022\r\n\tKEYCODE_6\020\r\022\r\n\tKEYCODE_7\020\016" +
+                    "\022\r\n\tKEYCODE_8\020\017\022\r\n\tKEYCODE_9\020\020\022\020\n\014KEYCOD" +
+                    "E_STAR\020\021\022\021\n\rKEYCODE_POUND\020\022\022\023\n\017KEYCODE_D" +
+                    "PAD_UP\020\023\022\025\n\021KEYCODE_DPAD_DOWN\020\024\022\025\n\021KEYCO" +
+                    "DE_DPAD_LEFT\020\025\022\026\n\022KEYCODE_DPAD_RIGHT\020\026\022\027" +
+                    "\n\023KEYCODE_DPAD_CENTER\020\027\022\025\n\021KEYCODE_VOLUM" +
+                    "E_UP\020\030\022\027\n\023KEYCODE_VOLUME_DOWN\020\031\022\021\n\rKEYCO" +
+                    "DE_POWER\020\032\022\022\n\016KEYCODE_CAMERA\020\033\022\021\n\rKEYCOD" +
+                    "E_CLEAR\020\034\022\r\n\tKEYCODE_A\020\035\022\r\n\tKEYCODE_B\020\036\022" +
+                    "\r\n\tKEYCODE_C\020\037\022\r\n\tKEYCODE_D\020 \022\r\n\tKEYCODE" +
+                    "_E\020!\022\r\n\tKEYCODE_F\020\"\022\r\n\tKEYCODE_G\020#\022\r\n\tKE" +
+                    "YCODE_H\020$\022\r\n\tKEYCODE_I\020%\022\r\n\tKEYCODE_J\020&\022" +
+                    "\r\n\tKEYCODE_K\020\'\022\r\n\tKEYCODE_L\020(\022\r\n\tKEYCODE" +
+                    "_M\020)\022\r\n\tKEYCODE_N\020*\022\r\n\tKEYCODE_O\020+\022\r\n\tKE" +
+                    "YCODE_P\020,\022\r\n\tKEYCODE_Q\020-\022\r\n\tKEYCODE_R\020.\022" +
+                    "\r\n\tKEYCODE_S\020/\022\r\n\tKEYCODE_T\0200\022\r\n\tKEYCODE" +
+                    "_U\0201\022\r\n\tKEYCODE_V\0202\022\r\n\tKEYCODE_W\0203\022\r\n\tKE" +
+                    "YCODE_X\0204\022\r\n\tKEYCODE_Y\0205\022\r\n\tKEYCODE_Z\0206\022" +
+                    "\021\n\rKEYCODE_COMMA\0207\022\022\n\016KEYCODE_PERIOD\0208\022\024" +
+                    "\n\020KEYCODE_ALT_LEFT\0209\022\025\n\021KEYCODE_ALT_RIGH" +
+                    "T\020:\022\026\n\022KEYCODE_SHIFT_LEFT\020;\022\027\n\023KEYCODE_S" +
+                    "HIFT_RIGHT\020<\022\017\n\013KEYCODE_TAB\020=\022\021\n\rKEYCODE" +
+                    "_SPACE\020>\022\017\n\013KEYCODE_SYM\020?\022\024\n\020KEYCODE_EXP" +
+                    "LORER\020@\022\024\n\020KEYCODE_ENVELOPE\020A\022\021\n\rKEYCODE" +
+                    "_ENTER\020B\022\017\n\013KEYCODE_DEL\020C\022\021\n\rKEYCODE_GRA" +
+                    "VE\020D\022\021\n\rKEYCODE_MINUS\020E\022\022\n\016KEYCODE_EQUAL" +
+                    "S\020F\022\030\n\024KEYCODE_LEFT_BRACKET\020G\022\031\n\025KEYCODE" +
+                    "_RIGHT_BRACKET\020H\022\025\n\021KEYCODE_BACKSLASH\020I\022" +
+                    "\025\n\021KEYCODE_SEMICOLON\020J\022\026\n\022KEYCODE_APOSTR" +
+                    "OPHE\020K\022\021\n\rKEYCODE_SLASH\020L\022\016\n\nKEYCODE_AT\020" +
+                    "M\022\017\n\013KEYCODE_NUM\020N\022\027\n\023KEYCODE_HEADSETHOO" +
+                    "K\020O\022\021\n\rKEYCODE_FOCUS\020P\022\020\n\014KEYCODE_PLUS\020Q" +
+                    "\022\020\n\014KEYCODE_MENU\020R\022\030\n\024KEYCODE_NOTIFICATI" +
+                    "ON\020S\022\022\n\016KEYCODE_SEARCH\020T\022\034\n\030KEYCODE_MEDI" +
+                    "A_PLAY_PAUSE\020U\022\026\n\022KEYCODE_MEDIA_STOP\020V\022\026" +
+                    "\n\022KEYCODE_MEDIA_NEXT\020W\022\032\n\026KEYCODE_MEDIA_" +
+                    "PREVIOUS\020X\022\030\n\024KEYCODE_MEDIA_REWIND\020Y\022\036\n\032" +
+                    "KEYCODE_MEDIA_FAST_FORWARD\020Z\022\020\n\014KEYCODE_" +
+                    "MUTE\020[\022\023\n\017KEYCODE_PAGE_UP\020\\\022\025\n\021KEYCODE_P" +
+                    "AGE_DOWN\020]\022\027\n\023KEYCODE_PICTSYMBOLS\020^\022\032\n\026K" +
+                    "EYCODE_SWITCH_CHARSET\020_\022\024\n\020KEYCODE_BUTTO" +
+                    "N_A\020`\022\024\n\020KEYCODE_BUTTON_B\020a\022\024\n\020KEYCODE_B" +
+                    "UTTON_C\020b\022\024\n\020KEYCODE_BUTTON_X\020c\022\024\n\020KEYCO" +
+                    "DE_BUTTON_Y\020d\022\024\n\020KEYCODE_BUTTON_Z\020e\022\025\n\021K" +
+                    "EYCODE_BUTTON_L1\020f\022\025\n\021KEYCODE_BUTTON_R1\020" +
+                    "g\022\025\n\021KEYCODE_BUTTON_L2\020h\022\025\n\021KEYCODE_BUTT" +
+                    "ON_R2\020i\022\031\n\025KEYCODE_BUTTON_THUMBL\020j\022\031\n\025KE" +
+                    "YCODE_BUTTON_THUMBR\020k\022\030\n\024KEYCODE_BUTTON_" +
+                    "START\020l\022\031\n\025KEYCODE_BUTTON_SELECT\020m\022\027\n\023KE" +
+                    "YCODE_BUTTON_MODE\020n\022\022\n\016KEYCODE_ESCAPE\020o\022" +
+                    "\027\n\023KEYCODE_FORWARD_DEL\020p\022\025\n\021KEYCODE_CTRL" +
+                    "_LEFT\020q\022\026\n\022KEYCODE_CTRL_RIGHT\020r\022\025\n\021KEYCO" +
+                    "DE_CAPS_LOCK\020s\022\027\n\023KEYCODE_SCROLL_LOCK\020t\022" +
+                    "\025\n\021KEYCODE_META_LEFT\020u\022\026\n\022KEYCODE_META_R" +
+                    "IGHT\020v\022\024\n\020KEYCODE_FUNCTION\020w\022\021\n\rKEYCODE_" +
+                    "SYSRQ\020x\022\021\n\rKEYCODE_BREAK\020y\022\025\n\021KEYCODE_MO" +
+                    "VE_HOME\020z\022\024\n\020KEYCODE_MOVE_END\020{\022\022\n\016KEYCO" +
+                    "DE_INSERT\020|\022\023\n\017KEYCODE_FORWARD\020}\022\026\n\022KEYC" +
+                    "ODE_MEDIA_PLAY\020~\022\027\n\023KEYCODE_MEDIA_PAUSE\020" +
+                    "\177\022\030\n\023KEYCODE_MEDIA_CLOSE\020\200\001\022\030\n\023KEYCODE_M" +
+                    "EDIA_EJECT\020\201\001\022\031\n\024KEYCODE_MEDIA_RECORD\020\202\001" +
+                    "\022\017\n\nKEYCODE_F1\020\203\001\022\017\n\nKEYCODE_F2\020\204\001\022\017\n\nKE" +
+                    "YCODE_F3\020\205\001\022\017\n\nKEYCODE_F4\020\206\001\022\017\n\nKEYCODE_" +
+                    "F5\020\207\001\022\017\n\nKEYCODE_F6\020\210\001\022\017\n\nKEYCODE_F7\020\211\001\022" +
+                    "\017\n\nKEYCODE_F8\020\212\001\022\017\n\nKEYCODE_F9\020\213\001\022\020\n\013KEY" +
+                    "CODE_F10\020\214\001\022\020\n\013KEYCODE_F11\020\215\001\022\020\n\013KEYCODE" +
+                    "_F12\020\216\001\022\025\n\020KEYCODE_NUM_LOCK\020\217\001\022\025\n\020KEYCOD" +
+                    "E_NUMPAD_0\020\220\001\022\025\n\020KEYCODE_NUMPAD_1\020\221\001\022\025\n\020" +
+                    "KEYCODE_NUMPAD_2\020\222\001\022\025\n\020KEYCODE_NUMPAD_3\020" +
+                    "\223\001\022\025\n\020KEYCODE_NUMPAD_4\020\224\001\022\025\n\020KEYCODE_NUM" +
+                    "PAD_5\020\225\001\022\025\n\020KEYCODE_NUMPAD_6\020\226\001\022\025\n\020KEYCO" +
+                    "DE_NUMPAD_7\020\227\001\022\025\n\020KEYCODE_NUMPAD_8\020\230\001\022\025\n" +
+                    "\020KEYCODE_NUMPAD_9\020\231\001\022\032\n\025KEYCODE_NUMPAD_D" +
+                    "IVIDE\020\232\001\022\034\n\027KEYCODE_NUMPAD_MULTIPLY\020\233\001\022\034" +
+                    "\n\027KEYCODE_NUMPAD_SUBTRACT\020\234\001\022\027\n\022KEYCODE_" +
+                    "NUMPAD_ADD\020\235\001\022\027\n\022KEYCODE_NUMPAD_DOT\020\236\001\022\031" +
+                    "\n\024KEYCODE_NUMPAD_COMMA\020\237\001\022\031\n\024KEYCODE_NUM" +
+                    "PAD_ENTER\020\240\001\022\032\n\025KEYCODE_NUMPAD_EQUALS\020\241\001" +
+                    "\022\036\n\031KEYCODE_NUMPAD_LEFT_PAREN\020\242\001\022\037\n\032KEYC" +
+                    "ODE_NUMPAD_RIGHT_PAREN\020\243\001\022\030\n\023KEYCODE_VOL" +
+                    "UME_MUTE\020\244\001\022\021\n\014KEYCODE_INFO\020\245\001\022\027\n\022KEYCOD" +
+                    "E_CHANNEL_UP\020\246\001\022\031\n\024KEYCODE_CHANNEL_DOWN\020" +
+                    "\247\001\022\024\n\017KEYCODE_ZOOM_IN\020\250\001\022\025\n\020KEYCODE_ZOOM" +
+                    "_OUT\020\251\001\022\017\n\nKEYCODE_TV\020\252\001\022\023\n\016KEYCODE_WIND" +
+                    "OW\020\253\001\022\022\n\rKEYCODE_GUIDE\020\254\001\022\020\n\013KEYCODE_DVR" +
+                    "\020\255\001\022\025\n\020KEYCODE_BOOKMARK\020\256\001\022\025\n\020KEYCODE_CA" +
+                    "PTIONS\020\257\001\022\025\n\020KEYCODE_SETTINGS\020\260\001\022\025\n\020KEYC" +
+                    "ODE_TV_POWER\020\261\001\022\025\n\020KEYCODE_TV_INPUT\020\262\001\022\026" +
+                    "\n\021KEYCODE_STB_POWER\020\263\001\022\026\n\021KEYCODE_STB_IN" +
+                    "PUT\020\264\001\022\026\n\021KEYCODE_AVR_POWER\020\265\001\022\026\n\021KEYCOD" +
+                    "E_AVR_INPUT\020\266\001\022\025\n\020KEYCODE_PROG_RED\020\267\001\022\027\n" +
+                    "\022KEYCODE_PROG_GREEN\020\270\001\022\030\n\023KEYCODE_PROG_Y" +
+                    "ELLOW\020\271\001\022\026\n\021KEYCODE_PROG_BLUE\020\272\001\022\027\n\022KEYC" +
+                    "ODE_APP_SWITCH\020\273\001\022\025\n\020KEYCODE_BUTTON_1\020\274\001" +
+                    "\022\025\n\020KEYCODE_BUTTON_2\020\275\001\022\025\n\020KEYCODE_BUTTO" +
+                    "N_3\020\276\001\022\025\n\020KEYCODE_BUTTON_4\020\277\001\022\025\n\020KEYCODE" +
+                    "_BUTTON_5\020\300\001\022\025\n\020KEYCODE_BUTTON_6\020\301\001\022\025\n\020K" +
+                    "EYCODE_BUTTON_7\020\302\001\022\025\n\020KEYCODE_BUTTON_8\020\303" +
+                    "\001\022\025\n\020KEYCODE_BUTTON_9\020\304\001\022\026\n\021KEYCODE_BUTT" +
+                    "ON_10\020\305\001\022\026\n\021KEYCODE_BUTTON_11\020\306\001\022\026\n\021KEYC" +
+                    "ODE_BUTTON_12\020\307\001\022\026\n\021KEYCODE_BUTTON_13\020\310\001" +
+                    "\022\026\n\021KEYCODE_BUTTON_14\020\311\001\022\026\n\021KEYCODE_BUTT" +
+                    "ON_15\020\312\001\022\026\n\021KEYCODE_BUTTON_16\020\313\001\022\034\n\027KEYC" +
+                    "ODE_LANGUAGE_SWITCH\020\314\001\022\030\n\023KEYCODE_MANNER" +
+                    "_MODE\020\315\001\022\024\n\017KEYCODE_3D_MODE\020\316\001\022\025\n\020KEYCOD" +
+                    "E_CONTACTS\020\317\001\022\025\n\020KEYCODE_CALENDAR\020\320\001\022\022\n\r" +
+                    "KEYCODE_MUSIC\020\321\001\022\027\n\022KEYCODE_CALCULATOR\020\322" +
+                    "\001\022\034\n\027KEYCODE_ZENKAKU_HANKAKU\020\323\001\022\021\n\014KEYCO" +
+                    "DE_EISU\020\324\001\022\025\n\020KEYCODE_MUHENKAN\020\325\001\022\023\n\016KEY" +
+                    "CODE_HENKAN\020\326\001\022\036\n\031KEYCODE_KATAKANA_HIRAG" +
+                    "ANA\020\327\001\022\020\n\013KEYCODE_YEN\020\330\001\022\017\n\nKEYCODE_RO\020\331" +
+                    "\001\022\021\n\014KEYCODE_KANA\020\332\001\022\023\n\016KEYCODE_ASSIST\020\333" +
+                    "\001\022\034\n\027KEYCODE_BRIGHTNESS_DOWN\020\334\001\022\032\n\025KEYCO" +
+                    "DE_BRIGHTNESS_UP\020\335\001\022\036\n\031KEYCODE_MEDIA_AUD" +
+                    "IO_TRACK\020\336\001\022\022\n\rKEYCODE_SLEEP\020\337\001\022\023\n\016KEYCO" +
+                    "DE_WAKEUP\020\340\001\022\024\n\017KEYCODE_PAIRING\020\341\001\022\033\n\026KE" +
+                    "YCODE_MEDIA_TOP_MENU\020\342\001\022\017\n\nKEYCODE_11\020\343\001" +
+                    "\022\017\n\nKEYCODE_12\020\344\001\022\031\n\024KEYCODE_LAST_CHANNE" +
+                    "L\020\345\001\022\034\n\027KEYCODE_TV_DATA_SERVICE\020\346\001\022\031\n\024KE" +
+                    "YCODE_VOICE_ASSIST\020\347\001\022\035\n\030KEYCODE_TV_RADI" +
+                    "O_SERVICE\020\350\001\022\030\n\023KEYCODE_TV_TELETEXT\020\351\001\022\034" +
+                    "\n\027KEYCODE_TV_NUMBER_ENTRY\020\352\001\022\"\n\035KEYCODE_" +
+                    "TV_TERRESTRIAL_ANALOG\020\353\001\022#\n\036KEYCODE_TV_T" +
+                    "ERRESTRIAL_DIGITAL\020\354\001\022\031\n\024KEYCODE_TV_SATE" +
+                    "LLITE\020\355\001\022\034\n\027KEYCODE_TV_SATELLITE_BS\020\356\001\022\034" +
+                    "\n\027KEYCODE_TV_SATELLITE_CS\020\357\001\022!\n\034KEYCODE_" +
+                    "TV_SATELLITE_SERVICE\020\360\001\022\027\n\022KEYCODE_TV_NE" +
+                    "TWORK\020\361\001\022\035\n\030KEYCODE_TV_ANTENNA_CABLE\020\362\001\022" +
+                    "\034\n\027KEYCODE_TV_INPUT_HDMI_1\020\363\001\022\034\n\027KEYCODE" +
+                    "_TV_INPUT_HDMI_2\020\364\001\022\034\n\027KEYCODE_TV_INPUT_" +
+                    "HDMI_3\020\365\001\022\034\n\027KEYCODE_TV_INPUT_HDMI_4\020\366\001\022" +
+                    "!\n\034KEYCODE_TV_INPUT_COMPOSITE_1\020\367\001\022!\n\034KE" +
+                    "YCODE_TV_INPUT_COMPOSITE_2\020\370\001\022!\n\034KEYCODE" +
+                    "_TV_INPUT_COMPONENT_1\020\371\001\022!\n\034KEYCODE_TV_I" +
+                    "NPUT_COMPONENT_2\020\372\001\022\033\n\026KEYCODE_TV_INPUT_" +
+                    "VGA_1\020\373\001\022!\n\034KEYCODE_TV_AUDIO_DESCRIPTION" +
+                    "\020\374\001\022(\n#KEYCODE_TV_AUDIO_DESCRIPTION_MIX_" +
+                    "UP\020\375\001\022*\n%KEYCODE_TV_AUDIO_DESCRIPTION_MI" +
+                    "X_DOWN\020\376\001\022\031\n\024KEYCODE_TV_ZOOM_MODE\020\377\001\022\035\n\030" +
+                    "KEYCODE_TV_CONTENTS_MENU\020\200\002\022\"\n\035KEYCODE_T" +
+                    "V_MEDIA_CONTEXT_MENU\020\201\002\022!\n\034KEYCODE_TV_TI" +
+                    "MER_PROGRAMMING\020\202\002\022\021\n\014KEYCODE_HELP\020\203\002\022\036\n" +
+                    "\031KEYCODE_NAVIGATE_PREVIOUS\020\204\002\022\032\n\025KEYCODE" +
+                    "_NAVIGATE_NEXT\020\205\002\022\030\n\023KEYCODE_NAVIGATE_IN" +
+                    "\020\206\002\022\031\n\024KEYCODE_NAVIGATE_OUT\020\207\002\022\031\n\024KEYCOD" +
+                    "E_STEM_PRIMARY\020\210\002\022\023\n\016KEYCODE_STEM_1\020\211\002\022\023" +
+                    "\n\016KEYCODE_STEM_2\020\212\002\022\023\n\016KEYCODE_STEM_3\020\213\002" +
+                    "\022\031\n\024KEYCODE_DPAD_UP_LEFT\020\214\002\022\033\n\026KEYCODE_D" +
+                    "PAD_DOWN_LEFT\020\215\002\022\032\n\025KEYCODE_DPAD_UP_RIGH" +
+                    "T\020\216\002\022\034\n\027KEYCODE_DPAD_DOWN_RIGHT\020\217\002\022\037\n\032KE" +
+                    "YCODE_MEDIA_SKIP_FORWARD\020\220\002\022 \n\033KEYCODE_M" +
+                    "EDIA_SKIP_BACKWARD\020\221\002\022\037\n\032KEYCODE_MEDIA_S" +
+                    "TEP_FORWARD\020\222\002\022 \n\033KEYCODE_MEDIA_STEP_BAC" +
+                    "KWARD\020\223\002\022\027\n\022KEYCODE_SOFT_SLEEP\020\224\002\022\020\n\013KEY" +
+                    "CODE_CUT\020\225\002\022\021\n\014KEYCODE_COPY\020\226\002\022\022\n\rKEYCOD" +
+                    "E_PASTE\020\227\002\022!\n\034KEYCODE_SYSTEM_NAVIGATION_" +
+                    "UP\020\230\002\022#\n\036KEYCODE_SYSTEM_NAVIGATION_DOWN\020" +
+                    "\231\002\022#\n\036KEYCODE_SYSTEM_NAVIGATION_LEFT\020\232\002\022" +
+                    "$\n\037KEYCODE_SYSTEM_NAVIGATION_RIGHT\020\233\002\022\025\n" +
+                    "\020KEYCODE_ALL_APPS\020\234\002\022\024\n\017KEYCODE_REFRESH\020" +
+                    "\235\002\022\026\n\021KEYCODE_THUMBS_UP\020\236\002\022\030\n\023KEYCODE_TH" +
+                    "UMBS_DOWN\020\237\002\022\033\n\026KEYCODE_PROFILE_SWITCH\020\240" +
+                    "\002\022\030\n\023KEYCODE_VIDEO_APP_1\020\241\002\022\030\n\023KEYCODE_V" +
+                    "IDEO_APP_2\020\242\002\022\030\n\023KEYCODE_VIDEO_APP_3\020\243\002\022" +
+                    "\030\n\023KEYCODE_VIDEO_APP_4\020\244\002\022\030\n\023KEYCODE_VID" +
+                    "EO_APP_5\020\245\002\022\030\n\023KEYCODE_VIDEO_APP_6\020\246\002\022\030\n" +
+                    "\023KEYCODE_VIDEO_APP_7\020\247\002\022\030\n\023KEYCODE_VIDEO" +
+                    "_APP_8\020\250\002\022\033\n\026KEYCODE_FEATURED_APP_1\020\251\002\022\033" +
+                    "\n\026KEYCODE_FEATURED_APP_2\020\252\002\022\033\n\026KEYCODE_F" +
+                    "EATURED_APP_3\020\253\002\022\033\n\026KEYCODE_FEATURED_APP" +
+                    "_4\020\254\002\022\027\n\022KEYCODE_DEMO_APP_1\020\255\002\022\027\n\022KEYCOD" +
+                    "E_DEMO_APP_2\020\256\002\022\027\n\022KEYCODE_DEMO_APP_3\020\257\002" +
+                    "\022\027\n\022KEYCODE_DEMO_APP_4\020\260\002*Q\n\017RemoteDirec" +
+                    "tion\022\025\n\021UNKNOWN_DIRECTION\020\000\022\016\n\nSTART_LON" +
+                    "G\020\001\022\014\n\010END_LONG\020\002\022\t\n\005SHORT\020\003b\006proto3"
+    };
+    /*String[] descriptorData = {
       "\n\023remotemessage.proto\022\022com.example.myapplication.kunal52.remot" +
       "e\".\n\032RemoteAppLinkLaunchRequest\022\020\n\010app_l" +
       "ink\030\001 \001(\t\"!\n\037RemoteResetPreferredAudioDe" +
@@ -21654,7 +21912,7 @@ public final class Remotemessage {
       "\022\027\n\022KEYCODE_DEMO_APP_4\020\260\002*Q\n\017RemoteDirec" +
       "tion\022\025\n\021UNKNOWN_DIRECTION\020\000\022\016\n\nSTART_LON" +
       "G\020\001\022\014\n\010END_LONG\020\002\022\t\n\005SHORT\020\003b\006proto3"
-    };
+    };*/
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {

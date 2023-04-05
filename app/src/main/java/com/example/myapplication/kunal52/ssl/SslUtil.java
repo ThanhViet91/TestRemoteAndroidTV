@@ -123,7 +123,8 @@ public class SslUtil {
 
 		// This method is deprecated, but Android Eclair does not provide the
 		// generate() methods.
-		X509Certificate cert = certGen.generate(pair.getPrivate(), "BC");
+//		X509Certificate cert = certGen.generate(pair.getPrivate(), "BC");
+		X509Certificate cert = certGen.generateX509Certificate(pair.getPrivate(), "BC");
 		return cert;
 	}
 
@@ -148,6 +149,7 @@ public class SslUtil {
 	public static X509Certificate generateX509V3Certificate(KeyPair pair,
 			String name, Date notBefore, Date notAfter, BigInteger serialNumber)
 			throws GeneralSecurityException {
+		java.security.Security.removeProvider("BC");
 		java.security.Security
 				.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
 
@@ -156,8 +158,8 @@ public class SslUtil {
 		X500Principal principal = new X500Principal(name);
 
 		certGen.setSerialNumber(serialNumber);
-		// certGen.setIssuerDN(dnName);
-		// certGen.setSubjectDN(dnName); // note: same as issuer
+//		 certGen.setIssuerDN(dnName);
+//		 certGen.setSubjectDN(dnName); // note: same as issuer
 		certGen.setIssuerDN(principal);
 		certGen.setSubjectDN(principal);
 		certGen.setNotBefore(notBefore);
@@ -186,27 +188,28 @@ public class SslUtil {
 		certGen.addExtension(X509Extension.basicConstraints, true,
 				new BasicConstraints(false));
 
-		certGen.addExtension(X509Extension.keyUsage, true, new KeyUsage(
-				KeyUsage.digitalSignature | KeyUsage.keyEncipherment
-						| KeyUsage.keyCertSign));
+		certGen.addExtension(X509Extension.keyUsage, true, new KeyUsage( 160
+				/*KeyUsage.digitalSignature | KeyUsage.keyEncipherment
+						| KeyUsage.keyCertSign*/));
 		certGen.addExtension(X509Extension.extendedKeyUsage, true,
 				new ExtendedKeyUsage(KeyPurposeId.id_kp_serverAuth));
 
 		AuthorityKeyIdentifier authIdentifier = createAuthorityKeyIdentifier(
 				pair.getPublic(), dnName, serialNumber);
 
-		certGen.addExtension(X509Extension.authorityKeyIdentifier, true,
-				authIdentifier);
+//		certGen.addExtension(X509Extension.authorityKeyIdentifier, true,
+//				authIdentifier);
 		// certGen.addExtension(X509Extension.subjectKeyIdentifier, true,
 		// new SubjectKeyIdentifier(pair.getPublic()));
 
 		certGen.addExtension(X509Extension.subjectAlternativeName, false,
-				new GeneralNames(new GeneralName(GeneralName.rfc822Name,
+				new GeneralNames(new GeneralName(/*GeneralName.rfc822Name,*/ 1,
 						"googletv@test.test")));
 
 		// This method is deprecated, but Android Eclair does not provide the
 		// generate() methods.
 		X509Certificate cert = certGen.generate(pair.getPrivate(), "BC");
+//		X509Certificate cert = certGen.generateX509Certificate(pair.getPrivate(), "BC");
 		return cert;
 	}
 

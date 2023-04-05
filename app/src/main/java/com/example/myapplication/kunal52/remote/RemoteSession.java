@@ -1,5 +1,7 @@
 package com.example.myapplication.kunal52.remote;
 
+import android.content.Context;
+
 import com.example.myapplication.kunal52.exception.PairingException;
 import com.example.myapplication.kunal52.ssl.DummyTrustManager;
 import com.example.myapplication.kunal52.ssl.KeyStoreManager;
@@ -36,13 +38,15 @@ public class RemoteSession {
     int retry;
 
     OutputStream outputStream;
+    Context mContext;
 
-    public RemoteSession(String host, int port, RemoteSessionListener remoteSessionListener) {
+    public RemoteSession(Context context, String host, int port, RemoteSessionListener remoteSessionListener) {
         mMessageQueue = new LinkedBlockingQueue<>();
         mMessageManager = new RemoteMessageManager();
         mHost = host;
         mPort = port;
         mRemoteSessionListener = remoteSessionListener;
+        mContext = context;
     }
 
     public void connect() throws GeneralSecurityException, IOException, InterruptedException, PairingException {
@@ -50,7 +54,7 @@ public class RemoteSession {
         try {
             SSLContext sSLContext = SSLContext.getInstance("TLS");
 //            sSLContext.init(new KeyStoreManager().getKeyManagers(), new TrustManager[]{new DummyTrustManager()}, new SecureRandom());
-            sSLContext.init(new KeyStoreManager().getKeyManagers(), new TrustManager[]{new DummyTrustManager()}, new SecureRandom());
+            sSLContext.init(new KeyStoreManager(mContext).getKeyManagers(), new TrustManager[]{new DummyTrustManager()}, new SecureRandom());
             SSLSocketFactory sslsocketfactory = sSLContext.getSocketFactory();
             SSLSocket sSLSocket = (SSLSocket) sslsocketfactory.createSocket(mHost, mPort);
             sSLSocket.setNeedClientAuth(true);
@@ -144,6 +148,14 @@ public class RemoteSession {
     public void sendCommand(Remotemessage.RemoteKeyCode remoteKeyCode, Remotemessage.RemoteDirection remoteDirection) {
         try {
             outputStream.write(mMessageManager.createKeyCommand(remoteKeyCode,remoteDirection));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void sendAppLink(String appLink) {
+        try {
+            outputStream.write(mMessageManager.createAppLinkCommand(appLink));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

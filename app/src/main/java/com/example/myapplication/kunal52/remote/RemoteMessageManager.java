@@ -81,4 +81,14 @@ public class RemoteMessageManager extends MessageManager {
         return addLengthAndCreate(remoteMessage.toByteArray());
     }
 
+    public byte[] createAppLinkCommand(String appLink) {
+        Remotemessage.RemoteMessage remoteMessage = Remotemessage.RemoteMessage.newBuilder()
+                .setRemoteAppLinkLaunchRequest(Remotemessage.RemoteAppLinkLaunchRequest.newBuilder()
+                        .setAppLink(appLink)
+                        .build())
+                .build();
+
+        return addLengthAndCreate(remoteMessage.toByteArray());
+    }
+
 }

@@ -1,5 +1,7 @@
 package com.example.myapplication.kunal52;
 
+import android.content.Context;
+
 import com.example.myapplication.kunal52.exception.PairingException;
 import com.example.myapplication.kunal52.pairing.PairingListener;
 import com.example.myapplication.kunal52.pairing.PairingSession;
@@ -8,6 +10,7 @@ import com.example.myapplication.kunal52.remote.Remotemessage;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
+import java.util.ConcurrentModificationException;
 
 
 public class AndroidRemoteTv extends BaseAndroidRemoteTv {
@@ -18,8 +21,8 @@ public class AndroidRemoteTv extends BaseAndroidRemoteTv {
 
     private RemoteSession mRemoteSession;
 
-    public void connect(String host, AndroidTvListener androidTvListener) throws GeneralSecurityException, IOException, InterruptedException, PairingException {
-        mRemoteSession = new RemoteSession(host, 6466, new RemoteSession.RemoteSessionListener() {
+    public void connect(Context context, String host, AndroidTvListener androidTvListener) throws GeneralSecurityException, IOException, InterruptedException, PairingException {
+        mRemoteSession = new RemoteSession(context, host, 6466, new RemoteSession.RemoteSessionListener() {
             @Override
             public void onConnected() {
                 androidTvListener.onConnected();
@@ -50,7 +53,7 @@ public class AndroidRemoteTv extends BaseAndroidRemoteTv {
             mRemoteSession.connect();
         else {
             mPairingSession = new PairingSession();
-            mPairingSession.pair(host, 6467, new PairingListener() {
+            mPairingSession.pair(context, host, 6467, new PairingListener() {
                 @Override
                 public void onSessionCreated() {
 
@@ -106,6 +109,10 @@ public class AndroidRemoteTv extends BaseAndroidRemoteTv {
 
     public void sendSecret(String code) {
         mPairingSession.provideSecret(code);
+    }
+
+    public void sendAppLink(String appLink) {
+        mRemoteSession.sendAppLink(appLink);
     }
 
 }

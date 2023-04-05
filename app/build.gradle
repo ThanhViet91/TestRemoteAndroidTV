@@ -44,7 +44,7 @@ dependencies {
 
     //
     implementation 'com.google.protobuf:protobuf-java:3.17.2'
-    implementation 'org.bouncycastle:bcprov-jdk15on:1.67'
+    implementation 'org.bouncycastle:bcprov-jdk15to18:1.68'
 
 
 }

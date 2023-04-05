@@ -1,5 +1,7 @@
 package com.example.myapplication.kunal52.pairing;
 
+import android.content.Context;
+
 import com.example.myapplication.kunal52.AndroidRemoteContext;
 import com.example.myapplication.kunal52.exception.PairingException;
 import com.example.myapplication.kunal52.ssl.DummyTrustManager;
@@ -8,6 +10,7 @@ import com.example.myapplication.kunal52.util.Utils;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.net.InetSocketAddress;
 import java.security.GeneralSecurityException;
 import java.security.SecureRandom;
 import java.util.Arrays;
@@ -36,14 +39,21 @@ public class PairingSession {
         mPairingMessageManager = new PairingMessageManager();
     }
 
-    public void pair(String host, int port, PairingListener pairingListener) throws GeneralSecurityException, IOException, InterruptedException, PairingException {
+    public void pair(Context context, String host, int port, PairingListener pairingListener) throws GeneralSecurityException, IOException, InterruptedException, PairingException {
 
+        KeyStoreManager keyStoreManager = new KeyStoreManager(context);
         SSLContext sSLContext = SSLContext.getInstance("TLS");
-        sSLContext.init(new KeyStoreManager().getKeyManagers(), new TrustManager[]{new DummyTrustManager()}, new SecureRandom());
-//        sSLContext.init(null, new TrustManager[]{new DummyTrustManager()}, new SecureRandom());
+        if (!keyStoreManager.hasServerIdentityAlias()) {
+            keyStoreManager.initializeKeyStore();
+        }
+        sSLContext.init(keyStoreManager.getKeyManagers(), new TrustManager[]{new DummyTrustManager()}, new SecureRandom());
         SSLSocketFactory sslsocketfactory = sSLContext.getSocketFactory();
         SSLSocket sSLSocket = (SSLSocket) sslsocketfactory.createSocket(host, port);
+//        sSLSocket.setEnabledProtocols(new String[]{"TLSv1", "TLSv1.1", "TLSv1.2"});
+//        sSLSocket.setSoTimeout(5000);
+//        sSLSocket.connect(new InetSocketAddress(host, port), 5000);
         mSslSocket = sSLSocket;
+//        sSLSocket.setSoTimeout(0);
 //        sSLSocket.setNeedClientAuth(true);
 //        sSLSocket.setUseClientMode(true);
 //        sSLSocket.setKeepAlive(true);
@@ -83,7 +93,6 @@ public class PairingSession {
 
         pairingListener.onPaired();
         pairingListener.onSessionEnded();
-
     }
 
 
