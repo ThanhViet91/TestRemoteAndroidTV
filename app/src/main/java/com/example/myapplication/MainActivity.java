@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
                         System.out.println("thanhlv androidRemoteTv.connect() onConnected" );
 
                         androidRemoteTv.sendCommand(Remotemessage.RemoteKeyCode.KEYCODE_VOLUME_UP, Remotemessage.RemoteDirection.SHORT);
-                        androidRemoteTv.sendCommand(Remotemessage.RemoteKeyCode.KEYCODE_VOLUME_UP, Remotemessage.RemoteDirection.SHORT);
                         androidRemoteTv.sendAppLink("https://www.youtube.com");
+
 
                     }
 
